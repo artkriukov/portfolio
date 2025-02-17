@@ -1,11 +1,42 @@
 .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content h1 {
-    margin-top: 0;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 .about-content p {
+    font-size: 18px;
     line-height: 1.6;
+    color: #34495e;
+    margin-bottom: 40px;
+}
+
+.skills-section h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
