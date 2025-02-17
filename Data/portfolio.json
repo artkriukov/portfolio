@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "title": "Project 1",
+            "description": "Описание проекта 1",
+            "image": "assets/project1.jpg",
+            "github": "https://github.com/project1",
+            "stack": [
+                {"name": "React", "color": "#61dafb"},
+                {"name": "Node.js", "color": "#68a063"}
+            ],
+            "category": "personal",
+            "role": "Разработал фронтенд и бэкенд."
+        },
+        {
+            "title": "Project 2",
+            "description": "Описание проекта 2",
+            "image": "assets/project2.jpg",
+            "github": "https://github.com/project2",
+            "stack": [
+                {"name": "Vue.js", "color": "#42b983"},
+                {"name": "Firebase", "color": "#ffcb2b"}
+            ],
+            "category": "team",
+            "role": "Работал в команде над фронтендом."
+        },
+        {
+            "title": "Project 3",
+            "description": "Описание проекта 3",
+            "image": "assets/project3.jpg",
+            "github": "https://github.com/project3",
+            "stack": [
+                {"name": "Next.js", "color": "#000000"},
+                {"name": "Tailwind CSS", "color": "#38b2ac"}
+            ],
+            "category": "personal",
+            "role": "Полностью разработал проект."
+        }
+    ]
+}
