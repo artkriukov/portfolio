@@ -1,0 +1,92 @@
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50; /* Темно-синий фон */
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Чтобы контент занимал всю ширину Sidebar */
+}
+
+.profile-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #007BFF;
+  margin-bottom: 20px;
+}
+
+.sidebar-content h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.sidebar-content p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #bdc3c7;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+.sidebar-content ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ecf0f1;
+}
+
+.sidebar-content button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-content button:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+}

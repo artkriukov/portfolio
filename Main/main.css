@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.main-content {
+    margin-left: 350px; /* Отступ для Sidebar */
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.tapbar {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.tapbar button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.tapbar button:hover {
+    background-color: #0056b3;
+}
+
+#content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
