@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "title": "Project 1",
+            "title": "Project 1 personal",
             "description": "Описание проекта 1",
             "image": "assets/project1.jpg",
             "github": "https://github.com/project1",
@@ -10,10 +10,11 @@
                 {"name": "Node.js", "color": "#68a063"}
             ],
             "category": "personal",
-            "role": "Разработал фронтенд и бэкенд."
+            "role": "Разработал фронтенд и бэкенд.",
+            "details": "Детальное описание проекта 1. Здесь можно рассказать о задачах, которые решались, и о технологиях, которые использовались."
         },
         {
-            "title": "Project 2",
+            "title": "Project 2 team",
             "description": "Описание проекта 2",
             "image": "assets/project2.jpg",
             "github": "https://github.com/project2",
@@ -22,10 +23,11 @@
                 {"name": "Firebase", "color": "#ffcb2b"}
             ],
             "category": "team",
-            "role": "Работал в команде над фронтендом."
+            "role": "Работал в команде над фронтендом.",
+            "details": "Детальное описание проекта 2. Здесь можно рассказать о задачах, которые решались, и о технологиях, которые использовались."
         },
         {
-            "title": "Project 3",
+            "title": "Project 3 personal",
             "description": "Описание проекта 3",
             "image": "assets/project3.jpg",
             "github": "https://github.com/project3",
@@ -34,7 +36,8 @@
                 {"name": "Tailwind CSS", "color": "#38b2ac"}
             ],
             "category": "personal",
-            "role": "Полностью разработал проект."
+            "role": "Полностью разработал проект.",
+            "details": "Детальное описание проекта 3. Здесь можно рассказать о задачах, которые решались, и о технологиях, которые использовались."
         }
     ]
 }

@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (window.loadSidebarData) {
                         window.loadSidebarData();
                     }
+                } else if (page === 'portfolio') {
+                    if (window.loadPortfolioData) {
+                        window.loadPortfolioData();
+                    }
                 }
             })
             .catch(error => console.error('Error loading page:', error));
@@ -37,6 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Загружаем данные для About при первой загрузке
     if (window.loadAboutData) {
         window.loadAboutData();
+    }
+    
+    if (window.loadPortfolioData) {
+        window.loadPortfolioData();
     }
 
     // Загружаем страницу About по умолчанию
