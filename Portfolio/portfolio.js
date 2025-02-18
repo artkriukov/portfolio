@@ -1,20 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadPortfolioData();
-    initFilters();
-    initModal();
 });
 
 function loadPortfolioData() {
     fetch('Data/portfolio.json')
         .then(response => response.json())
         .then(data => {
+            console.log("Данные загружены:", data); // Проверяем загруженные проекты
             window.portfolioData = data.projects;
             renderProjects(data.projects);
+            initFilters(); // Инициализация фильтров после загрузки данных
         })
-        .catch(console.error);
+        .catch(error => console.error("Ошибка загрузки данных:", error));
 }
 
 function renderProjects(projects) {
+    console.log("Рендерим проекты:", projects); // Проверяем, какие проекты рендерятся
     const grid = document.getElementById('projects-grid');
     grid.innerHTML = projects.map(project => `
         <article class="project-card" data-category="${project.category}">
@@ -40,17 +41,32 @@ function addProjectCardListeners(projects) {
 }
 
 function initFilters() {
-    document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    
+    if (filterButtons.length === 0) {
+        console.error("Фильтры не найдены! Проверь HTML.");
+        return;
+    }
+
+    filterButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            document.querySelectorAll('.portfolio-filter-btn').forEach(b => b.classList.remove('active'));
+            filterButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
+
             const category = this.dataset.category;
-            const filtered = category === 'all' 
-                ? window.portfolioData 
+            console.log("Выбрана категория:", category);
+
+            if (!window.portfolioData) {
+                console.error("Данные о проектах не загружены!");
+                return;
+            }
+
+            const filteredProjects = category === 'all'
+                ? window.portfolioData
                 : window.portfolioData.filter(p => p.category === category);
-            
-            renderProjects(filtered);
+
+            console.log("Фильтрованные проекты:", filteredProjects);
+            renderProjects(filteredProjects);
         });
     });
 }
