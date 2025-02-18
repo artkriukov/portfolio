@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    loadAboutData();
-});
-
-function loadAboutData() {
     fetch('Data/about.json')
         .then(response => response.json())
         .then(data => {
@@ -12,7 +8,6 @@ function loadAboutData() {
 
             // Вставляем навыки
             const skillsList = document.getElementById('skills-list');
-            skillsList.innerHTML = ''; // Очищаем список перед добавлением новых элементов
             data.skills.forEach(skill => {
                 const skillElement = document.createElement('div');
                 skillElement.classList.add('skill');
@@ -22,7 +17,4 @@ function loadAboutData() {
             });
         })
         .catch(error => console.error('Error loading about data:', error));
-}
-
-// Экспортируем функцию для использования в main.js
-window.loadAboutData = loadAboutData;
+});

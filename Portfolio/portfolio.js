@@ -16,11 +16,6 @@ function loadPortfolioData() {
 
 function renderProjects(projects) {
     const grid = document.getElementById('projects-grid');
-    
-    // Полная очистка контейнера
-    grid.innerHTML = '';
-    
-    // Генерация новых карточек
     grid.innerHTML = projects.map(project => `
         <article class="project-card" data-category="${project.category}">
             <img src="${project.image}" alt="${project.title}" class="project-image">
@@ -35,34 +30,32 @@ function renderProjects(projects) {
         </article>
     `).join('');
 
-    // Обновляем обработчики кликов
+    addProjectCardListeners(projects);
+}
+
+function addProjectCardListeners(projects) {
     document.querySelectorAll('.project-card').forEach((card, index) => {
         card.addEventListener('click', () => openModal(projects[index]));
     });
 }
 
 function initFilters() {
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+    document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            // Удаляем активный класс у всех кнопок
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            
-            // Добавляем активный класс текущей кнопке
+            document.querySelectorAll('.portfolio-filter-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Получаем выбранную категорию
             const category = this.dataset.category;
-            
-            // Фильтруем проекты
             const filtered = category === 'all' 
                 ? window.portfolioData 
                 : window.portfolioData.filter(p => p.category === category);
             
-            // Перерисовываем проекты
             renderProjects(filtered);
         });
     });
 }
+
+// Остальной код без изменений
 
 function initModal() {
     const modal = document.getElementById('project-modal');
