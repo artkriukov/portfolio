@@ -178,3 +178,12 @@
         height: 200px;
     }
 }
+
+@media (max-width: 340px) {
+    .projects-grid {
+        padding: 0;
+    }
+    .portfolio-content {
+        padding: 0;
+    }
+}

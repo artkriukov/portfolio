@@ -110,3 +110,30 @@
     max-height: 80vh;
     object-fit: contain;
 }
+
+@media (max-width: 340px) {
+    .certificates-container {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+    .certificate-item {
+        padding: 0;
+    }
+    
+    .certificate-title {
+        font-size: 0.8rem;
+    }
+
+    .certificate-organization {
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+
+    .certificate-date {
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+}

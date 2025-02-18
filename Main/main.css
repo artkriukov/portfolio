@@ -122,3 +122,18 @@ html, body {
         grid-row: 3 / -1;
     }
 }
+
+@media (max-width: 483px) {
+    .tapbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 340px) {
+    #content {
+        padding: 0;
+        padding-top: 20px;
+    }
+}

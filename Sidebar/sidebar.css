@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.container-top {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile-photo img {
   width: 100px;
   height: 100px;
@@ -75,4 +80,15 @@
 .social-links img {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 768px) {
+  .container-top {
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  .container-name {
+    align-self: center;
+  }
 }

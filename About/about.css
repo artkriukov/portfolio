@@ -40,3 +40,17 @@
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 340px) {
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .about-content p{
+        font-size: 14px;
+    }
+
+    .skills-section h2 {
+        font-size: 24px;
+    }
+}
