@@ -1,13 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.loadAboutData = function () {
     fetch('Data/about.json')
         .then(response => response.json())
         .then(data => {
+            const title = document.getElementById('about-title');
+            const description = document.getElementById('about-description');
+            const skillsList = document.getElementById('skills-list');
+
+            if (!title || !description || !skillsList) {
+                console.error("Ошибка: элементы About не найдены.");
+                return;
+            }
+
             // Вставляем заголовок и описание
-            document.getElementById('about-title').textContent = data.title;
-            document.getElementById('about-description').textContent = data.description;
+            title.textContent = data.title;
+            description.textContent = data.description;
+
+            // Очищаем список навыков перед добавлением новых
+            skillsList.innerHTML = '';
 
             // Вставляем навыки
-            const skillsList = document.getElementById('skills-list');
             data.skills.forEach(skill => {
                 const skillElement = document.createElement('div');
                 skillElement.classList.add('skill');
@@ -16,5 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 skillsList.appendChild(skillElement);
             });
         })
-        .catch(error => console.error('Error loading about data:', error));
-});
+        .catch(error => console.error('Ошибка загрузки данных About:', error));
+};

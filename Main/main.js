@@ -20,19 +20,25 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 contentDiv.innerHTML = data;
     
-                setTimeout(() => {
-                    if (page === 'about' && window.loadAboutData) {
-                        window.loadAboutData();
-                    } else if (page === 'sidebar' && window.loadSidebarData) {
-                        window.loadSidebarData();
-                    } else if (page === 'portfolio' && window.loadPortfolioData) {
-                        window.loadPortfolioData();
-                    } else if (page === 'certificates' && window.loadCertificatesData) {
-                        window.loadCertificatesData();
-                    } else if (page === 'experience' && window.loadExperienceData) {
-                        window.loadExperienceData();
+                setTimeout(() => {  // Даем время браузеру вставить HTML
+                    switch (page) {
+                        case 'about':
+                            if (window.loadAboutData) window.loadAboutData();
+                            break;
+                        case 'sidebar':
+                            if (window.loadSidebarData) window.loadSidebarData();
+                            break;
+                        case 'portfolio':
+                            if (window.loadPortfolioData) window.loadPortfolioData();
+                            break;
+                        case 'certificates':
+                            if (window.loadCertificatesData) window.loadCertificatesData();
+                            break;
+                        case 'experience':
+                            if (window.loadExperienceData) window.loadExperienceData();
+                            break;
                     }
-                }, 100);
+                }, 50);
             })
             .catch(error => console.error('Ошибка загрузки страницы:', error));
     }
