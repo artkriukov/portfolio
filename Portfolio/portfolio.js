@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadPortfolioData();
+    initFilters();
+    initModal();
 });
 
 function loadPortfolioData() {
@@ -9,7 +11,8 @@ function loadPortfolioData() {
             console.log("Данные загружены:", data); // Проверяем загруженные проекты
             window.portfolioData = data.projects;
             renderProjects(data.projects);
-            initFilters(); // Инициализация фильтров после загрузки данных
+            initFilters(); 
+            initModal();
         })
         .catch(error => console.error("Ошибка загрузки данных:", error));
 }
@@ -71,39 +74,61 @@ function initFilters() {
     });
 }
 
-// Остальной код без изменений
-
 function initModal() {
     const modal = document.getElementById('project-modal');
     const closeBtn = modal.querySelector('.modal-close');
 
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (!modal || !closeBtn) {
+        console.error("Ошибка: модальное окно или кнопка закрытия не найдены!");
+        return;
+    }
 
-    window.addEventListener('click', (e) => {
+    // Закрытие по клику на крестик
+    closeBtn.addEventListener('click', closeModal);
+
+    // Закрытие по клику на фон
+    modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.style.display = 'none';
+            closeModal();
         }
     });
+
+    console.log("Модальное окно инициализировано");
 }
 
 function openModal(project) {
     const modal = document.getElementById('project-modal');
-    const content = modal.querySelector('.modal-content');
+    
+    if (!modal) {
+        console.error("Ошибка: модальное окно не найдено!");
+        return;
+    }
 
-    // Заполняем данные
+    // Заполняем данные в модалке
     modal.querySelector('.modal-image').src = project.image;
     modal.querySelector('.modal-title').textContent = project.title;
     modal.querySelector('.modal-description').textContent = project.details;
     modal.querySelector('.modal-role span').textContent = project.role;
     modal.querySelector('.modal-github').href = project.github;
-    
-    // Обновляем стек
+
+    // Обновляем стек технологий
     const stackContainer = modal.querySelector('.modal-stack');
     stackContainer.innerHTML = project.stack.map(tech => `
         <span class="stack-item" style="background: ${tech.color}">${tech.name}</span>
     `).join('');
 
-    modal.style.display = 'block';
+    // Открываем модалку
+    modal.style.display = 'flex'; // Меняем с `block` на `flex`, если flex-центровка
+    document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
+
+    console.log("Открыта модалка для проекта:", project.title);
+}
+
+function closeModal() {
+    const modal = document.getElementById('project-modal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Возвращаем прокрутку страницы
+        console.log("Модальное окно закрыто");
+    }
 }
