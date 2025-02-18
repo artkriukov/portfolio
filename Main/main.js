@@ -14,21 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 contentDiv.innerHTML = data;
-
+    
                 // Загружаем данные для страницы
-                if (page === 'about') {
-                    if (window.loadAboutData) {
+                setTimeout(() => {  // Даем время вставить HTML в DOM
+                    if (page === 'about' && window.loadAboutData) {
                         window.loadAboutData();
-                    }
-                } else if (page === 'sidebar') {
-                    if (window.loadSidebarData) {
+                    } else if (page === 'sidebar' && window.loadSidebarData) {
                         window.loadSidebarData();
-                    }
-                } else if (page === 'portfolio') {
-                    if (window.loadPortfolioData) {
+                    } else if (page === 'portfolio' && window.loadPortfolioData) {
                         window.loadPortfolioData();
+                    } else if (page === 'certificates' && window.loadCertificatesData) {
+                        window.loadCertificatesData();
                     }
-                }
+                }, 100);
             })
             .catch(error => console.error('Error loading page:', error));
     }
