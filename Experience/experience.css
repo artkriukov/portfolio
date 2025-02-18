@@ -51,10 +51,16 @@
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 483px) {
+    .content {
+        padding: 0;
+    }
     .experience-container {
         padding: 0 0;
     }
+}
+
+@media (max-width: 340px) {
     .experience-container h2 {
         font-size: 24px;
     }

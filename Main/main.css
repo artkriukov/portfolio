@@ -101,6 +101,14 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow: auto; 
+      }
+    
+      #content {
+        overflow: hidden;
+      }
+
     .container {
         grid-template-columns: 1fr; /* Одна колонка на мобильных */
         grid-template-rows: auto auto 1fr; /* Tapbar, сайдбар, контент */
