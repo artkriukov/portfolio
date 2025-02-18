@@ -11,12 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadPage(page) {
         fetch(`${page}/${page}.html`)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Ошибка загрузки ${page}.html: ${response.statusText}`);
+                }
+                return response.text();
+            })
             .then(data => {
                 contentDiv.innerHTML = data;
     
-                // Загружаем данные для страницы
-                setTimeout(() => {  // Даем время вставить HTML в DOM
+                setTimeout(() => {
                     if (page === 'about' && window.loadAboutData) {
                         window.loadAboutData();
                     } else if (page === 'sidebar' && window.loadSidebarData) {
@@ -25,10 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         window.loadPortfolioData();
                     } else if (page === 'certificates' && window.loadCertificatesData) {
                         window.loadCertificatesData();
+                    } else if (page === 'experience' && window.loadExperienceData) {
+                        window.loadExperienceData();
                     }
                 }, 100);
             })
-            .catch(error => console.error('Error loading page:', error));
+            .catch(error => console.error('Ошибка загрузки страницы:', error));
     }
 
     // Загружаем данные для Sidebar при первой загрузке

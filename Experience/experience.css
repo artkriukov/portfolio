@@ -1,0 +1,52 @@
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.experience-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.experience-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.experience-tasks, .experience-achievements {
+    margin-bottom: 1rem;
+}
+
+.experience-tasks ul, .experience-achievements ul {
+    padding-left: 20px;
+}
+
+.experience-tasks li, .experience-achievements li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 1rem;
+    }
+}
