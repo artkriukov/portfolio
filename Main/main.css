@@ -1,30 +1,33 @@
+/* Основные стили */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Отключаем скролл всей страницы */
     font-family: Arial, sans-serif;
-    display: flex;
 }
 
 .container {
-    display: flex;
-    width: 100%;
-    height: 75vh; /* Контейнер на всю высоту экрана */
-}
-
-/* Основной контент */
-.main-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Сайдбар и основной контент */
+    grid-template-rows: auto 1fr; /* Tapbar и контент */
     height: 100vh;
-    padding: 0;
-    margin-left: 550px; /* Делаем отступ под сайдбар */
 }
 
-/* Tapbar (навигация) */
+/* Сайдбар */
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1; /* Занимает всю высоту */
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Добавляем скролл, если контент не помещается */
+}
+
+/* Tapbar */
 .tapbar {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
     padding: 15px;
@@ -47,16 +50,43 @@ html, body {
     background-color: #0056b3;
 }
 
-/* Контент, который подгружается */
-#content {
-    flex-grow: 1;
-    width: 1200px; /* Делаем ширину на всю доступную область */
-    max-width: 100%; /* Чтобы ничего не выходило за границы */
-    overflow-y: auto; /* Только этот блок скроллится */
+/* Основной контент */
+.main-content {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
     padding: 20px;
-    height: 80%; 
+    overflow-y: auto; /* Скролл для контента */
+    background: #fff;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        grid-template-rows: auto auto 1fr; /* Tapbar, сайдбар, контент */
+    }
+
+    .sidebar {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3; /* Сайдбар перемещается наверх */
+        height: auto; /* Высота по содержимому */
+    }
+
+    .tapbar {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 1 / -1;
+        grid-row: 3 / -1;
+    }
+}
+
+#content {
+    max-width: 100%; /* Убираем жесткую ширину */
+    padding: 20px;
     box-sizing: border-box;
-    height: calc(100vh - 60px); /* Высота с учетом Tapbar */
     background: #fff;
     border-radius: 5px;
 }
@@ -68,4 +98,27 @@ html, body {
 #content::-webkit-scrollbar-thumb {
     background-color: #bbb;
     border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        grid-template-rows: auto auto 1fr; /* Tapbar, сайдбар, контент */
+    }
+
+    .sidebar {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3; /* Сайдбар перемещается наверх */
+        height: auto; /* Высота по содержимому */
+    }
+
+    .tapbar {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 1 / -1;
+        grid-row: 3 / -1;
+    }
 }
