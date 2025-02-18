@@ -10,7 +10,7 @@ html, body {
 .container {
     display: flex;
     width: 100%;
-    height: 100vh; /* Контейнер на всю высоту экрана */
+    height: 75vh; /* Контейнер на всю высоту экрана */
 }
 
 /* Основной контент */
@@ -54,8 +54,18 @@ html, body {
     max-width: 100%; /* Чтобы ничего не выходило за границы */
     overflow-y: auto; /* Только этот блок скроллится */
     padding: 20px;
+    height: 80%; 
     box-sizing: border-box;
     height: calc(100vh - 60px); /* Высота с учетом Tapbar */
     background: #fff;
     border-radius: 5px;
+}
+
+#content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#content::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
 }
