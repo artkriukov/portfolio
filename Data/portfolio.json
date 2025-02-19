@@ -1,17 +1,19 @@
 {
     "projects": [
         {
-            "title": "Project 1 personal",
-            "description": "Описание проекта 1",
-            "image": "assets/1.jpeg",
-            "github": "https://github.com/project1",
+            "title": "Bomb",
+            "description": "",
+            "image": "assets/Portfoloi/GameBomb.gif",
+            "github": "https://github.com/artkriukov/Boom",
             "stack": [
-                {"name": "React", "color": "#61dafb"},
-                {"name": "Node.js", "color": "#68a063"}
+                {"name": "UIKit", "color": "#68a063"},
+                {"name": "Lottie", "color": "#b8e1d5"},
+                {"name": "AVFoundation", "color": "#f1c40f"},
+                {"name": "UserDefoults", "color": "#5f6b77"}
             ],
-            "category": "personal",
-            "role": "Разработал фронтенд и бэкенд.",
-            "details": "Детальное описание проекта 1. Здесь можно рассказать о задачах, которые решались, и о технологиях, которые использовались."
+            "category": "team",
+            "role": "В процессе разработки игры создал UI для экрана GameView с таймером и динамичными анимациями. Для улучшения атмосферы добавил зацикленные звуковые эффекты и музыку с тиканьем бомбы, а также использовал Lottie для реализации анимации. Также провел рефакторинг верстки экрана настроек, улучшив структуру и взаимодействие элементов.",
+            "details": "Бомба — это iOS-приложение, которое идеально подойдет для веселых вечеринок! Игроки по очереди отвечают на вопросы, а если не успели — бомба взрывается"
         },
         {
             "title": "Project 2 team",
