@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (nameEl) nameEl.textContent = data.name;
             if (roleEl) roleEl.textContent = data.role;
             if (phoneEl) phoneEl.textContent = `📱 ${data.phone}`;
-            if (emailEl) emailEl.textContent = `📧 ${data.email}`;
-            if (locationEl) locationEl.textContent = `📍 ${data.location}`;
+            if (emailEl) emailEl.textContent = `✉️ ${data.email}`;
+            if (locationEl) locationEl.textContent = `🌍 ${data.location}`;
 
             if (socialLinksContainer && data.socialLinks) {
                 socialLinksContainer.innerHTML = ''; // Очищаем перед добавлением

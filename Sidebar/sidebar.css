@@ -21,11 +21,12 @@
 }
 
 .profile-photo img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #0A84FF;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .sidebar-content h2 {
