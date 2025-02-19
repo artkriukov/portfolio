@@ -1,17 +1,15 @@
 {
     "experiences": [
         {
-            "company": "GSON Experience",
-            "position": "Junior iOS Developer",
-            "period": "2023-05 - Present",
+            "company": "Swift Marathon 14",
+            "position": "iOS Developer",
+            "period": "01-2025 - Present",
             "tasks": [
                 "Разработка iOS-приложений на Swift",
-                "Оптимизация UI и UX интерфейсов",
                 "Работа с API и базами данных"
             ],
             "achievements": [
-                "Разработал новую архитектуру приложения, увеличив скорость загрузки на 30%",
-                "Внедрил Unit-тестирование, улучшив качество кода"
+                "чему научился на марафоне"
             ]
         },
         {
