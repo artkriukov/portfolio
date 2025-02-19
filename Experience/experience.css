@@ -1,70 +1,103 @@
 .experience-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-color: #F5F5F7; /* Светлый фон в стиле macOS */
+    border-radius: 20px; /* Округленные края */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    text-align: center;
 }
 
 .experience-container h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
+    font-size: 32px;
+    color: #1D1D1F; /* Темный текст */
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .experience-item {
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Более мягкая тень */
+    padding: 24px;
+    margin-bottom: 24px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: scale(1.02);
 }
 
 .experience-item h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 22px;
+    color: #1D1D1F;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .experience-period {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    color: #6E6E73; /* Серый цвет Apple */
+    margin-bottom: 16px;
 }
 
-.experience-tasks, .experience-achievements {
-    margin-bottom: 1rem;
+.experience-tasks,
+.experience-achievements {
+    margin-bottom: 16px;
 }
 
-.experience-tasks ul, .experience-achievements ul {
+.experience-tasks ul,
+.experience-achievements ul {
     padding-left: 20px;
 }
 
-.experience-tasks li, .experience-achievements li {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 0.5rem;
+.experience-tasks li,
+.experience-achievements li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 6px;
 }
 
+/* Адаптив */
 @media (max-width: 768px) {
-    .experience-item {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 483px) {
-    .content {
-        padding: 0;
-    }
     .experience-container {
-        padding: 0 0;
+        padding: 30px;
+    }
+
+    .experience-container h2 {
+        font-size: 28px;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .experience-item h3 {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 480px) {
+    .experience-container {
+        padding: 20px;
+    }
+
     .experience-container h2 {
         font-size: 24px;
     }
+
+    .experience-item {
+        padding: 16px;
+    }
+
     .experience-item h3 {
-        font-size: 1rem;
+        font-size: 18px;
+    }
+
+    .experience-period,
+    .experience-tasks li,
+    .experience-achievements li {
+        font-size: 14px;
     }
 }

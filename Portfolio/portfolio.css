@@ -1,47 +1,55 @@
 /* Основные стили */
 .portfolio-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-color: #F5F5F7; /* Светлый фон в стиле macOS */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Фильтры */
 .portfolio-filters {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
-.filter-btn {
-    padding: 0.8rem 1.5rem;
+.portfolio-filter-btn {
+    padding: 10px 20px;
     border: none;
     border-radius: 25px;
-    background: #f0f0f0;
-    color: #333;
+    background: #E5E5EA; /* Светлый серый в стиле iOS */
+    color: #1D1D1F; /* Темный текст */
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-    background: #007bff;
+.portfolio-filter-btn.active,
+.portfolio-filter-btn:hover {
+    background: #007BFF; /* Синий цвет Apple */
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 /* Сетка проектов */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .project-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -54,31 +62,34 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 3px solid #007bff;
+    border-bottom: 3px solid #007BFF;
 }
 
 .project-info {
-    padding: 1.5rem;
+    padding: 20px;
 }
 
 .project-title {
-    margin: 0 0 1rem;
-    font-size: 1.25rem;
-    color: #2c3e50;
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: #1D1D1F;
+    font-weight: 600;
 }
 
 .project-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
 .stack-item {
-    padding: 0.25rem 0.75rem;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 500;
+    background: #E5E5EA;
+    color: #1D1D1F;
 }
 
 /* Модальное окно */
@@ -98,58 +109,60 @@
     position: relative;
     background: white;
     max-width: 800px;
-    margin: 2rem auto;
-    border-radius: 12px;
+    margin: 40px auto;
+    border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: #333;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: white;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .modal-close:hover {
-    color: #007bff;
+    color: #007BFF;
 }
 
 .modal-image {
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
 }
 
 .modal-body {
-    padding: 2rem;
+    padding: 24px;
 }
 
 .modal-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #1D1D1F;
+    font-weight: 600;
 }
 
 .modal-stack {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 8px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
 }
 
 .modal-details {
     line-height: 1.6;
-    color: #555;
+    color: #333;
 }
 
 .modal-github {
     display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.5rem;
-    background: #007bff;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -159,30 +172,24 @@
 .modal-github:hover {
     background: #0056b3;
 }
-.filter-btn.active {
-    background: #007bff;
-    color: white;
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
-}
+
 /* Адаптивность */
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+        padding: 10px;
     }
     
+    .portfolio-content {
+        padding: 20px;
+    }
+
     .modal-content {
-        margin: 1rem;
+        margin: 20px;
     }
     
     .modal-image {
-        height: 200px;
-    }
-
-    .projects-grid {
-        padding: 0;
-    }
-    .portfolio-content {
-        padding: 0;
+        height: 220px;
     }
 
     .modal-body {
@@ -190,29 +197,33 @@
     }
 
     .modal-title {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
-    .modal-description {
-        font-size: 0.9rem;
+    .modal-details {
+        font-size: 14px;
     }
 
-    .modal-role {
-        font-size: 0.9rem;
-    }
     .modal-github {
-        padding: 0.3rem 0.7rem;
+        padding: 8px 16px;
     }
 }
 
-@media (max-width: 483px) {
-    .content {
-        padding: 0;
-        padding-top: 20px;
+@media (max-width: 480px) {
+    .portfolio-content {
+        padding: 10px;
     }
-}
 
-@media (max-width: 340px) {
+    .modal-content {
+        margin: 10px;
+    }
 
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .modal-details {
+        font-size: 13px;
+    }
 }

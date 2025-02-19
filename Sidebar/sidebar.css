@@ -1,3 +1,15 @@
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  display: grid; 
+  place-items: center;
+  width: 250px; 
+  height: 100vh; 
+  background-color: #1C1C1E;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .sidebar-content {
   display: flex;
   flex-direction: column;
@@ -6,28 +18,25 @@
   width: 100%;
 }
 
-.container-top {
-  display: flex;
-  flex-direction: column;
-}
-
 .profile-photo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid #007BFF;
+  border: 3px solid #0A84FF;
   margin-bottom: 20px;
 }
 
 .sidebar-content h2 {
   margin: 10px 0;
   font-size: 24px;
+  font-weight: 600;
+  color: #F5F5F7;
 }
 
 .sidebar-content p {
   margin: 0 0 20px 0;
   font-size: 16px;
-  color: #bdc3c7;
+  color: #A1A1A3;
 }
 
 .sidebar-content ul {
@@ -41,25 +50,31 @@
 .sidebar-content ul li {
   margin-bottom: 10px;
   font-size: 14px;
-  color: #ecf0f1;
+  color: #D1D1D6;
 }
 
 .sidebar-content button {
-  background-color: #007BFF;
+  background-color: #0A84FF;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 14px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar-content button:hover {
-  background-color: #0056b3;
+  background-color: #007AFF;
+  transform: scale(1.05);
 }
 
+.sidebar-content button:active {
+  transform: scale(0.98);
+}
+
+/* Социальные ссылки */
 .social-links {
   display: flex;
   justify-content: space-around;
@@ -82,10 +97,17 @@
   height: 24px;
 }
 
+/* Адаптивность */
 @media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto; /* Высота по содержимому на мобильных */
+    padding: 40px 20px;
+  }
+
   .container-top {
     flex-direction: row;
-    gap: 35px;
+    gap: 20px;
   }
 
   .container-name {

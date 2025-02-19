@@ -1,53 +1,69 @@
 .about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-color: #F5F5F7; /* Светлый фон в стиле macOS */
+    border-radius: 20px; /* Округленные края */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    text-align: center;
 }
 
 .about-content h1 {
-    font-size: 32px;
-    color: #2c3e50;
+    font-size: 36px;
+    color: #1D1D1F; /* Тёмно-серый заголовок */
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .about-content p {
     font-size: 18px;
-    line-height: 1.6;
-    color: #34495e;
+    line-height: 1.8;
+    color: #666; /* Серый текст */
     margin-bottom: 40px;
 }
 
+/* Блок скиллов */
 .skills-section h2 {
     font-size: 28px;
-    color: #2c3e50;
+    color: #1D1D1F;
     margin-bottom: 20px;
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    justify-content: center;
 }
 
 .skill {
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 12px 24px;
+    border-radius: 16px;
     font-size: 16px;
-    color: white;
+    font-weight: 500;
+    color: #333;
+    background: linear-gradient(135deg, #E5E5EA, #D2D2D7); /* Градиент Apple */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
-@media (max-width: 340px) {
-    .about-content h1 {
-        font-size: 24px;
+.skill:hover {
+    transform: scale(1.05);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 30px;
     }
 
-    .about-content p{
-        font-size: 14px;
+    .about-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 16px;
     }
 
     .skills-section h2 {
@@ -55,7 +71,26 @@
     }
 
     .skill {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 340px) {
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .skills-section h2 {
+        font-size: 22px;
+    }
+
+    .skill {
         font-size: 13px;
-        padding: 7px 10px;
+        padding: 8px 14px;
     }
 }
