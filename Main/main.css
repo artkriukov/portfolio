@@ -1,129 +1,118 @@
-/* Основные стили */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-    background-color: #F5F5F7;
-    color: #1D1D1F;
-    overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  background-color: #F5F5F7;
+  color: #1D1D1F;
 }
 
-/* Контейнер */
 .container {
-    display: grid;
-    grid-template-columns: 240px 1fr; /* Сайдбар и основной контент */
-    grid-template-rows: auto 1fr; /* Tapbar и контент */
-    height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr; /* Сайдбар и основной контент */
+  grid-template-rows: auto 1fr; /* Tapbar и контент */
+  height: 100vh;
 }
 
-/* Tapbar */
 .tapbar {
-    grid-column: 2 / -1;
-    grid-row: 1 / 2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 12px 20px;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 20px;
 }
 
-/* Кнопки */
 .tapbar button {
-    margin-left: 10px;
-    padding: 10px 18px;
-    cursor: pointer;
-    background-color: #F0F0F5; /* Нейтральный фон */
-    color: #333;
-    border: none;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 10px;
+  padding: 10px 18px;
+  cursor: pointer;
+  background-color: #F0F0F5; /* Нейтральный фон */
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Наведение */
 .tapbar button:hover {
-    background-color: #DDE1E7;
-    transform: scale(1.05);
+  background-color: #DDE1E7;
+  transform: scale(1.05);
 }
 
-
-
-/* Основной контент */
 .main-content {
-    grid-column: 2 / -1;
-    grid-row: 2 / -1;
-    padding: 20px;
-    overflow-y: auto; 
-    border-radius: 12px;
-    margin-left: 100px;
-    margin-right: 50px;
-    margin-top: 100px;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  padding: 20px; 
+  border-radius: 12px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-top: 100px;
 }
 
-/* Контент */
 #content {
-    max-width: 100%;
-    padding: 24px;
-    box-sizing: border-box;
+  max-width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 #content::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 #content::-webkit-scrollbar-thumb {
-    background-color: #C6C6C6;
-    border-radius: 3px;
+  background-color: #C6C6C6;
+  border-radius: 3px;
 }
 
-/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
-    body {
-        overflow: auto;
-    }
-    
-    .container {
-        grid-template-columns: 1fr; /* Одна колонка */
-        grid-template-rows: auto auto 1fr; /* Tapbar, сайдбар, контент */
-    }
+  body {
+    overflow: auto;
+  }
+  
+  .container {
+    grid-template-columns: 1fr; /* Одна колонка */
+    grid-template-rows: auto auto 1fr; /* Tapbar, сайдбар, контент */
+  }
 
-    .sidebar {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #E5E5E5;
-    }
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #E5E5E5;
+  }
 
-    .tapbar {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-    }
+  .tapbar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 
-    .main-content {
-        grid-column: 1 / -1;
-        grid-row: 3 / -1;
-        margin: 8px;
-        border-radius: 10px;
-    }
+  .main-content {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    margin: 8px;
+    border-radius: 10px;
+  }
 
-    #content {
-        padding: 16px;
-    }
+  #content {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 483px) {
-    .tapbar {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
+  .tapbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 340px) {
-    #content {
-        padding: 12px;
-        padding-top: 20px;
-    }
+  #content {
+    padding: 12px;
+    padding-top: 20px;
+  }
 }
