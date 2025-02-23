@@ -38,9 +38,9 @@
 }
 
 .sidebar-content p {
-  margin: 0 0 11px 0;
+  margin: 0 0 20px 0;
   font-size: 17px;
-  color: #636366; /* Серый цвет средний */
+  color: #636366;
   line-height: 1.5;
 }
 
@@ -70,7 +70,7 @@
 
 .stack {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .skills-list {
@@ -108,7 +108,7 @@
   justify-content: center;
   gap: 20px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .social-links a {
