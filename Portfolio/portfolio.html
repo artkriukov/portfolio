@@ -1,27 +1,25 @@
 <div class="portfolio-content">
-    <!-- Фильтры -->
     <div class="portfolio-filters">
         <button class="portfolio-filter-btn active" data-category="all">Все проекты</button>
         <button class="portfolio-filter-btn" data-category="personal">Личные</button>
         <button class="portfolio-filter-btn" data-category="team">Командные</button>
     </div>
 
-    <!-- Сетка проектов -->
     <div class="projects-grid" id="projects-grid"></div>
+</div>
 
-    <!-- Модальное окно -->
-    <div class="project-modal" id="project-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <img class="modal-image" src="" alt="">
-            <div class="modal-body">
-                <h3 class="modal-title"></h3>
-                <div class="modal-stack"></div>
-                <div class="modal-details">
-                    <p class="modal-description"></p>
-                    <p class="modal-role"><strong>Роль:</strong> <span></span></p>
-                    <a class="modal-github" href="#" target="_blank">Посмотреть код на GitHub</a>
-                </div>
+<div id="project-drawer">
+    <div class="drawer-overlay"></div>
+    <div class="drawer-content">
+        <button class="drawer-close">&times;</button>
+        <img class="drawer-image" src="" alt="Превью проекта">
+        <div class="drawer-body">
+            <h3 class="drawer-title"></h3>
+            <div class="drawer-stack"></div>
+            <div class="drawer-details">
+                <p class="drawer-description"></p>
+                <p class="drawer-role"><strong>Роль:</strong> <span></span></p>
+                <a class="drawer-github" href="#" target="_blank">Посмотреть код на GitHub</a>
             </div>
         </div>
     </div>

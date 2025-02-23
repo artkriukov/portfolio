@@ -8,17 +8,15 @@ function loadPortfolioData() {
     fetch('Data/portfolio.json')
         .then(response => response.json())
         .then(data => {
-            console.log("Данные загружены:", data); // Проверяем загруженные проекты
             window.portfolioData = data.projects;
             renderProjects(data.projects);
-            initFilters(); 
+            initFilters();
             initModal();
         })
         .catch(error => console.error("Ошибка загрузки данных:", error));
 }
 
 function renderProjects(projects) {
-    console.log("Рендерим проекты:", projects); // Проверяем, какие проекты рендерятся
     const grid = document.getElementById('projects-grid');
     grid.innerHTML = projects.map(project => `
         <article class="project-card" data-category="${project.category}">
@@ -46,89 +44,56 @@ function addProjectCardListeners(projects) {
 function initFilters() {
     const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
     
-    if (filterButtons.length === 0) {
-        console.error("Фильтры не найдены! Проверь HTML.");
-        return;
-    }
-
     filterButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             filterButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
 
             const category = this.dataset.category;
-            console.log("Выбрана категория:", category);
-
-            if (!window.portfolioData) {
-                console.error("Данные о проектах не загружены!");
-                return;
-            }
-
             const filteredProjects = category === 'all'
                 ? window.portfolioData
                 : window.portfolioData.filter(p => p.category === category);
 
-            console.log("Фильтрованные проекты:", filteredProjects);
             renderProjects(filteredProjects);
         });
     });
 }
 
 function initModal() {
-    const modal = document.getElementById('project-modal');
-    const closeBtn = modal.querySelector('.modal-close');
+    const drawer = document.getElementById('project-drawer');
+    const closeBtn = drawer.querySelector('.drawer-close');
 
-    if (!modal || !closeBtn) {
-        console.error("Ошибка: модальное окно или кнопка закрытия не найдены!");
-        return;
-    }
-
-    // Закрытие по клику на крестик
     closeBtn.addEventListener('click', closeModal);
-
-    // Закрытие по клику на фон
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    console.log("Модальное окно инициализировано");
+    drawer.querySelector('.drawer-overlay').addEventListener('click', closeModal);
 }
 
 function openModal(project) {
-    const modal = document.getElementById('project-modal');
+    const drawer = document.getElementById('project-drawer');
     
-    if (!modal) {
-        console.error("Ошибка: модальное окно не найдено!");
-        return;
-    }
+    drawer.querySelector('.drawer-image').src = project.image;
+    drawer.querySelector('.drawer-title').textContent = project.title;
+    drawer.querySelector('.drawer-description').textContent = project.details;
+    drawer.querySelector('.drawer-role span').textContent = project.role;
+    drawer.querySelector('.drawer-github').href = project.github;
 
-    // Заполняем данные в модалке
-    modal.querySelector('.modal-image').src = project.image;
-    modal.querySelector('.modal-title').textContent = project.title;
-    modal.querySelector('.modal-description').textContent = project.details;
-    modal.querySelector('.modal-role span').textContent = project.role;
-    modal.querySelector('.modal-github').href = project.github;
-
-    // Обновляем стек технологий
-    const stackContainer = modal.querySelector('.modal-stack');
+    const stackContainer = drawer.querySelector('.drawer-stack');
     stackContainer.innerHTML = project.stack.map(tech => `
         <span class="stack-item" style="background: ${tech.color}">${tech.name}</span>
     `).join('');
 
-    // Открываем модалку
-    modal.style.display = 'flex'; // Меняем с `block` на `flex`, если flex-центровка
-    document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
-
-    console.log("Открыта модалка для проекта:", project.title);
+    drawer.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+        drawer.classList.add('active');
+    });
 }
 
 function closeModal() {
-    const modal = document.getElementById('project-modal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = ''; // Возвращаем прокрутку страницы
-        console.log("Модальное окно закрыто");
-    }
+    const drawer = document.getElementById('project-drawer');
+    drawer.classList.remove('active');
+    
+    setTimeout(() => {
+        drawer.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 300);
 }
