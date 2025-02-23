@@ -1,13 +1,15 @@
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-  display: grid; 
+  display: grid;
   place-items: center;
-  width: 250px; 
-  height: 100%; 
-  background-color: #1C1C1E;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF; /* Белый фон */
+  padding: 30px 30px;
+  align-items: stretch;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Более светлая тень */
+  border-right: 1px solid #E5E5EA; /* Граница как в tapbar */
 }
 
 .sidebar-content {
@@ -15,109 +17,152 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 250px;
-  position: fixed; /* Делаем сайдбар липким */
+  width: 100%;
+  max-width: 300px;
+  position: sticky;
   top: 25%;
 }
 
 .profile-photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #0A84FF;
-  margin-bottom: 20px;
+  width: 350px;
+  height: 300px;
+  border-radius: 12px;
   object-fit: cover;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .sidebar-content h2 {
-  margin: 10px 0;
-  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 26px;
   font-weight: 600;
-  color: #F5F5F7;
+  color: #1D1D1F; /* Темный цвет как в основном контенте */
 }
 
 .sidebar-content p {
-  margin: 0 0 20px 0;
-  font-size: 16px;
-  color: #A1A1A3;
+  margin: 0 0 11px 0;
+  font-size: 17px;
+  color: #636366; /* Серый цвет средний */
+  line-height: 1.5;
 }
 
 .sidebar-content ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
   width: 100%;
   text-align: start;
 }
 
 .sidebar-content ul li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #D1D1D6;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #48484A; /* Темно-серый */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+
+
+.about-description {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.stack {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.skill {
+  padding: 5px;
+  border-radius: 8px;
+}
 .sidebar-content button {
   background-color: #0A84FF;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
   width: 100%;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(10, 132, 255, 0.2);
 }
 
 .sidebar-content button:hover {
   background-color: #007AFF;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(10, 132, 255, 0.25);
 }
 
-.sidebar-content button:active {
-  transform: scale(0.98);
-}
-
-/* Социальные ссылки */
 .social-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .social-links a {
   text-decoration: none;
-  color: white;
+  color: #1D1D1F; /* Темный цвет иконок */
   transition: transform 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  background: #F5F5F7;
 }
 
 .social-links a:hover {
-  transform: scale(1.2);
+  transform: translateY(-3px);
+  background: #E5E5EA;
 }
 
 .social-links img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  filter: brightness(0.8); /* Затемняем иконки */
 }
 
-/* Адаптивность */
+/* Обновляем grid-контейнер */
+.container {
+  display: grid;
+  grid-template-columns: 35% 1fr; /* Ширина сайдбара 35% */
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
 @media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  
   .sidebar {
     width: 100%;
-    height: auto; /* Высота по содержимому на мобильных */
-    padding: 40px 20px;
+    padding: 30px 20px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
   }
-
+  
   .sidebar-content {
     position: relative;
     top: auto;
+    max-width: 100%;
   }
-  .container-top {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .container-name {
-    align-self: center;
+  
+  .profile-photo img {
+    width: 140px;
+    height: 140px;
   }
 }

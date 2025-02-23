@@ -1,41 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.querySelector('.sidebar');
 
-    // Загружаем HTML сайдбара
     fetch('Sidebar/sidebar.html')
         .then(response => response.text())
         .then(data => {
             sidebar.innerHTML = data;
-
-            // После загрузки HTML загружаем JSON-данные
             return fetch('Data/sidebar.json');
         })
         .then(response => response.json())
         .then(data => {
-            // Проверяем, что элементы существуют перед их обновлением
+            // Основная информация
             const nameEl = document.getElementById('name');
             const roleEl = document.getElementById('role');
-            const phoneEl = document.getElementById('phone');
-            const emailEl = document.getElementById('email');
-            const locationEl = document.getElementById('location');
-            const socialLinksContainer = document.getElementById('social-links');
-
+            
             if (nameEl) nameEl.textContent = data.name;
             if (roleEl) roleEl.textContent = data.role;
-            if (phoneEl) phoneEl.textContent = `📱 ${data.phone}`;
-            if (emailEl) emailEl.textContent = `✉️ ${data.email}`;
-            if (locationEl) locationEl.textContent = `🌍 ${data.location}`;
 
+            // Социальные ссылки
+            const socialLinksContainer = document.getElementById('social-links');
             if (socialLinksContainer && data.socialLinks) {
-                socialLinksContainer.innerHTML = ''; // Очищаем перед добавлением
+                socialLinksContainer.innerHTML = '';
                 data.socialLinks.forEach(link => {
                     const socialLink = document.createElement('a');
                     socialLink.href = link.url;
+                    socialLink.title = link.name;
                     socialLink.target = "_blank";
                     socialLink.innerHTML = link.icon;
                     socialLinksContainer.appendChild(socialLink);
                 });
             }
+
+            // Кнопка резюме
+            const resumeButton = document.getElementById('resume-button');
+            if (resumeButton && data.resumeButton) {
+                resumeButton.href = data.resumeButton.url;
+                resumeButton.textContent = data.resumeButton.text;
+            }
+
+            // Секция "Обо мне"
+            const aboutDescription = document.getElementById('about-description');
+            const skillsList = document.getElementById('skills-list');
+            
+            if (data.about) {
+                // Описание
+                if (aboutDescription) {
+                    aboutDescription.textContent = data.about.description;
+                }
+                
+                // Навыки
+                if (skillsList) {
+                    skillsList.innerHTML = '';
+                    data.about.skills.forEach(skill => {
+                        const skillElement = document.createElement('div');
+                        skillElement.classList.add('skill');
+                        skillElement.textContent = skill.name;
+                        skillElement.style.backgroundColor = skill.color;
+                        skillsList.appendChild(skillElement);
+                    });
+                }
+            }
         })
-        .catch(error => console.error('Ошибка загрузки сайдбара:', error));
+        .catch(error => console.error('Ошибка загрузки:', error));
 });

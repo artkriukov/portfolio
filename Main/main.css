@@ -9,7 +9,7 @@ html, body {
 
 .container {
   display: grid;
-  grid-template-columns: 240px 1fr; /* Сайдбар и основной контент */
+  grid-template-columns: 40vh 1fr; /* Сайдбар и основной контент */
   grid-template-rows: auto 1fr; /* Tapbar и контент */
   height: 100vh;
 }
