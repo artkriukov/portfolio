@@ -95,16 +95,15 @@
 #project-drawer {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1000;
     display: none;
-    transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    
 }
 
 #project-drawer.active {
-    right: 0;
     display: block;
 }
 
@@ -117,28 +116,31 @@
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease 0.1s; /* Небольшая задержка для контента */
 }
 
-#project-drawer.active .drawer-overlay {
-    opacity: 1;
-}
+
 
 .drawer-content {
     position: fixed;
     top: 0;
-    right: -50%;
-    width: 50%;
+    right: -100%;
+    width: 90%;
+    max-width: 600px;
     height: 100%;
     background: white;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    overflow-y: auto;
-    padding: 40px;
+    z-index: 2;
+}
+
+#project-drawer.active .drawer-overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease; 
 }
 
 #project-drawer.active .drawer-content {
     right: 0;
+    transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0.1s; /* Добавлена задержка */
 }
 
 .drawer-close {
