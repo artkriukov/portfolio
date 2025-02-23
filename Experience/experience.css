@@ -2,6 +2,7 @@
     max-width: 100%;
     margin: 0;
     padding: 40px;
+    padding-top: 10px;
     background-color: #F5F5F7; /* Светлый фон в стиле macOS */
     border-radius: 20px; /* Округленные края */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Мягкая тень */
