@@ -5,6 +5,7 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
   background-color: #F5F5F7;
   color: #1D1D1F;
+  overflow-y: scroll;
 }
 
 .container {
