@@ -53,7 +53,28 @@ document.addEventListener('DOMContentLoaded', function () {
                     data.about.skills.forEach(skill => {
                         const skillElement = document.createElement('div');
                         skillElement.classList.add('skill');
-                        skillElement.textContent = skill.name;
+                        
+                        // Создаем контейнер для иконки и названия
+                        const skillContainer = document.createElement('div');
+                        skillContainer.classList.add('skill-container');
+                        
+                        // Добавление иконки технологии (PNG изображение)
+                        const skillIcon = document.createElement('div');
+                        skillIcon.classList.add('skill-icon');
+                        const img = document.createElement('img');
+                        img.src = skill.icon; // Путь к PNG файлу
+                        img.alt = skill.name; // Добавление alt для доступности
+                        img.width = 24; // Размер иконки
+                        img.height = 24;
+                        skillIcon.appendChild(img);
+                        skillContainer.appendChild(skillIcon);
+
+                        // Название технологии
+                        const skillName = document.createElement('span');
+                        skillName.textContent = skill.name;
+                        skillContainer.appendChild(skillName);
+
+                        skillElement.appendChild(skillContainer);
                         skillElement.style.backgroundColor = skill.color;
                         skillsList.appendChild(skillElement);
                     });

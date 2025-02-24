@@ -1,7 +1,7 @@
 {
   "name": "Артем Крюков",
-  "role": "Frontend Developer",
-  "email": "your.email@example.com",
+  "role": "iOS Developer",
+  "email": " ",
   "socialLinks": [
       {
           "name": "LinkedIn",
@@ -27,12 +27,26 @@
   "about": {
         "description": "Привет! Я full-stack разработчик с опытом работы в создании современных веб-приложений. Специализируюсь на React экосистеме и облачных решениях.",
         "skills": [
-            {"name": "JavaScript", "color": "#f0db4f"},
-            {"name": "React", "color": "#61dafb"},
-            {"name": "Node.js", "color": "#68a063"},
-            {"name": "TypeScript", "color": "#3178c6"},
-            {"name": "Next.js", "color": "#000000"},
-            {"name": "GraphQL", "color": "#e535ab"}
+            {
+                "name": "Swift",
+                "color": "#E5E4E2",
+                "icon": "assets/icons/swift.svg"
+            },
+            {
+                "name": "UIKit",
+                "color": "#E5E4E2",
+                "icon": "assets/icons/UIKit.png"
+            },
+            {
+                "name": "Git",
+                "color": "#E5E4E2",
+                "icon": "assets/icons/git.svg"
+            },
+            {
+                "name": "Postman",
+                "color": "#E5E4E2",
+                "icon": "assets/icons/postman.svg"
+            }
         ]
     },
   "resumeButton": {

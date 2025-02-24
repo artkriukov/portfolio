@@ -88,7 +88,7 @@
     font-size: 14px;
     font-weight: 500;
     background: #E5E5EA;
-    color: #1D1D1F;
+    color: white;
 }
 
 /* Стили для боковой панели */
@@ -146,6 +146,12 @@
 #project-drawer.active .drawer-content {
     right: 0;
     transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0.1s; /* Добавлена задержка */
+}
+
+.drawer-stack {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .drawer-close {
