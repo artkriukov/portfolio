@@ -143,7 +143,7 @@
   
   .skill {
     font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.2rem 0.3rem;
   }
 }
 
@@ -169,7 +169,7 @@
   .sidebar {
     padding: 1rem; /* Еще меньше отступы */
   }
-  
+
   .profile-photo img {
     width: 150px;
     height: 130px;
