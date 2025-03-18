@@ -20,7 +20,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(300px, 25%) 1fr;
+  grid-template-columns: minmax(250px, 30%) 1fr;
   min-height: 100vh;
 }
 
@@ -47,18 +47,41 @@ body {
   }
   
   .container {
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
+    gap: 0; 
   }
+
+  .tapbar {
+    grid-row: 2; 
+    padding: 0.5rem 1rem;
+    margin-bottom: 0; 
+  }
+
+  .main-content {
+    grid-row: 3; 
+    padding: 1rem;
+    margin-top: 0;
+  }
+
 }
 
 @media (max-width: 480px) {
   .container {
-    grid-template-rows: auto minmax(auto, 400px) 1fr;
+    grid-template-rows: auto auto 1fr;
   }
   
   .resume-button {
     font-size: 0.9rem;
     padding: 0.8rem;
+  }
+
+  .tapbar {
+    padding: 0.5rem; /* Минимальные отступы */
+  }
+
+  .main-content {
+    padding: 0.5rem; /* Минимальные отступы */
   }
 }
 

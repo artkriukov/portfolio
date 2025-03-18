@@ -149,10 +149,10 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    position: static;
-    width: 100%;
-    padding: 2rem 1rem;
+    grid-row: 1;
+    padding: 1.5rem 1rem; 
     border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 0;
   }
   
   .profile-photo img {
@@ -166,6 +166,10 @@
 }
 
 @media (max-width: 480px) {
+  .sidebar {
+    padding: 1rem; /* Еще меньше отступы */
+  }
+  
   .profile-photo img {
     width: 150px;
     height: 130px;
