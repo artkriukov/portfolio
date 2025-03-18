@@ -30,22 +30,22 @@
             {
                 "name": "Swift",
                 "color": "#E5E4E2",
-                "icon": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/icons/swift.svg"
+                "icon": "assets/icons/swift.svg"
             },
             {
                 "name": "UIKit",
                 "color": "#E5E4E2",
-                "icon": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/icons/UIKit.png"
+                "icon": "assets/icons/UIKit.png"
             },
             {
                 "name": "Git",
                 "color": "#E5E4E2",
-                "icon": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/icons/git.svg"
+                "icon": "assets/icons/git.svg"
             },
             {
                 "name": "Postman",
                 "color": "#E5E4E2",
-                "icon": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/icons/postman.svg"
+                "icon": "assets/icons/postman.svg"
             }
         ]
     },

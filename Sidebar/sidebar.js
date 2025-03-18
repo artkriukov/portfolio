@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.querySelector('.sidebar');
 
-    fetch('https://raw.githubusercontent.com/artkriukov/portfolio/main/Sidebar/sidebar.html')
+    fetch('Sidebar/sidebar.html')
         .then(response => response.text())
         .then(data => {
             sidebar.innerHTML = data;

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для загрузки страницы
     function loadPage(page) {
-        fetch(`https://raw.githubusercontent.com/artkriukov/portfolio/main/${page}/${page}.html`)
+        fetch(`${page}/${page}.html`)
             .then(response => {
                 if (!response.ok) throw new Error(`Ошибка загрузки ${page}.html: ${response.statusText}`);
                 return response.text();
