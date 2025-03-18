@@ -36,7 +36,7 @@ function renderProjects(projects) {
     const grid = document.getElementById('projects-grid');
     grid.innerHTML = projects.map(project => `
         <article class="project-card" data-category="${project.category}">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <img src="https://raw.githubusercontent.com/artkriukov/portfolio/main/${project.image}" alt="${project.title}" class="project-image">
             <div class="project-info">
                 <h3 class="project-title">${project.title}</h3>
                 <div class="project-stack">
