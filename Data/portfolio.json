@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Bomb",
-            "image": "assets/Portfolio/GameBomb.gif",
+            "image": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/Portfolio/GameBomb.gif",
             "github": "https://github.com/artkriukov/Boom",
             "stack": [
                 {"name": "UIKit", "color": "#1E5945"},
@@ -23,7 +23,7 @@
         },
         {
             "title": "MovieQuiz",
-            "image": "assets/Portfolio/MovieQuiz.png",
+            "image": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/Portfolio/MovieQuiz.png",
             "github": "https://github.com/artkriukov/MovieQuiz",
             "stack": [
                 {"name": "MVP", "color": "#1E5945"},
@@ -49,7 +49,7 @@
         },
         {
             "title": "Shoppe",
-            "image": "assets/Portfolio/Shoppe.jpg",
+            "image": "https://raw.githubusercontent.com/artkriukov/portfolio/main/assets/Portfolio/Shoppe.jpg",
             "github": "https://github.com/artkriukov/Shoppe",
             "stack": [
                 {"name": "VIPER", "color": "#1E5945"},
