@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 contentDiv.innerHTML = data;
 
+
+                
                 // Добавляем обработчик события 'load' для вставленного HTML
                 const insertedScripts = contentDiv.querySelectorAll('script');
                 insertedScripts.forEach(script => {
