@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.text())
         .then(data => {
             sidebar.innerHTML = data;
-            return fetch('Data/sidebar.json');
+            fetch('https://raw.githubusercontent.com/artkriukov/portfolio/main/Data/sidebar.json');
         })
         .then(response => response.json())
         .then(data => {

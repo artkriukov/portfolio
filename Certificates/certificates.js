@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadCertificatesData() {
-    fetch('Data/certificates.json')
+    fetch('https://raw.githubusercontent.com/artkriukov/portfolio/main/Data/certificates.json')
         .then(response => {
             if (!response.ok) throw new Error('Ошибка сети');
             return response.json();

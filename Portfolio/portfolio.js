@@ -20,7 +20,7 @@ function getScrollbarWidth() {
 
 // Загрузка данных
 function loadPortfolioData() {
-    fetch('Data/portfolio.json')
+    fetch('https://raw.githubusercontent.com/artkriukov/portfolio/main/Data/portfolio.json')
         .then(response => response.json())
         .then(data => {
             window.portfolioData = data.projects;
