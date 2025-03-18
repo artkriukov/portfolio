@@ -52,6 +52,32 @@
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0); /* Для оптимизации анимации */
+}
+
+/* Эффект параллакса */
+.social-links a:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Анимация иконок */
+.social-links img {
+  width: 1.8rem;
+  height: 1.8rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: translateY(-2px); /* Легкое смещение вверх */
+  opacity: 0.9;
+}
+
+/* Эффект при клике */
+.social-links a:active {
+  transform: translateY(0) scale(0.95);
 }
 
 #role {
