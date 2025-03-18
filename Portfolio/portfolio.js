@@ -101,7 +101,15 @@ function openModal(project) {
     drawer.querySelector('.drawer-image').src = project.image;
     drawer.querySelector('.drawer-title').textContent = project.title;
     drawer.querySelector('.drawer-description').textContent = project.details;
-    drawer.querySelector('.drawer-role span').textContent = project.role;
+
+    // Роль и задачи
+    const roleDescription = project.roleDescription;
+    const roleTasks = project.roleTasks.map(task => `<li>${task}</li>`).join('');
+    drawer.querySelector('.drawer-role span').innerHTML = `
+        <p>${roleDescription}</p>
+        <ul>${roleTasks}</ul>
+    `;
+
     drawer.querySelector('.drawer-github').href = project.github;
 
     // Технологии
