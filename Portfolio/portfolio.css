@@ -83,15 +83,6 @@
     margin-bottom: 12px;
 }
 
-.stack-item {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    background: #E5E5EA;
-    color: white;
-}
-
 /* Стили для боковой панели */
 #project-drawer {
     position: fixed;
@@ -101,32 +92,30 @@
     height: 100%;
     z-index: 1000;
     display: none;
-    
 }
 
 #project-drawer.active {
     display: block;
 }
 
-.drawer-body {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/* Оверлей с эффектом размытия */
 .drawer-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     opacity: 0;
-    transition: opacity 0.2s ease 0.1s; /* Небольшая задержка для контента */
+    transition: opacity 0.3s ease;
 }
 
+#project-drawer.active .drawer-overlay {
+    opacity: 1;
+}
 
-
+/* Контент боковой панели */
 .drawer-content {
     position: fixed;
     top: 0;
@@ -135,55 +124,153 @@
     max-width: 600px;
     height: 100%;
     background: white;
-    transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 2;
-}
-
-#project-drawer.active .drawer-overlay {
-    opacity: 1;
-    transition: opacity 0.3s ease; 
+    overflow-y: auto;
+    padding: 24px;
 }
 
 #project-drawer.active .drawer-content {
     right: 0;
-    transition: right 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0.1s; /* Добавлена задержка */
 }
 
-.drawer-stack {    
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
+/* Кнопка закрытия */
 .drawer-close {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 28px;
+    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
     color: #1D1D1F;
     transition: transform 0.2s ease;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .drawer-close:hover {
     transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.05);
 }
 
+/* Изображение проекта */
 .drawer-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 0px 0px 12px 12px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.drawer-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1D1D1F;
+    margin-bottom: 16px;
+}
+
+/* Стек технологий */
+.drawer-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 24px;
 }
 
+.stack-item {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    color: white;
+}
+
+.stack-item:hover {
+    background: #D1D1D6;
+}
+
+/* Описание и роль */
+.drawer-details {
+    margin-bottom: 50px;
+}
+.drawer-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1D1D1F;
+    margin-bottom: 10px;
+}
+
+.drawer-role {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1D1D1F;
+    margin-bottom: 24px;
+}
+
+.drawer-role strong {
+    font-weight: 600;
+}
+
+.drawer-role ul {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin-top: 8px;
+}
+
+.drawer-role li {
+    margin-bottom: 8px;
+}
+
+/* Ссылка на GitHub */
+.drawer-github {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 16px;
+}
+
+.drawer-github:hover {
+    background: #005BB5;
+}
+
 /* Адаптивность */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .drawer-content {
-        width: 70%;
-        right: -70%;
+        width: 100%;
+        right: -100%;
+        padding: 16px;
+    }
+
+    .drawer-image {
+        height: 200px;
+    }
+
+    .drawer-title {
+        font-size: 24px;
+    }
+
+    .drawer-description,
+    .drawer-role {
+        font-size: 14px;
+    }
+
+    .drawer-github {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
 
@@ -195,16 +282,6 @@
     
     .portfolio-content {
         padding: 20px;
-    }
-
-    .drawer-content {
-        width: 100%;
-        right: -100%;
-        padding: 20px;
-    }
-    
-    .drawer-image {
-        height: 200px;
     }
 }
 

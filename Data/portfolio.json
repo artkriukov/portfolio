@@ -49,9 +49,8 @@
         },
         {
             "title": "Shoppe",
-            "description": "выывывывывывывыввыывыв",
             "image": "assets/Portfolio/Shoppe.jpg",
-            "github": "https://github.com/artkriukov/MovieQuiz",
+            "github": "https://github.com/artkriukov/Shoppe",
             "stack": [
                 {"name": "VIPER", "color": "#1E5945"},
                 {"name": "Firebase", "color": "#1E5945"},
