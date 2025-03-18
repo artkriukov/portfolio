@@ -5,7 +5,7 @@
   "socialLinks": [
       {
           "name": "LinkedIn",
-          "url": "https://www.linkedin.com/in/artem-kriukov-348430256/",
+          "url": "https://linkedin.com",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#0077B5'><path d='M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z'/></svg>"
       },
       {
@@ -20,7 +20,7 @@
       },
       {
           "name": "Email",
-          "url": "mailto:art.kriukov@gmail.com",
+          "url": "mailto:your.email@example.com",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#EA4335'><path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>"
       }
   ],
