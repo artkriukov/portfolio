@@ -4,6 +4,7 @@
             "company": "Swift Marathon 14",
             "position": "iOS Developer",
             "period": "01-2025 - Present",
+            "description": "Описание работы, которое всегда должно быть.",
             "tasks": [
                 "Разработка iOS-приложений на Swift",
                 "Реализовывал функциональность, основанную на лучших практиках мобильной разработки",
@@ -12,6 +13,13 @@
             "achievements": [
                 "-"
             ]
+        },
+        {
+            "company": "Another Company",
+            "position": "Junior iOS Developer",
+            "period": "01-2024 - 12-2024",
+            "description": "Другое описание работы.",
+            "tasks": [] 
         }
     ]
 }
