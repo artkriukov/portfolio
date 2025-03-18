@@ -156,6 +156,21 @@
   text-align: center;
   text-decoration: none;
 }
+@media (min-width: 992px) {
+  .sidebar {
+      position: sticky; /* Делаем сайдбар "липким" */
+      top: 0; /* Прилипает к верху */
+      height: 100vh; /* Занимает всю высоту экрана */
+      overflow-y: auto; /* Включаем скролл внутри сайдбара */
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+      position: static; /* Обычный поток */
+      height: auto; /* Высота по содержимому */
+  }
+}
 
 @media (max-width: 1200px) {
   .sidebar {

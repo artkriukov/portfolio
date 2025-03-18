@@ -13,13 +13,6 @@
             "achievements": [
                 "-"
             ]
-        },
-        {
-            "company": "Another Company",
-            "position": "Junior iOS Developer",
-            "period": "01-2024 - 12-2024",
-            "description": "Другое описание работы.",
-            "tasks": [] 
         }
     ]
 }
