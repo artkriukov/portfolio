@@ -6,7 +6,7 @@ window.loadExperienceData = function () {
         return;
     }
 
-    fetch('https://raw.githubusercontent.com/artkriukov/portfolio/main/Data/experience.json')
+    fetch('Data/experience.json')
         .then(response => response.json())
         .then(data => {
             if (!data.experiences || data.experiences.length === 0) {
