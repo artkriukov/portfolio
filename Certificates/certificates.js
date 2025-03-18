@@ -85,7 +85,7 @@ function openPopup(imageUrl) {
 
     // Предзагрузка изображения
     const img = new Image();
-    img.src = `https://raw.githubusercontent.com/artkriukov/portfolio/main/${imageUrl}`;
+    img.src = imageUrl;
     img.onload = () => {
         imageElement.src = imageUrl;
         popup.classList.add('active');
