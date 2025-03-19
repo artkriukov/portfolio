@@ -235,3 +235,26 @@
     from { transform: translate(-50%, 0); opacity: 1; }
     to { transform: translate(-50%, 100%); opacity: 0; }
 }
+
+.certificates-container h2 {
+    font-size: clamp(1.5rem, 5vw, 1.4rem);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    color: #1D1D1F;
+    font-weight: 600;
+    margin: 0 auto 24px;
+    line-height: 1.2;
+    transition: font-size 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .certificates-container h2 {
+        font-size: clamp(1.25rem, 6vw, 1.75rem); /* На мобильных от 20px до 28px */
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-container h2 {
+        font-size: clamp(1.1rem, 5.5vw, 1.5rem); /* Для маленьких экранов 18px-24px */
+        margin-bottom: 20px;
+    }
+}
