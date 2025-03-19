@@ -9,6 +9,17 @@
     text-align: center;
 }
 
+#experience-id {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .experience-container h2 {
     font-size: 32px;
     color: #1D1D1F; /* Темный текст */

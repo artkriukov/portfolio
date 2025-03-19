@@ -1,9 +1,19 @@
 .stack-page {
     padding: 15px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #f9f9f9;
+
     max-width: 100%;
     overflow: hidden;
+
+    min-height: 500px;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+
 }
 
 h2 {
@@ -41,7 +51,9 @@ h2 {
     align-items: center;
     gap: 8px;
     padding: 6px 10px;
-    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;

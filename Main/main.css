@@ -14,7 +14,19 @@ body {
   color: #1D1D1F;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-y: scroll;
 }
+
+.certificates-container  { 
+  font-size: 32px;
+  color: #1D1D1F;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
 
 .container {
   display: grid;
