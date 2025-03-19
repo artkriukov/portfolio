@@ -1,26 +1,129 @@
 .stack-page {
-    padding: 20px;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #f9f9f9;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stack-category h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #808080;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .stack-category {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .stack-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
 }
 
 .stack-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background: #f5f5f5;
+    gap: 8px;
+    padding: 6px 10px;
+    background: #ffffff;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.stack-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
 .stack-icon {
-    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Убираем фон */
+    border-radius: 0; /* Убираем скругление */
+    overflow: hidden;
+}
+
+.stack-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.stack-item span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.4em;
+        margin-bottom: 8px;
+    }
+
+    .stack-category h3 {
+        font-size: 1em;
+    }
+
+    .stack-items {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .stack-item {
+        padding: 4px 8px;
+    }
+
+    .stack-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .stack-item span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    .stack-items {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .stack-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stack-item {
+        padding: 6px 10px;
+    }
+
+    .stack-item span {
+        font-size: 0.875rem;
+    }
 }
