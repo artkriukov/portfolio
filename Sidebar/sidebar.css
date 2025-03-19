@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
   overflow-y: auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  width: 100%;
 }
 
 .profile-photo {
@@ -177,6 +178,8 @@
 
 @media (max-width: 992px) {
   .sidebar {
+    position: static;
+    height: auto;
     padding: 1rem;
   }
   .profile-photo img {

@@ -13,16 +13,12 @@ body {
   background: #F5F5F7;
   color: #1D1D1F;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  overflow-y: scroll;
 }
 
 .container {
   display: grid;
-  grid-template-columns: minmax(200px, 25%) 1fr; /* Основное изменение */
-  min-height: 100vh;
+  grid-template-columns: minmax(200px, 25%) 1fr;
 }
 
 @media (max-width: 1200px) {
@@ -35,9 +31,9 @@ body {
   .container {
     grid-template-columns: 1fr;
   }
-  
+
   .main-content {
-    grid-row: 3;
+    padding: 1rem;
   }
 }
 
@@ -86,7 +82,6 @@ body {
 }
 
 .main-content {
-  flex: 1;
   padding: 2rem;
   overflow-y: auto;
 }
