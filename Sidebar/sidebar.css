@@ -1,6 +1,6 @@
 .sidebar {
   background: #FFF;
-  padding: 2rem;
+  padding: clamp(1.5rem, 2vw, 2rem); /* Динамический паддинг */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,12 +156,22 @@
   text-align: center;
   text-decoration: none;
 }
+
+@media (max-width: 1400px) {
+  .profile-photo img {
+    max-width: 250px; /* Уменьшаем фото для средних экранов */
+  }
+  
+  .sidebar {
+    padding: 1.5rem;
+  }
+}
+
 @media (min-width: 992px) {
   .sidebar {
-      position: sticky; /* Делаем сайдбар "липким" */
-      top: 0; /* Прилипает к верху */
-      height: 100vh; /* Занимает всю высоту экрана */
-      overflow-y: auto; /* Включаем скролл внутри сайдбара */
+    padding: 1.5rem 10%; /* Сохраняем боковые отступы */
+    position: static;
+    height: auto;
   }
 }
 
@@ -174,7 +184,7 @@
 
 @media (max-width: 1200px) {
   .sidebar {
-    padding: 1.5rem;
+    padding: clamp(1.2rem, 1.8vw, 1.5rem);
   }
   
   .profile-photo img {
@@ -190,15 +200,13 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    grid-row: 1;
-    padding: 1.5rem 1rem; 
-    border-bottom: 1px solid #E5E5E5;
-    margin-bottom: 0;
+    padding: 1.2rem 7%;
   }
   
   .profile-photo img {
-    width: 200px;
-    height: 180px;
+    width: min(80%, 300px); /* Гибкая ширина изображения */
+    height: auto;
+    aspect-ratio: 4/3;
   }
   
   .social-links {
@@ -208,7 +216,7 @@
 
 @media (max-width: 480px) {
   .sidebar {
-    padding: 1rem; /* Еще меньше отступы */
+    padding: 1rem 5%;
   }
 
   .profile-photo img {

@@ -21,7 +21,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(250px, 30%) 1fr;
+  grid-template-columns: minmax(200px, 25%) 1fr; /* Основное изменение */
   min-height: 100vh;
 }
 
@@ -34,7 +34,6 @@ body {
 @media (max-width: 992px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
   }
   
   .main-content {
