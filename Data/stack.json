@@ -3,56 +3,116 @@
       {
         "category": "Languages",
         "items": [
-          { "icon": "🐦", "name": "Swift" },
-          { "icon": "", "name": "JavaScript" }
+        {
+            "icon": "assets/icons/swift.svg",
+            "name": "Swift"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "JavaScript"
+          }
         ]
       },
       {
         "category": "Frameworks & Libraries",
         "items": [
-          { "icon": "🖼️", "name": "UIKit" },
-          { "icon": "", "name": "SnapKit" },
-          { "icon": "", "name": "Firebase" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "UIKit"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "SnapKit"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Firebase"
+          }
         ]
       },
       {
         "category": "Architectural Patterns",
         "items": [
-            { "icon": "🧱", "name": "MVC" },
-            { "icon": "", "name": "MVP" },
-            { "icon": "", "name": "VIPER" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "MVC"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "MVP"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "VIPER"
+          }
         ]
       },
       {
         "category": "Databases",
         "items": [
-          { "icon": "🐦", "name": "Firebase Firestore" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Firebase Firestore"
+          }
         ]
       },
       {
         "category": "Tools & Platforms",
         "items": [
-            { "icon": "🛠️", "name": "Xcode" },
-            { "icon": "", "name": "Git" },
-            { "icon": "", "name": "GitHub" },
-            { "icon": "", "name": "GitLab" },
-            { "icon": "", "name": "Swift Package Manager" },
-            { "icon": "", "name": "Postman" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Xcode"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Git"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "GitHub"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "GitLab"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Swift Package Manager"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Postman"
+          }
         ]
       },
       {
         "category": "Testing",
         "items": [
-            { "icon": "🧪", "name": "XCTest" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "XCTest"
+          }
         ]
       },
       {
         "category": "Other",
         "items": [
-            { "icon": "", "name": "Figma" },
-            { "icon": "", "name": "Jira" },
-            { "icon": "", "name": "Trello" },
-            { "icon": "", "name": "Agile/Scrum" }
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Figma"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Jira"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Trello"
+          },
+          {
+            "icon": "assets/icons/swift.svg",
+            "name": "Agile/Scrum"
+          }
         ]
       }
     ]

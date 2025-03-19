@@ -56,7 +56,19 @@ function renderStack(data) {
             if (item.icon && item.icon.trim() !== "") {
                 const icon = document.createElement("span");
                 icon.className = "stack-icon";
-                icon.textContent = item.icon;
+
+                // Проверка, если icon это SVG или путь к изображению
+                if (item.icon.trim().startsWith("<svg")) {
+                    // Если это SVG-код, вставляем его как HTML
+                    icon.innerHTML = item.icon;
+                } else {
+                    // Если это файл изображения (например, .png, .jpg)
+                    const img = document.createElement("img");
+                    img.src = item.icon.trim();
+                    img.alt = "Icon";
+                    icon.appendChild(img);
+                }
+
                 itemDiv.appendChild(icon);
             }
 
