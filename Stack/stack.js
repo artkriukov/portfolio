@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadStackData() {
-    fetch("/Data/stack.json") // Абсолютный путь
+    fetch("Data/stack.json") // Абсолютный путь
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Ошибка загрузки JSON: ${response.statusText}`);
