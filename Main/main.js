@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             case 'Certificates/certificates':
                                 if (window.loadCertificatesData) window.loadCertificatesData();
                                 break;
+                            case 'Stack/stack':
+                                if (window.loadStackData) window.loadStackData();
+                                break;
                         }
                     };
                 });
@@ -39,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         case 'Certificates/certificates':
                             if (window.loadCertificatesData) window.loadCertificatesData();
                             break;
+                        case 'Stack/stack':
+                            if (window.loadStackData) window.loadStackData();
+                        break;
                     }
                 }
             })

@@ -1,0 +1,26 @@
+.stack-page {
+    padding: 20px;
+}
+
+.stack-category {
+    margin-bottom: 30px;
+}
+
+.stack-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stack-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.stack-icon {
+    font-size: 1.2em;
+}

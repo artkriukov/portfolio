@@ -1,0 +1,59 @@
+{
+    "stack": [
+      {
+        "category": "Languages",
+        "items": [
+          { "icon": "🐦", "name": "Swift" },
+          { "icon": "", "name": "JavaScript" }
+        ]
+      },
+      {
+        "category": "Frameworks & Libraries",
+        "items": [
+          { "icon": "🖼️", "name": "UIKit" },
+          { "icon": "", "name": "SnapKit" },
+          { "icon": "", "name": "Firebase" }
+        ]
+      },
+      {
+        "category": "Architectural Patterns",
+        "items": [
+            { "icon": "🧱", "name": "MVC" },
+            { "icon": "", "name": "MVP" },
+            { "icon": "", "name": "VIPER" }
+        ]
+      },
+      {
+        "category": "Databases",
+        "items": [
+          { "icon": "🐦", "name": "Firebase Firestore" }
+        ]
+      },
+      {
+        "category": "Tools & Platforms",
+        "items": [
+            { "icon": "🛠️", "name": "Xcode" },
+            { "icon": "", "name": "Git" },
+            { "icon": "", "name": "GitHub" },
+            { "icon": "", "name": "GitLab" },
+            { "icon": "", "name": "Swift Package Manager" },
+            { "icon": "", "name": "Postman" }
+        ]
+      },
+      {
+        "category": "Testing",
+        "items": [
+            { "icon": "🧪", "name": "XCTest" }
+        ]
+      },
+      {
+        "category": "Other",
+        "items": [
+            { "icon": "", "name": "Figma" },
+            { "icon": "", "name": "Jira" },
+            { "icon": "", "name": "Trello" },
+            { "icon": "", "name": "Agile/Scrum" }
+        ]
+      }
+    ]
+  }
