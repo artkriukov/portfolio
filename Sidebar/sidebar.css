@@ -1,38 +1,52 @@
 .sidebar {
   background: #FFF;
-  padding: clamp(1.5rem, 2vw, 2rem); /* Динамический паддинг */
+  padding: clamp(1rem, 1.5vw, 1.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .profile-photo {
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .profile-photo img {
-  width: 350px; 
-  height: 300px; 
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
   border-radius: 12px;
   object-fit: cover;
   border: 2px solid #e5e5e5;
   box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
+.sidebar-content {
+  width: 100%;
+}
+
 .sidebar-content h2 {
-  margin: 0.3rem 0 0rem;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 600;
   color: #1D1D1F;
-  text-align: center;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+}
+
+#role {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: #636366;
+  margin-bottom: 1.5rem;
 }
 
 .sidebar-content p {
-  margin: 0 0 0.6rem;
-  font-size: clamp(0.9rem, 1.2vw, 0.7rem);
+  margin: 0 0 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   color: #636366;
   line-height: 1.6;
 }
@@ -40,187 +54,163 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 0.8rem;
+  gap: 1rem;
+  margin: 1.5rem 0;
   flex-wrap: wrap;
 }
 
 .social-links a {
-  padding: 0.8rem;
-  border-radius: 50%;
+  padding: 0.7rem;
+  border-radius: 30%;
   background: #F5F5F7;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transform: translateZ(0); /* Для оптимизации анимации */
+  flex-shrink: 0;
 }
 
-/* Эффект параллакса */
 .social-links a:hover {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* Анимация иконок */
 .social-links img {
-  width: 1.8rem;
-  height: 1.8rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: transform 0.3s ease;
 }
 
 .social-links a:hover img {
-  transform: translateY(-2px); /* Легкое смещение вверх */
-  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
-/* Эффект при клике */
 .social-links a:active {
   transform: translateY(0) scale(0.95);
 }
 
-#role {
-  text-align: center;
-}
-.social-links img {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-
-
-
 .about-section {
   width: 100%;
-  text-align: left;
+  margin: 1.5rem 0;
 }
 
 .about-section h3 {
-  text-align: left;
-  margin-bottom: 1rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  margin: 0 0 1rem;
+  color: #1D1D1F;
 }
 
 .about-description {
-  text-align: left !important;
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   line-height: 1.6;
+  color: #636366;
 }
 
-.skill {
-  background-color: transparent !important;
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.2rem 0;
 }
-
 
 .skill-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  background: #F5F5F7 !important;
+  padding: 0.5rem 1rem;
+  background: #F5F5F7;
   border-radius: 15px;
+  flex-shrink: 0;
 }
 
 .skill-icon img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle; 
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
 .skill-name {
-  line-height: 1; 
-  font-size: 0.9rem;
-}
-
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 0.5rem;
-  justify-content: flex-start;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+  color: #1D1D1F;
 }
 
 .resume-button {
   background: #0A84FF;
   color: white;
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem;
   width: 100%;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   transition: all 0.3s ease;
-  text-align: center;
-  text-decoration: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.resume-button:hover {
+  background: #007AFF;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1600px) {
+  .profile-photo img {
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 1400px) {
-  .profile-photo img {
-    max-width: 250px; /* Уменьшаем фото для средних экранов */
-  }
-  
   .sidebar {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+  .skill-container {
+    padding: 0.4rem 0.8rem;
   }
 }
 
-@media (min-width: 992px) {
-  .sidebar {
-    padding: 1.5rem 10%; /* Сохраняем боковые отступы */
-    position: static;
-    height: auto;
+@media (max-width: 1200px) {
+  .profile-photo img {
+    max-width: 240px;
+  }
+  .social-links {
+    gap: 0.8rem;
   }
 }
 
 @media (max-width: 992px) {
   .sidebar {
-      position: static; /* Обычный поток */
-      height: auto; /* Высота по содержимому */
+    padding: 1rem;
   }
-}
-
-@media (max-width: 1200px) {
-  .sidebar {
-    padding: clamp(1.2rem, 1.8vw, 1.5rem);
-  }
-  
   .profile-photo img {
-    width: 300px;
-    height: 250px;
+    max-width: 200px;
   }
-  
-  .skill {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.3rem;
+  .skill-name {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    padding: 1.2rem 7%;
-  }
-  
   .profile-photo img {
-    width: min(80%, 300px); /* Гибкая ширина изображения */
-    height: auto;
-    aspect-ratio: 4/3;
+    max-width: 180px;
   }
-  
-  .social-links {
-    gap: 1rem;
+  .social-links img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .resume-button {
+    padding: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .sidebar {
-    padding: 1rem 5%;
+    padding: 0.8rem;
   }
-
   .profile-photo img {
-    width: 150px;
-    height: 130px;
+    max-width: 150px;
+  }
+  .social-links {
+    gap: 0.6rem;
+  }
+  .skill-container {
+    padding: 0.3rem 0.6rem;
   }
 }
