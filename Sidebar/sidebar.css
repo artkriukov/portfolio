@@ -123,6 +123,10 @@
   flex-shrink: 0;
 }
 
+#name {
+  text-align: left;
+}
+
 .skill-icon img {
   width: 18px;
   height: 18px;
