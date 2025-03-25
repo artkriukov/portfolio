@@ -3,9 +3,18 @@ import Animator from './animator.js';
 import Render from './render.js';
 
 const Router = (() => {
+  // Текущая активная страница
   let currentPage = null;
-  const pageEvent = new CustomEvent('pageChanged', { detail: {} });
+  
+  // Кастомное событие для изменения страницы
+  const pageEvent = new CustomEvent('pageChanged', { 
+    detail: { 
+      page: null,
+      prevPage: null 
+    } 
+  });
 
+  // Настройка обработчиков закрытия модального окна
   const setupModalCloseHandlers = () => {
     const closeModal = () => {
       document.querySelector('.modal-overlay').classList.remove('active');
@@ -27,44 +36,70 @@ const Router = (() => {
     });
   };
 
+  // Открытие модального окна проекта
   const openProjectModal = async (projectId) => {
     try {
       console.log(`[Router] Opening project modal: ${projectId}`);
+      
+      // Загружаем данные проектов
       const data = await Http.fetchPage('projects');
       const project = data.projects.find(p => p.id === projectId);
       
       if (!project) throw new Error('Project not found');
 
-      // Заполнение модалки
-      document.querySelector('.modal-title').textContent = project.title;
-      document.querySelector('.modal-description').textContent = project.details.description;
-      
-      const imgContainer = document.querySelector('.modal-image-container');
-      imgContainer.innerHTML = project.image 
-        ? `<img src="${project.image}" alt="${project.title}" class="modal-project-image"
-             onerror="this.onerror=null;this.src='assets/images/default-project.png'">`
-        : '';
+      // Заполняем модальное окно данными
+      fillModalContent(project);
 
-      document.querySelector('.features-list').innerHTML = 
-        project.details.features.map(f => `<li>${f}</li>`).join('');
-
-      document.querySelector('.tasks-list').innerHTML = 
-        project.details.tasks.map(t => `<li>${t}</li>`).join('');
-
-      const githubLink = document.querySelector('.github-link');
-      githubLink.href = project.details.github || '#';
-      githubLink.style.display = project.details.github ? 'inline-block' : 'none';
-
-      // Показ модалки
-      document.querySelector('.modal-overlay').classList.add('active');
-      document.querySelector('.modal-container').classList.add('active');
-      document.body.style.overflow = 'hidden';
+      // Показываем модальное окно
+      showModal();
 
     } catch (error) {
       console.error('[Router] Error opening project modal:', error);
+      showErrorModal();
     }
   };
 
+  // Заполнение содержимого модального окна
+  const fillModalContent = (project) => {
+    document.querySelector('.modal-title').textContent = project.title;
+    document.querySelector('.modal-description').textContent = project.details.description;
+    
+    const imgContainer = document.querySelector('.modal-image-container');
+    imgContainer.innerHTML = project.image 
+      ? `<img src="${project.image}" alt="${project.title}" class="modal-project-image"
+           onerror="this.onerror=null;this.src='assets/images/default-project.png'">`
+      : '';
+
+    document.querySelector('.features-list').innerHTML = 
+      project.details.features.map(f => `<li>${f}</li>`).join('');
+
+    document.querySelector('.tasks-list').innerHTML = 
+      project.details.tasks.map(t => `<li>${t}</li>`).join('');
+
+    const githubLink = document.querySelector('.github-link');
+    githubLink.href = project.details.github || '#';
+    githubLink.style.display = project.details.github ? 'inline-block' : 'none';
+  };
+
+  // Показать модальное окно
+  const showModal = () => {
+    document.querySelector('.modal-overlay').classList.add('active');
+    document.querySelector('.modal-container').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Показать ошибку в модальном окне
+  const showErrorModal = () => {
+    document.querySelector('.modal-title').textContent = 'Ошибка';
+    document.querySelector('.modal-description').textContent = 'Не удалось загрузить данные проекта';
+    document.querySelector('.modal-image-container').innerHTML = '';
+    document.querySelector('.features-list').innerHTML = '';
+    document.querySelector('.tasks-list').innerHTML = '';
+    document.querySelector('.github-link').style.display = 'none';
+    showModal();
+  };
+
+  // Объект с функциями рендеринга для каждой страницы
   const renderers = {
     about: Render.about,
     stack: Render.stack,
@@ -72,76 +107,126 @@ const Router = (() => {
     projects: Render.projects
   };
 
+  // Инициализация роутера
   const init = () => {
     console.log('[Router] Initializing router');
+    
     setupModalCloseHandlers();
+    setupNavbarHandlers();
+    setupProjectClickHandlers();
 
-    // Навигация по табам
-    document.querySelectorAll('.sidebar__tab').forEach(tab => {
-      tab.addEventListener('click', () => navigate(tab.dataset.content));
-    });
-
-    // Обработчик кликов по проектам
-    document.addEventListener('click', (e) => {
-      const projectCard = e.target.closest('.project-card');
-      if (projectCard) openProjectModal(projectCard.dataset.project);
-    });
-
-    // Первая загрузка
-    if (!currentPage) navigate('about');
+    // Первая загрузка страницы
+    if (!currentPage) {
+      const initialPage = window.location.hash.substring(1) || 'about';
+      navigate(initialPage);
+    }
   };
 
+  // Настройка обработчиков навбара
+  const setupNavbarHandlers = () => {
+    document.querySelectorAll('.navbar-tab').forEach(tab => {
+      tab.addEventListener('click', () => navigate(tab.dataset.content));
+    });
+  };
+
+  // Настройка обработчиков кликов по проектам
+  const setupProjectClickHandlers = () => {
+    document.addEventListener('click', (e) => {
+      const projectCard = e.target.closest('.project-card');
+      if (projectCard) {
+        openProjectModal(projectCard.dataset.project);
+      }
+    });
+  };
+
+  // Навигация между страницами
   const navigate = async (page) => {
     if (currentPage === page) return;
     console.log(`[Router] Navigating to: ${page}`);
 
+    // Запуск анимации перехода
     Animator.startTransition();
+    
+    // Обновление активной вкладки
     updateActiveTab(page);
     
     try {
+      // Загрузка данных страницы
       const data = await Http.fetchPage(page);
-      renderPage(page, data);
-      currentPage = page;
       
-      // Отправляем событие о смене страницы
+      // Рендер страницы
+      renderPage(page, data);
+      
+      // Обновление текущей страницы и истории браузера
+      currentPage = page;
+      window.location.hash = page;
+      
+      // Отправка события о смене страницы
       pageEvent.detail.page = page;
+      pageEvent.detail.prevPage = currentPage;
       document.dispatchEvent(pageEvent);
       
     } catch (error) {
       console.error('[Router] Navigation error:', error);
-      showError();
+      showError('Ошибка загрузки страницы');
     }
   };
 
+  // Рендер страницы
   const renderPage = (page, data) => {
     console.log(`[Router] Rendering page: ${page}`);
-    document.querySelector('.content__title').textContent = getTitle(page);
-    document.querySelector('.content__body').innerHTML = renderers[page](data);
+    const contentContainer = document.querySelector('.content-container');
+    
+    contentContainer.innerHTML = `
+      <h1 class="content__title">${getTitle(page)}</h1>
+      <div class="content__body">
+        ${renderers[page](data)}
+      </div>
+    `;
+    
+    // Завершение анимации перехода
     Animator.completeTransition();
   };
 
+  // Получение заголовка страницы
   const getTitle = (page) => {
     const titles = {
       about: 'Обо мне',
-      projects: 'Проекты',
+      projects: 'Мои проекты',
       stack: 'Технологии',
       experience: 'Опыт работы'
     };
-    return titles[page];
+    return titles[page] || 'Страница';
   };
 
+  // Обновление активной вкладки в навбаре
   const updateActiveTab = (page) => {
     console.log(`[Router] Updating active tab to: ${page}`);
-    document.querySelectorAll('.sidebar__tab').forEach(tab => {
+    document.querySelectorAll('.navbar-tab').forEach(tab => {
       tab.classList.toggle('active', tab.dataset.content === page);
     });
   };
 
+  // Показать ошибку
   const showError = (message = 'Ошибка загрузки данных') => {
     console.error(`[Router] Showing error: ${message}`);
-    document.querySelector('.content__body').innerHTML = `
-      <div class="error-message">${message}</div>
-    `;
+    const contentContainer = document.querySelector('.content-container');
+    
+    if (contentContainer) {
+      contentContainer.innerHTML = `
+        <div class="error-message">
+          <h1>Ошибка</h1>
+          <p>${message}</p>
+          <button class="retry-button">Попробовать снова</button>
+        </div>
+      `;
+      
+      // Добавляем обработчик для кнопки повтора
+      document.querySelector('.retry-button')?.addEventListener('click', () => {
+        navigate(currentPage);
+      });
+    }
+    
     Animator.completeTransition();
   };
 

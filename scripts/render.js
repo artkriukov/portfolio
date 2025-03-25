@@ -47,7 +47,7 @@ const Render = {
   
     projects: function(data) {
       return `
-        <div class="projects-section">
+        <section class="projects-section">
           <div class="projects-tabs">
             <button class="projects-tab active" data-category="all">Все проекты</button>
             <button class="projects-tab" data-category="personal">Индивидуальные</button>
@@ -56,8 +56,10 @@ const Render = {
           <div class="projects-grid">
             ${data.projects.map(project => `
               <div class="project-card" data-project="${project.id}">
-                <img src="${project.image}" alt="${project.title}" class="project-image"
-                     onerror="this.onerror=null;this.src='assets/images/default-project.png'">
+                <div class="project-image-container">
+                  <img src="${project.image}" alt="${project.title}" class="project-image"
+                       onerror="this.onerror=null;this.src='assets/images/default-project.png'">
+                </div>
                 <div class="project-info">
                   <h3 class="project-title">${project.title}</h3>
                   <div class="project-stack">
@@ -67,7 +69,7 @@ const Render = {
               </div>
             `).join('')}
           </div>
-        </div>
+        </section>
       `;
     },
   

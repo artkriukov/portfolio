@@ -8,14 +8,31 @@
     --bg-alt: rgba(0, 0, 0, 0.03);
     --text-secondary: #86868b;
     
+    /* Navbar Light */
+    --navbar-bg: rgba(248, 249, 250, 0.8);
+    --navbar-border: rgba(0, 0, 0, 0.1);
+    --tabs-bg: rgba(0, 0, 0, 0.05);
+    --tab-hover: rgba(0, 0, 0, 0.1);
+    --tab-active-bg: #ffffff;
+    --tab-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --theme-toggle-bg: rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-theme {
     /* Dark Theme */
-    --dark-bg-color: #1a1a1a;
-    --dark-text-color: #e9ecef;
-    --dark-sidebar-bg: #2d2d2d;
-    --dark-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #e9ecef;
+    --sidebar-bg: #2d2d2d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     --bg-alt: rgba(255, 255, 255, 0.05);
     --text-secondary: #a1a1a6;
-}
+    
+    /* Navbar Dark */
+    --navbar-bg: rgba(26, 26, 26, 0.8);
+    --navbar-border: rgba(255, 255, 255, 0.1);
+    --tabs-bg: rgba(255, 255, 255, 0.1);
+    --tab-hover: rgba(255, 255, 255, 0.2);
+    --tab-active-bg: #3a3a3a;
+    --tab-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --theme-toggle-bg: rgba(255, 255, 255, 0.1);
+  }

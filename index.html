@@ -7,19 +7,28 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <div class="container">
-    <button class="theme-toggle"><span class="theme-icon">🌓</span></button>
-    <aside class="sidebar">
-      <nav class="sidebar__nav">
-        <button class="sidebar__tab active" data-content="about"><span class="icon">👤</span><span class="text">Обо мне</span></button>
-        <button class="sidebar__tab" data-content="stack"><span class="icon">🛠</span><span class="text">Стэк</span></button>
-        <button class="sidebar__tab" data-content="projects"><span class="icon">🚀</span><span class="text">Проекты</span></button>
-        <button class="sidebar__tab" data-content="experience"><span class="icon">💼</span><span class="text">Опыт</span></button>
-      </nav>
-    </aside>
-    <main class="content">
-      <h1 class="content__title"></h1>
-      <div class="content__body"></div>
+  <div class="app-container">
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="navbar-name">Artem Kriukov</div>
+        
+        <div class="navbar-tabs">
+          <button class="navbar-tab active" data-content="about">About</button>
+          <button class="navbar-tab" data-content="projects">Projects</button>
+          <button class="navbar-tab" data-content="stack">Stack</button>
+          <button class="navbar-tab" data-content="experience">Experience</button>
+        </div>
+        
+        <button class="theme-toggle">
+          <span class="theme-icon">🌓</span>
+        </button>
+      </div>
+    </div>
+    
+    <main class="main-content">
+      <div class="content-container">
+        <!-- Контент будет загружаться здесь -->
+      </div>
     </main>
   </div>
 

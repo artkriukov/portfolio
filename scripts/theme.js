@@ -1,38 +1,44 @@
-const Theme = (function() {
-    let currentTheme = 'light';
-
-    function init() {
-        loadTheme();
-        document.querySelector('.theme-toggle').addEventListener('click', toggle);
+class Theme {
+    constructor() {
+      this.themeToggle = document.querySelector('.theme-toggle');
+      this.currentTheme = localStorage.getItem('theme') || 'light';
     }
-
-    function loadTheme() {
-        currentTheme = localStorage.getItem('theme') || 'light';
-        document.body.style.transition = 'none';
-        document.body.classList.add(currentTheme + '-theme');
-        setTimeout(() => {
-            document.body.style.transition = '';
-        }, 50);
+  
+    init() {
+      this.applyTheme();
+      this.setupEventListeners();
     }
-
-    function toggle() {
-        document.body.style.transition = 'none';
-        document.body.classList.remove(currentTheme + '-theme');
-        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.body.classList.add(currentTheme + '-theme');
-        localStorage.setItem('theme', currentTheme);
-        setTimeout(() => {
-            document.body.style.transition = '';
-        }, 50);
+  
+    applyTheme() {
+      if (this.currentTheme === 'dark') {
+        document.documentElement.classList.add('dark-theme');
+      } else {
+        document.documentElement.classList.remove('dark-theme');
+      }
+      localStorage.setItem('theme', this.currentTheme);
     }
-
-    return {
-        init: init,
-        current: function() {
-            return currentTheme;
-        }
-    };
-})();
-
-// Явно указываем экспорт по умолчанию
-export default Theme;
+  
+    toggleTheme() {
+      this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+      this.applyTheme();
+      this.updateToggleIcon();
+    }
+  
+    updateToggleIcon() {
+      const icon = this.themeToggle.querySelector('.theme-icon');
+      if (icon) {
+        icon.textContent = this.currentTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+  
+    setupEventListeners() {
+      if (this.themeToggle) {
+        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+      }
+      
+      // Инициализация иконки
+      this.updateToggleIcon();
+    }
+  }
+  
+  export default new Theme();
