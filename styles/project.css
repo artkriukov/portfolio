@@ -58,6 +58,10 @@
     justify-content: center;
 }
 
+.modal-container.closing {
+    transform: translateX(100%) !important;
+  }
+
 /* Гарантируем, что модальное окно поверх всего */
 body.modal-open {
     overflow: hidden;
