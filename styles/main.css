@@ -1,11 +1,12 @@
 /* Base styles */
 @import url('./variables.css');
 @import url('./about.css');
-/* @import url('./animations.css');
-@import url('./sidebar.css');
+@import url('./project.css');
+
+/* @import url('./sidebar.css');
 @import url('./content.css');
 @import url('./cards.css');
-@import url('./theme.css'); */
+@import url('./theme.css');  */
 
 
 
@@ -96,6 +97,8 @@ body {
 
 /* Content */
 .content {
+    position: relative;
+    z-index: 1;
     padding: 4rem 2rem;
     overflow-y: auto;
     height: 100vh;
@@ -261,3 +264,12 @@ body {
 }
 
 
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Гарантируем, что модальные элементы выше всего */
+.modal-overlay, .modal-container {
+    z-index: 10000 !important;
+}

@@ -1,5 +1,4 @@
-// scripts/render.js
-var Render = {
+const Render = {
     about: function(data) {
         return `
             <section class="about-section">
@@ -11,13 +10,9 @@ var Render = {
                             <p class="about-role">${data.role}</p>
                         </div>
                     </div>
-                    
                     <div class="about-description">
-                        ${data.description.map(line => `
-                            <p>${line}</p>
-                        `).join('')}
+                        ${data.description.map(line => `<p>${line}</p>`).join('')}
                     </div>
-                    
                     <div class="social-links">
                         ${data.socialLinks.map(link => `
                             <a href="${link.url}" target="_blank" class="social-link">
@@ -53,26 +48,27 @@ var Render = {
 
     projects: function(data) {
         return `
-            <div class="projects-list">
-                ${data.projects.map(project => `
-                    <div class="project-card card">
-                        <h3>${project.title}</h3>
-                        <a href="${project.github}" target="_blank" class="github-link">GitHub</a>
-                        ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-image">` : ''}
-                        <div class="tech-stack">
-                            ${project.stack.map(tech => `
-                                <span class="tech-tag" style="background: ${tech.color}">${tech.name}</span>
-                            `).join('')}
+            <div class="projects-section">
+                <div class="projects-tabs">
+                    <button class="projects-tab active" data-category="all">Все проекты</button>
+                    <button class="projects-tab" data-category="personal">Индивидуальные</button>
+                    <button class="projects-tab" data-category="team">Командные</button>
+                </div>
+                <div class="projects-grid">
+                    ${data.projects.map(project => `
+                        <div class="project-card" data-project="${project.id}">
+                            <img src="${project.image}" alt="${project.title}" class="project-image">
+                            <div class="project-info">
+                                <h3 class="project-title">${project.title}</h3>
+                                <div class="project-stack">
+                                    ${project.stack.map(tech => `
+                                        <span class="tech-tag" data-tech="${tech}">${tech}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
                         </div>
-                        <p class="project-description">${project.details}</p>
-                        <div class="project-tasks">
-                            <h4>Реализованные задачи:</h4>
-                            <ul>
-                                ${project.roleTasks.map(task => `<li>${task}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                `).join('')}
+                    `).join('')}
+                </div>
             </div>
         `;
     },
@@ -93,15 +89,18 @@ var Render = {
                             </ul>
                         </div>
                         ${exp.achievements && exp.achievements.length > 0 ? `
-                        <div class="experience-achievements">
-                            <h4>Достижения:</h4>
-                            <ul>
-                                ${exp.achievements.map(ach => `<li>${ach}</li>`).join('')}
-                            </ul>
-                        </div>` : ''}
+                            <div class="experience-achievements">
+                                <h4>Достижения:</h4>
+                                <ul>
+                                    ${exp.achievements.map(ach => `<li>${ach}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
                     </div>
                 `).join('')}
             </div>
         `;
     }
 };
+
+export default Render;
