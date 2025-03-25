@@ -1,85 +1,82 @@
 export default class Projects {
     constructor() {
-      console.log('[Projects] Constructor called');
       this.projectsData = [];
       this.activeCategory = 'all';
-      this.initialized = false;
-      
-      this.init = this.init.bind(this);
-      this.handleTabClick = this.handleTabClick.bind(this);
-      this.handleProjectClick = this.handleProjectClick.bind(this);
-  
-      // Отложенная инициализация при полной загрузке DOM
-      if (document.readyState === 'complete') {
-        this.init();
-      } else {
-        document.addEventListener('DOMContentLoaded', this.init);
-      }
+      this.init();
     }
   
     async init() {
-      if (this.initialized) return;
-      console.log('[Projects] Initializing...');
-      
-      try {
-        await this.loadProjects();
-        this.setupTabs();
-        this.setupProjectClick();
-        this.initialized = true;
-        console.log('[Projects] Initialization complete');
-      } catch (error) {
-        console.error('[Projects] Initialization failed:', error);
-      }
+      await this.loadProjects();
+      this.setupTabs();
+      this.setupProjectClick();
     }
   
     async loadProjects() {
-      console.log('[Projects] Loading projects data...');
       try {
         const response = await fetch('data/projects.json');
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        this.projectsData = data.projects || [];
-        console.log(`[Projects] Loaded ${this.projectsData.length} projects`);
+        this.projectsData = data.projects;
         this.renderProjects();
       } catch (error) {
-        console.error('[Projects] Failed to load projects:', error);
+        console.error("Failed to load projects:", error);
         this.showError();
-        throw error;
       }
     }
   
     renderProjects() {
-        const container = document.querySelector('.projects-grid');
-        if (!container) return;
-      
-        const filtered = this.activeCategory === 'all' 
-          ? this.projectsData 
-          : this.projectsData.filter(p => p.category === this.activeCategory);
-      
-        container.innerHTML = filtered.map(project => `
-          <div class="project-card" data-project="${project.id}">
-            <img src="/${project.image}" 
+      const container = document.querySelector('.projects-grid');
+      if (!container) return;
+  
+      // Сначала делаем контейнер прозрачным для анимации
+      container.style.opacity = '0';
+      container.style.transform = 'translateY(10px)';
+  
+      const filtered = this.activeCategory === 'all' 
+        ? this.projectsData 
+        : this.projectsData.filter(p => p.category === this.activeCategory);
+  
+      container.innerHTML = filtered.map((project, index) => `
+        <div class="project-card" 
+             data-project="${project.id}"
+             style="animation-delay: ${index * 50}ms">
+          <div class="project-image-container">
+            <img src="${project.image}" 
                  alt="${project.title}" 
                  class="project-image"
-                 onerror="this.onerror=null; this.src='/assets/images/default-project.png'">
-            <div class="project-info">
-              <h3>${project.title}</h3>
-              <div class="project-stack">
-                ${project.stack.map(tech => `<span>${tech}</span>`).join('')}
-              </div>
+                 onerror="this.onerror=null; this.src='assets/images/default-project.png'">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">${project.title}</h3>
+            <div class="project-stack">
+              ${project.stack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
           </div>
-        `).join('');
-      }
+        </div>
+      `).join('');
+  
+      // Запускаем анимацию появления
+      setTimeout(() => {
+        container.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+        container.style.opacity = '1';
+        container.style.transform = 'translateY(0)';
+        
+        // После анимации убираем transition
+        setTimeout(() => {
+          container.style.transition = 'none';
+        }, 400);
+      }, 10);
+    }
   
     setupTabs() {
       const tabsContainer = document.querySelector('.projects-tabs');
-      if (!tabsContainer) {
-        console.error('[Projects] Tabs container not found');
-        return;
-      }
+      if (!tabsContainer) return;
   
-      console.log('[Projects] Setting up tabs');
+      // Создаем индикатор активного таба
+      const indicator = document.createElement('div');
+      indicator.className = 'tab-indicator';
+      tabsContainer.appendChild(indicator);
+  
       tabsContainer.innerHTML = `
         <button class="projects-tab ${this.activeCategory === 'all' ? 'active' : ''}" 
                 data-category="all">Все проекты</button>
@@ -89,101 +86,131 @@ export default class Projects {
                 data-category="team">Командные</button>
       `;
   
-      // Удаляем старые обработчики перед добавлением новых
-      tabsContainer.querySelectorAll('.projects-tab').forEach(tab => {
-        tab.removeEventListener('click', this.handleTabClick);
+      this.updateTabIndicator();
+  
+      tabsContainer.addEventListener('click', (e) => {
+        const tab = e.target.closest('.projects-tab');
+        if (tab) {
+          this.activeCategory = tab.dataset.category;
+          this.updateActiveTab();
+          this.animateTabSwitch(tab);
+          this.renderProjects();
+        }
       });
-      
-      tabsContainer.addEventListener('click', this.handleTabClick);
     }
   
-    handleTabClick(e) {
-      const tab = e.target.closest('.projects-tab');
-      if (!tab) return;
+    updateTabIndicator() {
+      const activeTab = document.querySelector('.projects-tab.active');
+      const indicator = document.querySelector('.tab-indicator');
+      if (!activeTab || !indicator) return;
   
-      const category = tab.dataset.category;
-      console.log(`[Projects] Tab clicked: ${category}`);
+      const tabRect = activeTab.getBoundingClientRect();
+      const containerRect = activeTab.parentNode.getBoundingClientRect();
       
-      if (this.activeCategory !== category) {
-        this.activeCategory = category;
-        this.updateActiveTab();
-        this.renderProjects();
-      }
+      indicator.style.width = `${tabRect.width}px`;
+      indicator.style.left = `${tabRect.left - containerRect.left}px`;
+    }
+  
+    animateTabSwitch(clickedTab) {
+      // Анимация переключения табов
+      const tabs = document.querySelectorAll('.projects-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        tab.style.transform = 'scale(0.98)';
+        tab.style.transition = 'transform 0.2s ease-out';
+      });
+  
+      clickedTab.classList.add('active');
+      clickedTab.style.transform = 'scale(1.02)';
+  
+      setTimeout(() => {
+        clickedTab.style.transform = 'scale(1)';
+        this.updateTabIndicator();
+      }, 200);
     }
   
     updateActiveTab() {
-      console.log(`[Projects] Updating active tab to: ${this.activeCategory}`);
       document.querySelectorAll('.projects-tab').forEach(tab => {
-        const isActive = tab.dataset.category === this.activeCategory;
-        tab.classList.toggle('active', isActive);
+        tab.classList.toggle('active', tab.dataset.category === this.activeCategory);
       });
     }
   
     setupProjectClick() {
-      const grid = document.querySelector('.projects-grid');
-      if (!grid) {
-        console.error('[Projects] Projects grid not found');
-        return;
-      }
-  
-      // Удаляем старый обработчик перед добавлением нового
-      grid.removeEventListener('click', this.handleProjectClick);
-      grid.addEventListener('click', this.handleProjectClick);
+      document.querySelector('.projects-grid')?.addEventListener('click', (e) => {
+        const card = e.target.closest('.project-card');
+        if (card) {
+          this.animateProjectClick(card);
+          this.openModal(card.dataset.project);
+        }
+      });
     }
   
-    handleProjectClick(e) {
-      const card = e.target.closest('.project-card');
-      if (card) {
-        const projectId = card.dataset.project;
-        console.log(`[Projects] Project clicked: ${projectId}`);
-        this.openModal(projectId);
-      }
+    animateProjectClick(card) {
+      // Анимация нажатия на карточку
+      card.style.transform = 'scale(0.97)';
+      card.style.transition = 'transform 0.2s ease-out';
+  
+      setTimeout(() => {
+        card.style.transform = 'scale(1)';
+      }, 200);
     }
   
     async openModal(projectId) {
-      console.log(`[Projects] Opening modal for project: ${projectId}`);
-      try {
-        const project = this.projectsData.find(p => p.id === projectId);
-        if (!project) throw new Error('Project not found');
+      const project = this.projectsData.find(p => p.id === projectId);
+      if (!project) return;
   
-        // Заполнение модального окна
-        document.querySelector('.modal-title').textContent = project.title;
-        document.querySelector('.modal-description').textContent = project.details.description;
+      // Анимация открытия модального окна
+      const modal = document.querySelector('.modal-container');
+      const overlay = document.querySelector('.modal-overlay');
+      
+      modal.style.opacity = '0';
+      modal.style.transform = 'scale(0.95) translateY(20px)';
+      overlay.style.opacity = '0';
+      
+      modal.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  
+      // Заполняем данные
+      document.querySelector('.modal-title').textContent = project.title;
+      document.querySelector('.modal-description').textContent = project.details.description;
+      
+      const imgContainer = document.querySelector('.modal-image-container');
+      imgContainer.innerHTML = `
+        <img src="${project.image}" 
+             alt="${project.title}" 
+             class="modal-project-image"
+             onerror="this.onerror=null; this.src='assets/images/default-project.png'">
+      `;
+  
+      document.querySelector('.features-list').innerHTML = 
+        project.details.features.map(f => `<li>${f}</li>`).join('');
+  
+      document.querySelector('.tasks-list').innerHTML = 
+        project.details.tasks.map(t => `<li>${t}</li>`).join('');
+  
+      const githubLink = document.querySelector('.github-link');
+      githubLink.href = project.details.github || '#';
+      githubLink.style.display = project.details.github ? 'block' : 'none';
+  
+      // Анимация появления
+      setTimeout(() => {
+        modal.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+        overlay.style.transition = 'opacity 0.3s ease-out';
         
-        const imgContainer = document.querySelector('.modal-image-container');
-        imgContainer.innerHTML = `
-          <img src="${project.image}" 
-               alt="${project.title}" 
-               onerror="this.onerror=null;this.src='assets/images/default-project.png'">
-        `;
-  
-        document.querySelector('.features-list').innerHTML = 
-          project.details.features.map(f => `<li>${f}</li>`).join('');
-  
-        document.querySelector('.tasks-list').innerHTML = 
-          project.details.tasks.map(t => `<li>${t}</li>`).join('');
-  
-        const githubLink = document.querySelector('.github-link');
-        githubLink.href = project.details.github || '#';
-        githubLink.style.display = project.details.github ? 'block' : 'none';
-  
-        // Показ модалки
-        document.querySelector('.modal-overlay').classList.add('active');
-        document.querySelector('.modal-container').classList.add('active');
-        document.body.style.overflow = 'hidden';
-  
-      } catch (error) {
-        console.error('[Projects] Error opening modal:', error);
-      }
+        modal.style.opacity = '1';
+        modal.style.transform = 'scale(1) translateY(0)';
+        overlay.style.opacity = '1';
+      }, 10);
     }
   
     showError() {
-      console.log('[Projects] Showing error message');
       const container = document.querySelector('.projects-grid');
       if (container) {
         container.innerHTML = `
           <div class="error-message">
-            Не удалось загрузить проекты. Пожалуйста, попробуйте позже.
+            <p>Не удалось загрузить проекты.</p>
+            <p>Попробуйте обновить страницу.</p>
           </div>
         `;
       }
