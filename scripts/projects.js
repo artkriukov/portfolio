@@ -49,33 +49,28 @@ export default class Projects {
     }
   
     renderProjects() {
-      const container = document.querySelector('.projects-grid');
-      if (!container) {
-        console.error('[Projects] Projects grid not found');
-        return;
-      }
-  
-      const filtered = this.activeCategory === 'all'
-        ? this.projectsData
-        : this.projectsData.filter(p => p.category === this.activeCategory);
-  
-      console.log(`[Projects] Rendering ${filtered.length} projects for category: ${this.activeCategory}`);
-  
-      container.innerHTML = filtered.map(project => `
-        <div class="project-card" data-project="${project.id}">
-          <img src="${project.image}" 
-               alt="${project.title}" 
-               class="project-image"
-               onerror="this.onerror=null;this.src='assets/images/default-project.png'">
-          <div class="project-info">
-            <h3>${project.title}</h3>
-            <div class="project-stack">
-              ${project.stack.map(tech => `<span>${tech}</span>`).join('')}
+        const container = document.querySelector('.projects-grid');
+        if (!container) return;
+      
+        const filtered = this.activeCategory === 'all' 
+          ? this.projectsData 
+          : this.projectsData.filter(p => p.category === this.activeCategory);
+      
+        container.innerHTML = filtered.map(project => `
+          <div class="project-card" data-project="${project.id}">
+            <img src="/${project.image}" 
+                 alt="${project.title}" 
+                 class="project-image"
+                 onerror="this.onerror=null; this.src='/assets/images/default-project.png'">
+            <div class="project-info">
+              <h3>${project.title}</h3>
+              <div class="project-stack">
+                ${project.stack.map(tech => `<span>${tech}</span>`).join('')}
+              </div>
             </div>
           </div>
-        </div>
-      `).join('');
-    }
+        `).join('');
+      }
   
     setupTabs() {
       const tabsContainer = document.querySelector('.projects-tabs');

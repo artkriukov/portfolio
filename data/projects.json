@@ -4,7 +4,7 @@
         "id": "moviequiz",
         "title": "MovieQuiz",
         "category": "personal",
-        "image": "assets/projects/moviequiz.jpg",
+        "image": "assets/projects/MovieQuiz.png",
         "stack": ["Swift", "UIKit"],
         "details": {
           "description": "Киновикторина с вопросами о фильмах",
