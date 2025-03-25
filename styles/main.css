@@ -8,12 +8,16 @@
 
 
 
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    overflow-y: scroll; 
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +25,8 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-y: auto; 
+    scrollbar-width: thin;
 }
 
 /* Layout */
@@ -55,6 +61,7 @@ body {
     position: sticky;
     top: 0;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .sidebar__nav {
@@ -73,7 +80,7 @@ body {
     color: var(--text-color);
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sidebar__tab:hover {
@@ -83,16 +90,25 @@ body {
 .sidebar__tab.active {
     background: var(--accent);
     color: white;
+    transform: translateX(4px);
 }
 
 /* Content */
 .content {
     padding: 4rem 2rem;
+    overflow-y: auto;
+    height: 100vh;
+    overscroll-behavior: contain;
 }
 
 .content__title {
     margin-bottom: 2rem;
     font-size: 2.5rem;
+}
+
+.content__body {
+    will-change: opacity, transform;
+    transform-origin: top center;
 }
 
 /* Cards */
@@ -102,6 +118,11 @@ body {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
 }
 
 /* About Section */
@@ -182,17 +203,60 @@ body {
     --shadow: var(--dark-shadow);
 }
 
+/* Apple Animation */
+@keyframes appleFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.98) translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.apple-transition {
+    animation: appleFadeIn 0.4s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .container {
+.container {
         grid-template-columns: 80px 1fr;
+    }
+    
+    .sidebar {
+        padding: 1rem 0.5rem;
     }
     
     .sidebar__tab .text {
         display: none;
     }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .sidebar__nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    
+    .sidebar__tab {
+        padding: 0.8rem;
+    }
     
     .content {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 }
+
+

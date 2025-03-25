@@ -30,8 +30,20 @@ var Router = (function() {
     }
     
     function renderPage(page, data) {
+        var content = document.querySelector('.content__body');
+        content.style.animation = 'none'; // Сброс анимации
+        content.offsetHeight; // Trigger reflow
+        
         document.querySelector('.content__title').textContent = getTitle(page);
-        document.querySelector('.content__body').innerHTML = getRenderer(page)(data);
+        content.innerHTML = getRenderer(page)(data);
+        
+        // Добавляем класс с анимацией Apple
+        content.classList.add('apple-transition');
+        
+        // Удаляем класс после завершения анимации
+        setTimeout(() => {
+            content.classList.remove('apple-transition');
+        }, 400);
     }
     
     function getTitle(page) {
