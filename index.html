@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru" class="light-theme">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Артем Крюков | iOS Developer</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Артем Крюков | iOS Developer</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="container">
-        <button class="theme-toggle">
-            <span class="theme-icon">🌓</span>
-        </button>
-        
-        <aside class="sidebar">
-            <nav class="sidebar__nav">
-                <button class="sidebar__tab active" data-content="about">
-                    <span class="icon">👤</span>
-                    <span class="text">Обо мне</span>
-                </button>
-                <button class="sidebar__tab" data-content="stack">
-                    <span class="icon">🛠</span>
-                    <span class="text">Стэк</span>
-                </button>
-                <button class="sidebar__tab" data-content="projects">
-                    <span class="icon">🚀</span>
-                    <span class="text">Проекты</span>
-                </button>
-                <button class="sidebar__tab" data-content="experience">
-                    <span class="icon">💼</span>
-                    <span class="text">Опыт</span>
-                </button>
-            </nav>
-        </aside>
+  <div class="container">
+    <button class="theme-toggle"><span class="theme-icon">🌓</span></button>
+    <aside class="sidebar">
+      <nav class="sidebar__nav">
+        <button class="sidebar__tab active" data-content="about"><span class="icon">👤</span><span class="text">Обо мне</span></button>
+        <button class="sidebar__tab" data-content="stack"><span class="icon">🛠</span><span class="text">Стэк</span></button>
+        <button class="sidebar__tab" data-content="projects"><span class="icon">🚀</span><span class="text">Проекты</span></button>
+        <button class="sidebar__tab" data-content="experience"><span class="icon">💼</span><span class="text">Опыт</span></button>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1 class="content__title"></h1>
+      <div class="content__body"></div>
+    </main>
+  </div>
 
-        <main class="content">
-            <h1 class="content__title"></h1>
-            <div class="content__body"></div>
-        </main>
+  <!-- Модальное окно -->
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <button class="modal-close">✕</button>
+    <div class="modal-content">
+      <div class="modal-image-container"></div>
+      <h2 class="modal-title"></h2>
+      <p class="modal-description"></p>
+      <div class="modal-features">
+        <h4>Особенности:</h4>
+        <ul class="features-list"></ul>
+      </div>
+      <div class="modal-tasks">
+        <h4>Реализованные задачи:</h4>
+        <ul class="tasks-list"></ul>
+      </div>
+      <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
     </div>
+  </div>
 
-    <!-- Модальное окно добавляем здесь (в корне body) -->
-    <div class="modal-overlay"></div>
-    <div class="modal-container">
-        <button class="modal-close">✕</button>
-        <div class="modal-content">
-            <div class="modal-image-container"></div>
-            <h2 class="modal-title"></h2>
-            <p class="modal-description"></p>
-            <div class="modal-features">
-                <h4>Особенности:</h4>
-                <ul class="features-list"></ul>
-            </div>
-            <div class="modal-tasks">
-                <h4>Реализованные задачи:</h4>
-                <ul class="tasks-list"></ul>
-            </div>
-            <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
-        </div>
-    </div>
-
-    <script src="scripts/animator.js" type="module"></script>
-    <script src="scripts/http.js" type="module"></script>
-    <script src="scripts/render.js" type="module"></script>
-    <script src="scripts/theme.js" type="module"></script>
-    <script src="scripts/router.js" type="module"></script>
-    <script src="scripts/projects.js" type="module"></script>
-    <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/animator.js" type="module"></script>
+  <script src="scripts/http.js" type="module"></script>
+  <script src="scripts/render.js" type="module"></script>
+  <script src="scripts/theme.js" type="module"></script>
+  <script src="scripts/router.js" type="module"></script>
+  <script src="scripts/projects.js" type="module"></script>
+  <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
