@@ -1,5 +1,6 @@
 /* Base styles */
 @import url('./variables.css');
+@import url('./about.css');
 /* @import url('./animations.css');
 @import url('./sidebar.css');
 @import url('./content.css');

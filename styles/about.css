@@ -1,0 +1,186 @@
+/* Основная секция "Обо мне" */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 5rem 0;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        var(--bg-alt) 0%,
+        var(--bg-alt) 70%,
+        transparent 100%
+    );
+    border-radius: 24px 24px 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Контейнер контента */
+.about-content {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Шапка с фото и именем */
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.about-role {
+    font-size: 1.6rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Блок с описанием */
+.about-description {
+    margin-bottom: 4rem;
+}
+
+.about-description p {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+/* Социальные ссылки */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background: var(--bg);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.social-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+}
+
+.social-link span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .about-content {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 4rem 0;
+        background-size: 100% 90%;
+    }
+    
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-role {
+        font-size: 1.4rem;
+    }
+    
+    .about-description p {
+        font-size: 1.2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-content {
+        padding: 0 1.5rem;
+    }
+    
+    .about-section {
+        padding: 3rem 0;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+    
+    .social-link {
+        padding: 0.8rem 1.5rem;
+    }
+}

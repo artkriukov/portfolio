@@ -2,19 +2,25 @@
 var Http = {
     fetchPage: function(page, callback) {
         fetch('data/' + page + '.json')
-            .then(function(response) {
+            .then(response => {
                 if (!response.ok) throw new Error('Network error');
                 return response.json();
             })
-            .then(callback)
-            .catch(function(error) {
+            .then(data => {
+                // Нормализация данных для about
+                if (page === 'about' && data.description && !Array.isArray(data.description)) {
+                    data.description = [data.description];
+                }
+                callback(data);
+            })
+            .catch(error => {
                 console.error('Failed to load page:', error);
-                document.querySelector('.content__body').innerHTML = `
-                    <div class="error-card card">
-                        <p>⚠️ Ошибка загрузки данных</p>
-                    </div>
-                `;
-                Animator.completeTransition();
+                callback({
+                    name: '',
+                    role: '',
+                    description: ['Информация временно недоступна'],
+                    socialLinks: []
+                });
             });
     }
 };

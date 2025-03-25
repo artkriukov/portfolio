@@ -2,19 +2,32 @@
 var Render = {
     about: function(data) {
         return `
-            <div class="about-card card">
-                <h2>${data.name}</h2>
-                <p class="role">${data.role}</p>
-                <div class="social-links">
-                    ${data.socialLinks.map(link => `
-                        <a href="${link.url}" target="_blank" class="social-link">
-                            ${link.icon}
-                            <span>${link.name}</span>
-                        </a>
-                    `).join('')}
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-header">
+                        ${data.photo ? `<img src="${data.photo}" alt="${data.name}" class="profile-image">` : ''}
+                        <div>
+                            <h1 class="about-title">${data.name}</h1>
+                            <p class="about-role">${data.role}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-description">
+                        ${data.description.map(line => `
+                            <p>${line}</p>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="social-links">
+                        ${data.socialLinks.map(link => `
+                            <a href="${link.url}" target="_blank" class="social-link">
+                                ${link.icon}
+                                <span>${link.name}</span>
+                            </a>
+                        `).join('')}
+                    </div>
                 </div>
-                <p>${data.about.description}</p>
-            </div>
+            </section>
         `;
     },
 

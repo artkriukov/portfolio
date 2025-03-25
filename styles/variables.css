@@ -5,10 +5,17 @@
     --sidebar-bg: #ffffff;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --accent: #4a90e2;
+    --bg-alt: rgba(0, 0, 0, 0.03);
+    --text-secondary: #86868b;
     
     /* Dark Theme */
     --dark-bg-color: #1a1a1a;
     --dark-text-color: #e9ecef;
     --dark-sidebar-bg: #2d2d2d;
     --dark-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme {
+    --bg-alt: rgba(255, 255, 255, 0.05);
+    --text-secondary: #a1a1a6;
 }
