@@ -1,0 +1,32 @@
+.theme-toggle {
+    position: fixed;
+    top: var(--space-md);
+    right: var(--space-md);
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    border: 0.1rem solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle-inner {
+    position: relative;
+    width: 2em;
+    height: 2em;
+}
+
+.sun-icon, .moon-icon {
+    position: absolute;
+    font-size: 1.8em;
+    transition: opacity 0.3s ease;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артем Крюков | iOS Developer</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle">
+            <span class="theme-icon">🌓</span>
+        </button>
+        
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <button class="sidebar__tab active" data-content="about">
+                    <span class="icon">👤</span>
+                    <span class="text">Обо мне</span>
+                </button>
+                <button class="sidebar__tab" data-content="stack">
+                    <span class="icon">🛠</span>
+                    <span class="text">Стэк</span>
+                </button>
+                <button class="sidebar__tab" data-content="projects">
+                    <span class="icon">🚀</span>
+                    <span class="text">Проекты</span>
+                </button>
+                <button class="sidebar__tab" data-content="experience">
+                    <span class="icon">💼</span>
+                    <span class="text">Опыт</span>
+                </button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="content__title"></h1>
+            <div class="content__body"></div>
+        </main>
+    </div>
+
+<script src="scripts/animator.js"></script>
+<script src="scripts/http.js"></script>
+<script src="scripts/render.js"></script>
+<script src="scripts/theme.js"></script>
+<script src="scripts/router.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

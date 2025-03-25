@@ -1,0 +1,69 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--bg-alt);
+    border-right: 0.1rem solid var(--border);
+    padding: var(--space-md) 0;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--space-md);
+    gap: 0.4rem;
+}
+
+.sidebar-tab {
+    position: relative;
+    height: var(--tab-height);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-sm);
+    border-radius: var(--border-radius);
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar-tab:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-tab.active {
+    color: var(--accent);
+}
+
+.sidebar-tab.active .tab-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.3rem;
+    background-color: var(--accent);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    animation: tabIndicator 0.3s ease-out;
+}
+
+.tab-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.tab-icon {
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-text {
+    font-size: 1em;
+    font-weight: 500;
+}

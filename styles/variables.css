@@ -1,0 +1,14 @@
+:root {
+    /* Light Theme */
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --sidebar-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --accent: #4a90e2;
+    
+    /* Dark Theme */
+    --dark-bg-color: #1a1a1a;
+    --dark-text-color: #e9ecef;
+    --dark-sidebar-bg: #2d2d2d;
+    --dark-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
