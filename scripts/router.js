@@ -67,7 +67,7 @@ const Router = (() => {
   // Обработчики табов проектов
   const setupProjectTabs = () => {
     const tabs = document.querySelectorAll('.projects-tab');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectsGrid = document.querySelector('.projects-grid');
     
     tabs.forEach(tab => {
       tab.addEventListener('click', function() {
@@ -78,20 +78,26 @@ const Router = (() => {
         
         const category = this.dataset.category;
         
-        // Фильтруем проекты с анимацией
-        projectCards.forEach(card => {
-          if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'block';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300);
-          }
-        });
+        // Добавляем класс для анимации
+        projectsGrid.classList.add('filtering');
+        
+        // Через небольшой таймаут начинаем фильтрацию
+        setTimeout(() => {
+          const projectCards = document.querySelectorAll('.project-card');
+          
+          projectCards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+          
+          // После завершения фильтрации убираем класс анимации
+          setTimeout(() => {
+            projectsGrid.classList.remove('filtering');
+          }, 300);
+        }, 50);
       });
     });
   };

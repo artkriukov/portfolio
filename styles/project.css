@@ -349,3 +349,35 @@
     filter: brightness(0.7);
     pointer-events: none;
   }
+
+  /* Анимация фильтрации проектов */
+.projects-grid.filtering {
+  transition: none;
+}
+
+.project-card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  transition: grid-template-columns 0.3s ease;
+}
+
+/* Отключаем анимацию при фильтрации */
+.projects-grid.filtering .project-card {
+  transition: none;
+}

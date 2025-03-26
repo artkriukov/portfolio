@@ -1,0 +1,127 @@
+/* Stack Section Styles */
+.stack-section {
+    padding: 4rem 0;
+    background: linear-gradient(
+      to bottom,
+      var(--bg-alt) 0%,
+      var(--bg-alt) 70%,
+      transparent 100%
+    );
+    border-radius: 24px 24px 0 0;
+    margin-top: 3rem;
+  }
+  
+  .stack-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  
+  .stack-category {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+  }
+  
+  .stack-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .stack-category h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .stack-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+    border-radius: 12px;
+    transition: all var(--transition-base);
+  }
+  
+  .stack-item:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+  }
+  
+  .stack-item:hover span {
+    color: white;
+  }
+  
+  .stack-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+    filter: grayscale(30%);
+    transition: all var(--transition-base);
+  }
+  
+  .stack-item:hover .stack-icon {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+  }
+  
+  .stack-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    transition: color var(--transition-base);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .stack-items {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .stack-section {
+      padding: 3rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stack-items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .stack-item {
+      padding: 0.8rem;
+    }
+    
+    .stack-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
