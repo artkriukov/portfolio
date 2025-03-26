@@ -78,15 +78,6 @@
         ]
       },
       {
-        "category": "Testing",
-        "items": [
-          {
-            "icon": "assets/icons/xctest.webp",
-            "name": "XCTest"
-          }
-        ]
-      },
-      {
         "category": "Other",
         "items": [
           {
@@ -100,6 +91,10 @@
           {
             "icon": "assets/icons/agile.svg",
             "name": "Agile"
+          },
+          {
+            "icon": "assets/icons/xctest.webp",
+            "name": "XCTest"
           }
         ]
       }

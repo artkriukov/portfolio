@@ -1,40 +1,31 @@
 /* stack.css */
 .stack-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .stack-grid {
-    background: var(--bg-alt);
-    border-radius: 24px;
-    padding: 2rem;
-    box-shadow: inset 0 1px 0 0 var(--border-color);
     display: grid;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
   
   .stack-category {
     background: var(--card-bg);
-    border-radius: 14px;
-    padding: 1.8rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
     border: 1px solid var(--border-color);
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
-  
-  .stack-category:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
   
   .stack-category h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     color: var(--text-color);
     position: relative;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
   }
   
   .stack-category h3::after {
@@ -42,49 +33,46 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: 32px;
     height: 2px;
     background: var(--accent);
-    border-radius: 2px;
   }
   
   .stack-items {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0.8rem;
-    border-radius: 12px;
-    transition: background 0.3s ease;
   }
   
   .stack-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 1.2rem;
-    background: var(--stack-item-bg);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    gap: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-alt);
+    border-radius: 8px;
+    transition: all 0.2s ease;
   }
   
   .stack-item:hover {
     background: rgba(var(--accent-rgb), 0.1);
-    border-color: rgba(var(--accent-rgb), 0.3);
+    transform: translateY(-1px);
   }
   
   .stack-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
   }
   
   .stack-item span {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--text-color);
+    white-space: nowrap;
   }
   
-  /* Добавляем RGB переменную для акцентного цвета */
+  /* Цветовые переменные */
   :root {
     --accent-rgb: 0, 122, 255;
   }
@@ -96,23 +84,36 @@
   /* Адаптивность */
   @media (max-width: 768px) {
     .stack-grid {
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.2rem;
-      padding: 1.5rem;
     }
     
-    .stack-category {
-      padding: 1.5rem;
+    .stack-items {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     }
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     .stack-section {
-      padding: 1.5rem;
+      padding: 1.5rem 0.5rem;
     }
     
-    .stack-grid {
-      grid-template-columns: 1fr;
-      border-radius: 18px;
+    .stack-items {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.6rem;
+    }
+    
+    .stack-item {
+      padding: 0.5rem 0.6rem;
+      gap: 0.6rem;
+    }
+    
+    .stack-icon {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .stack-item span {
+      font-size: 0.9rem;
     }
   }
