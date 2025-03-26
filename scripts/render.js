@@ -11,6 +11,7 @@ const Render = {
           <div class="about-header">
             ${shared.photo ? `<img src="${shared.photo}" alt="${content.name}" class="profile-image">` : ''}
             <div>
+              <h1 class="about-title">${content.name}</h1>
               <p class="about-role">${content.role}</p>
             </div>
           </div>
