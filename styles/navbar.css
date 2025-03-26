@@ -94,17 +94,3 @@
   padding: 0.5rem 1rem;
 }
 
-/* Специфичные стили для табов проектов */
-.projects-tabs {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 1.5rem;
-  background: var(--bg-alt);
-  border-radius: 10px;
-  padding: 6px;
-}
-
-.projects-tab {
-  font-size: 0.9rem;
-  padding: 0.6rem 1.2rem;
-}
