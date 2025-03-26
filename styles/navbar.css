@@ -34,22 +34,37 @@
 .navbar-tabs {
   display: flex;
   gap: 4px;
-  background: var(--tabs-bg);
+  background: var(--bg-alt);
   border-radius: 8px;
   padding: 4px;
 }
 
-.navbar-tab {
-  padding: 6px 16px;
+
+.navbar-tab, .projects-tab {
+  padding: 0.5rem 1.25rem;
   border: none;
-  background: none;
-  font-family: "SF Pro Text", -apple-system, sans-serif;
-  font-size: 13px;
+  border-radius: 8px;
+  background: var(--tab-bg);
+  color: var(--tab-text);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-color);
   cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.navbar-tab:not(.active):hover, 
+.projects-tab:not(.active):hover {
+  background: var(--tab-hover-bg);
+}
+
+/* Активный таб */
+.navbar-tab.active, .projects-tab.active {
+  background: var(--tab-active-bg);
+  color: var(--tab-active-text);
+  box-shadow: var(--tab-shadow);
+  font-weight: 500;
 }
 
 .navbar-tab:hover {
@@ -72,4 +87,24 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.navbar-tab {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Специфичные стили для табов проектов */
+.projects-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.projects-tab {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
 }

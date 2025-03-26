@@ -191,44 +191,6 @@
     margin: 0 auto;
   }
   
-  /* Контейнер табов (вкладок) */
-  .projects-tabs {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 0.5rem;
-    background: var(--bg-alt);
-    border-radius: 12px;
-    width: fit-content;
-  }
-  
-  /* Отдельный таб */
-  .projects-tab {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 10px;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
-  
-  /* Активный таб */
-  .projects-tab.active {
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 125, 250, 0.2);
-  }
-  
-  /* Таб при наведении */
-  .projects-tab:not(.active):hover {
-    background: rgba(0, 125, 250, 0.1);
-    color: var(--accent);
-  }
-  
   /* Сетка проектов */
   .projects-grid {
     display: grid;
