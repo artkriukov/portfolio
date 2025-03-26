@@ -1,36 +1,4 @@
-/* ==================== */
-/* Глобальные переменные */
-/* ==================== */
-:root {
-    /* Цвета светлой темы */
-    --bg-color: #f5f5f7;
-    --text-color: #1d1d1f;
-    --text-secondary: #86868b;
-    --card-bg: #ffffff;
-    --bg-alt: rgba(0, 0, 0, 0.05);
-    --border-color: rgba(0, 0, 0, 0.08);
-    --badge-bg: rgba(0, 0, 0, 0.05);
-    --badge-text: #1d1d1f;
-    --accent: #007AFF;
-    --accent-hover: #0066CC;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  .dark-theme {
-    /* Цвета темной темы */
-    --bg-color: #1d1d1f;
-    --text-color: #f5f5f7;
-    --text-secondary: #8e8e93;
-    --card-bg: #2c2c2e;
-    --bg-alt: rgba(255, 255, 255, 0.08);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --badge-bg: rgba(255, 255, 255, 0.1);
-    --badge-text: #ffffff;
-    --accent: #0A84FF;
-    --accent-hover: #007AFF;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-  
+
   /* ==================== */
   /* Стили модального окна */
   /* ==================== */

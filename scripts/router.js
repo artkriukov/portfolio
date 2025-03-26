@@ -13,7 +13,7 @@ const Router = (() => {
     const closeModal = () => {
       document.querySelector('.modal-overlay').classList.remove('active');
       document.querySelector('.modal-container').classList.remove('active');
-      document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     };
 
     document.addEventListener('click', (e) => {
@@ -37,6 +37,7 @@ const Router = (() => {
       const project = data.projects.find(p => p.id === projectId);
       if (!project) throw new Error('Project not found');
 
+      // Заполнение модального окна
       document.querySelector('.modal-title').textContent = project.title;
       document.querySelector('.modal-description').textContent = project.details.description;
       
@@ -52,11 +53,12 @@ const Router = (() => {
       
       const githubLink = document.querySelector('.github-link');
       githubLink.href = project.details.github || '#';
-      githubLink.style.display = project.details.github ? 'inline-block' : 'none';
+      githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
 
+      // Показ модального окна
       document.querySelector('.modal-overlay').classList.add('active');
       document.querySelector('.modal-container').classList.add('active');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } catch (error) {
       console.error('Error opening project modal:', error);
     }
@@ -65,7 +67,7 @@ const Router = (() => {
   // Обработчики табов проектов
   const setupProjectTabs = () => {
     const tabs = document.querySelectorAll('.projects-tab');
-    const projectCards = document.querySelectorAll('.project-item'); // Изменил класс на project-item
+    const projectCards = document.querySelectorAll('.project-card');
     
     tabs.forEach(tab => {
       tab.addEventListener('click', function() {
@@ -97,7 +99,7 @@ const Router = (() => {
   // Обработчики кликов по проектам
   const setupProjectClickHandlers = () => {
     document.addEventListener('click', (e) => {
-      const projectCard = e.target.closest('.project-item'); // Изменил класс на project-item
+      const projectCard = e.target.closest('.project-card');
       if (projectCard) {
         openProjectModal(projectCard.dataset.project);
       }
@@ -111,27 +113,23 @@ const Router = (() => {
     experience: Render.experience,
     projects: function(data) {
       return `
-        <section class="projects">
+        <section class="projects-section">
           <div class="projects-tabs">
             <button class="projects-tab active" data-category="all">Все проекты</button>
             <button class="projects-tab" data-category="personal">Индивидуальные</button>
             <button class="projects-tab" data-category="team">Командные</button>
           </div>
-          <div class="projects-list">
+          <div class="projects-grid">
             ${data.projects.map(project => `
-              <div class="project-item" data-project="${project.id}" data-category="${project.category}">
-                <div class="project-card">
-                  <div class="project-image-wrapper">
-                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='assets/images/default-project.png'">
-                  </div>
-                  <div class="project-content">
-                    <h3 class="project-name">${project.title}</h3>
-                    <div class="project-technologies">
-                      ${project.stack.map(tech => `<span class="technology-badge">${tech}</span>`).join('')}
-                    </div>
-                    <div class="project-footer">
-                      <span class="project-category">${project.category === 'personal' ? 'Индивидуальный' : 'Командный'} проект</span>
-                    </div>
+              <div class="project-card" data-project="${project.id}" data-category="${project.category}">
+                <div class="project-image-container">
+                  <img src="${project.image}" alt="${project.title}" class="project-image"
+                       onerror="this.onerror=null;this.src='assets/images/default-project.png'">
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">${project.title}</h3>
+                  <div class="project-stack">
+                    ${project.stack.map(tech => `<span class="tech-tag" data-tech="${tech.toLowerCase()}">${tech}</span>`).join('')}
                   </div>
                 </div>
               </div>
