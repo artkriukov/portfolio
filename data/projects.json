@@ -1,4 +1,5 @@
 {
+  "ru": {
     "projects": [
       {
         "id": "moviequiz",
@@ -8,7 +9,6 @@
         "stack": ["Storyboard", "MVP", "URLSession", "UserDefoults", "Unit-tests", "UI-tests"],
         "details": {
           "description": "Одностраничное приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмов IMDb.",
-          "features": ["Разработал приложение для викторин на основе фильмов с использованием архитектуры MVP."],
           "tasks": [
             "Интеграция с API: Использовал NetworkClient для загрузки данных о фильмах.",
             "Загрузка и обработка данных: Реализовал MoviesLoader для загрузки списка популярных фильмов.",
@@ -29,16 +29,12 @@
         "image": "assets/projects/Shoppe.jpg",
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
-          "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее. Находите нужные товары, сохраняйте избранное, оформляйте заказы в разных валютах и получайте товары с доставкой по всему миру!",
-          "features": [
-            "Разработал экран корзины с использованием архитектуры VIPER."
-          ],
+          "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее.",
           "tasks": [
             "Реализовал взаимодействие с данными корзины, включая добавление, удаление и изменение количества товаров.",
             "Обеспечил подсчет общей суммы и количества товаров.",
             "Работал со StorageManager для загрузки и обновления данных.",
-            "Обеспечил связь между слоями Interactor, Presenter и View для корректного отображения данных и обработки пользовательских действий.",
-            "Участвовал в оптимизации и рефакторинге кода для улучшения производительности и читаемости."
+            "Обеспечил связь между слоями Interactor, Presenter и View для корректного отображения данных и обработки пользовательских действий."
           ],
           "github": "https://github.com/artkriukov/Shoppe"
         }
@@ -51,18 +47,72 @@
         "stack": ["UIKit", "MVC", "Lottie"],
         "details": {
           "description": "Мобильное приложение для интернет-магазина",
-          "features": [
-            "Разработал игровой экран (GameView) с использованием современных технологий и подходов."
-          ],
           "tasks": [
-            "Создал динамичные анимации с помощью библиотеки Lottie, включая анимацию тиканья бомбы и взрыва.",
+            "Создал динамичные анимации с помощью библиотеки Lottie.",
             "Интегрировал звуковые эффекты: зацикленное тиканье бомбы и фоновую музыку.",
-            "Реализовал интерактивный таймер с функциями паузы и возобновления.",
-            "Добавил вибрацию для обратной связи при завершении игры.",
-             "Реализовал переход на следующий экран по завершении таймера."
+            "Реализовал интерактивный таймер с функциями паузы и возобновления."
+          ],
+          "github": "https://github.com/artkriukov/Boom"
+        }
+      }
+    ]
+  },
+  "en": {
+    "projects": [
+      {
+        "id": "moviequiz",
+        "title": "MovieQuiz",
+        "category": "personal",
+        "image": "assets/projects/MovieQuiz.png",
+        "stack": ["Storyboard", "MVP", "URLSession", "UserDefoults", "Unit-tests", "UI-tests"],
+        "details": {
+          "description": "Single-page application with quizzes about movies from IMDb's top 250 and most popular films.",
+          "tasks": [
+            "API Integration: Used NetworkClient to load movie data.",
+            "Data loading and processing: Implemented MoviesLoader to fetch popular movies list.",
+            "Question generation: Created QuestionFactory to generate questions based on movie ratings.",
+            "User interface: Developed quiz screen using Storyboard.",
+            "Quiz logic: Implemented MovieQuizPresenter to manage quiz logic.",
+            "Statistics and results: Integrated StatisticService to track user progress.",
+            "Error handling: Implemented network error handling and user notifications.",
+            "Testing and debugging: Wrote Unit tests and UI tests."
+          ],
+          "github": "https://github.com/artkriukov/MovieQuiz"
+        }
+      },
+      {
+        "id": "shopee",
+        "title": "Shoppe",
+        "category": "team",
+        "image": "assets/projects/Shoppe.jpg",
+        "stack": ["UIKit", "VIPER", "StorageManager"],
+        "details": {
+          "description": "Shoppe is a universal mobile shopping app that makes online shopping easier, more convenient and accessible.",
+          "tasks": [
+            "Implemented cart data interaction including adding, removing and updating product quantities.",
+            "Calculated total amount and product count.",
+            "Worked with StorageManager to load and update data.",
+            "Established connection between Interactor, Presenter and View layers for proper data display and user action handling."
+          ],
+          "github": "https://github.com/artkriukov/Shoppe"
+        }
+      },
+      {
+        "id": "bomb",
+        "title": "Bomb",
+        "category": "team",
+        "image": "assets/projects/GameBomb.gif",
+        "stack": ["UIKit", "MVC", "Lottie"],
+        "details": {
+          "description": "Mobile application for e-commerce",
+          "tasks": [
+            "Created dynamic animations using Lottie library.",
+            "Integrated sound effects: looping bomb tick and background music.",
+            "Implemented interactive timer with pause and resume functions."
           ],
           "github": "https://github.com/artkriukov/Boom"
         }
       }
     ]
   }
+}

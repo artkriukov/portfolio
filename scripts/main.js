@@ -1,16 +1,18 @@
 import Theme from './theme.js';
 import Router from './router.js';
 import Projects from './projects.js';
+import Language from './lang.js';
 
 class MainApp {
   constructor() {
+    this.language = new Language(); // Инициализация языка первой
     this.init();
   }
 
   init() {
     console.log('Initializing application...');
     
-    // Инициализация основных модулей
+    // Инициализация модулей
     Theme.init();
     Router.init();
     
@@ -38,6 +40,7 @@ class MainApp {
 
     document.querySelector('.modal-close')?.addEventListener('click', closeModal);
     document.querySelector('.modal-overlay')?.addEventListener('click', closeModal);
+    
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && document.querySelector('.modal-container.active')) {
         closeModal();
@@ -46,18 +49,16 @@ class MainApp {
   }
 
   setupGlobalEventListeners() {
-    // Обработчик для всех внутренних ссылок
+    // Обработчик внутренних ссылок
     document.addEventListener('click', (e) => {
       if (e.target.matches('a[href^="#"]')) {
         e.preventDefault();
         const target = document.querySelector(e.target.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        target?.scrollIntoView({ behavior: 'smooth' });
       }
     });
 
-    // Подписка на изменение страниц
+    // Обработчик изменения страниц
     document.addEventListener('pageChanged', (e) => {
       this.initPageSpecificModules(e.detail.page);
     });
@@ -66,8 +67,6 @@ class MainApp {
   handleInitialLoad() {
     const initialPage = window.location.hash.substring(1) || 'about';
     this.initPageSpecificModules(initialPage);
-    
-    // Инициализация анимаций для текущей страницы
     this.initScrollAnimations();
   }
 
@@ -81,31 +80,22 @@ class MainApp {
       case 'experience':
         this.initTimelineAnimation();
         break;
-      case 'about':
-        // Можно добавить специфичную логику для страницы "О себе"
-        break;
       default:
-        console.log(`No specific modules for ${page}`);
+        // Для остальных страниц специфичная логика не требуется
     }
   }
 
   initScrollAnimations() {
-    // Инициализация всех анимаций при скролле
     const animateOnScroll = () => {
-      const elements = document.querySelectorAll('[data-animate]');
-      
-      elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.75) {
-          element.classList.add('animated');
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.75) {
+          el.classList.add('animated');
         }
       });
     };
 
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Инициализация при загрузке
+    animateOnScroll();
   }
 
   initTimelineAnimation() {
@@ -117,12 +107,8 @@ class MainApp {
         if (entry.isIntersecting) {
           entry.target.classList.add('animated');
           
-          // Анимация для каждого элемента временной линии
-          const items = entry.target.querySelectorAll('.experience-card');
-          items.forEach((item, index) => {
-            setTimeout(() => {
-              item.classList.add('animate-item');
-            }, index * 200);
+          entry.target.querySelectorAll('.experience-card').forEach((item, index) => {
+            setTimeout(() => item.classList.add('animate-item'), index * 200);
           });
           
           observer.unobserve(entry.target);
@@ -131,7 +117,6 @@ class MainApp {
     }, { threshold: 0.1 });
 
     observer.observe(timeline);
-    console.log('Timeline animation initialized');
   }
 }
 

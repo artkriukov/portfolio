@@ -1,282 +1,344 @@
 import Http from './http.js';
 import Animator from './animator.js';
 import Render from './render.js';
+import Language from './lang.js';
 
 const Router = (() => {
-  let currentPage = null;
-  const pageEvent = new CustomEvent('pageChanged', {
-    detail: { page: null, prevPage: null }
-  });
+    let currentPage = null;
+    const language = new Language();
+    const pageEvent = new CustomEvent('pageChanged', { detail: { page: null, prevPage: null } });
 
-  // Настройка модального окна
-  const setupModalCloseHandlers = () => {
-    const closeModal = () => {
-      document.querySelector('.modal-overlay').classList.remove('active');
-      document.querySelector('.modal-container').classList.remove('active');
-      document.body.classList.remove('modal-open');
+    // Настройка модального окна
+    const setupModalCloseHandlers = () => {
+        const closeModal = () => {
+            document.querySelector('.modal-overlay').classList.remove('active');
+            document.querySelector('.modal-container').classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+        
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-overlay') || 
+                e.target.classList.contains('modal-close')) {
+                closeModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.querySelector('.modal-container.active')) {
+                closeModal();
+            }
+        });
     };
 
-    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal-overlay') || 
-          e.target.classList.contains('modal-close')) {
-        closeModal();
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && document.querySelector('.modal-container.active')) {
-        closeModal();
-      }
-    });
-  };
-
-  // Открытие модалки проекта
-  const openProjectModal = async (projectId) => {
-    try {
-      const data = await Http.fetchPage('projects');
-      const project = data.projects.find(p => p.id === projectId);
-      if (!project) throw new Error('Project not found');
-
-      // Заполнение модального окна
-      document.querySelector('.modal-title').textContent = project.title;
-      document.querySelector('.modal-description').textContent = project.details.description;
-      
-      const imgContainer = document.querySelector('.modal-image-container');
-      imgContainer.innerHTML = project.image ? 
-        `<img src="${project.image}" alt="${project.title}" class="modal-project-image" onerror="this.onerror=null;this.src='assets/images/default-project.png'">` : '';
-      
-      document.querySelector('.features-list').innerHTML = 
-        project.details.features.map(f => `<li>${f}</li>`).join('');
-      
-      document.querySelector('.tasks-list').innerHTML = 
-        project.details.tasks.map(t => `<li>${t}</li>`).join('');
-      
-      const githubLink = document.querySelector('.github-link');
-      githubLink.href = project.details.github || '#';
-      githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
-
-      // Показ модального окна
-      document.querySelector('.modal-overlay').classList.add('active');
-      document.querySelector('.modal-container').classList.add('active');
-      document.body.classList.add('modal-open');
-    } catch (error) {
-      console.error('Error opening project modal:', error);
-    }
-  };
-
-  // Обработчики табов проектов
-  const setupProjectTabs = () => {
-    const tabs = document.querySelectorAll('.projects-tab');
-    const projectsGrid = document.querySelector('.projects-grid');
-    
-    tabs.forEach(tab => {
-      tab.addEventListener('click', function() {
-        // Удаляем активный класс у всех табов
-        tabs.forEach(t => t.classList.remove('active'));
-        // Добавляем активный класс текущему табу
-        this.classList.add('active');
+    // Навигация
+    const navigate = async (page, forceReload = false) => {
+        if (currentPage === page && !forceReload) return;
         
-        const category = this.dataset.category;
+        Animator.startTransition();
+        updateActiveTab(page);
         
-        // Добавляем класс для анимации
+        try {
+            const data = await Http.fetchPage(page);
+            renderPage(page, data);
+            currentPage = page;
+            window.location.hash = page;
+            pageEvent.detail.page = page;
+            pageEvent.detail.prevPage = currentPage;
+            document.dispatchEvent(pageEvent);
+        } catch (error) {
+            console.error('Navigation error:', error);
+            showError(language.t('load_error'));
+        }
+    };
+
+    // Рендер страницы с анимацией
+    const renderPage = async (page, data) => {
+        const contentContainer = document.querySelector('.content-container');
+        if (!contentContainer) return;
+        
+        // Анимация исчезновения
+        contentContainer.style.opacity = '0';
+        contentContainer.style.transform = 'translateY(10px)';
+        contentContainer.style.transition = 'opacity 0.3s, transform 0.3s';
+        
+        await new Promise(resolve => setTimeout(resolve, 300));
+        
+        const title = language.t(page);
+        const content = Render[page](data, language.getCurrentLang());
+        
+        contentContainer.innerHTML = `
+            <h1 class="content-title">${title}</h1>
+            <div class="content-body">${content}</div>
+        `;
+        
+        // Анимация появления
+        setTimeout(() => {
+            contentContainer.style.opacity = '1';
+            contentContainer.style.transform = 'translateY(0)';
+        }, 50);
+        
+        if (page === 'projects') {
+            initProjectsPage();
+        }
+    };
+
+    // Инициализация страницы проектов
+    const initProjectsPage = () => {
+        setupProjectTabs();
+        setupProjectClickHandlers();
+    };
+
+    // Настройка табов проектов с анимацией
+    const setupProjectTabs = () => {
+        const tabsContainer = document.querySelector('.projects-tabs');
+        if (!tabsContainer) return;
+
+        // Создаем индикатор активного таба
+        const indicator = document.createElement('div');
+        indicator.className = 'tab-indicator';
+        tabsContainer.appendChild(indicator);
+
+        // Обновляем табы с переводами
+        updateProjectTabs();
+
+        // Обработчик кликов
+        tabsContainer.addEventListener('click', (e) => {
+            const tab = e.target.closest('.projects-tab');
+            if (tab) {
+                const category = tab.dataset.category;
+                filterProjects(category);
+                updateTabIndicator(tab);
+            }
+        });
+    };
+
+    // Обновление табов с переводами
+    const updateProjectTabs = () => {
+        const tabsContainer = document.querySelector('.projects-tabs');
+        if (!tabsContainer) return;
+
+        const lang = language.getCurrentLang();
+        const translations = {
+            all: language.t('all'),
+            personal: language.t('personal'),
+            team: language.t('team')
+        };
+
+        tabsContainer.innerHTML = `
+            <button class="projects-tab active" data-category="all">${translations.all}</button>
+            <button class="projects-tab" data-category="personal">${translations.personal}</button>
+            <button class="projects-tab" data-category="team">${translations.team}</button>
+        `;
+
+        // Обновляем индикатор
+        const activeTab = tabsContainer.querySelector('.projects-tab.active');
+        if (activeTab) {
+            updateTabIndicator(activeTab);
+        }
+    };
+
+    // Фильтрация проектов с анимацией
+    const filterProjects = (category) => {
+        const projectsGrid = document.querySelector('.projects-grid');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        if (!projectsGrid || !projectCards.length) return;
+
+        // Анимация фильтрации
         projectsGrid.classList.add('filtering');
         
-        // Через небольшой таймаут начинаем фильтрацию
         setTimeout(() => {
-          const projectCards = document.querySelectorAll('.project-card');
-          
-          projectCards.forEach(card => {
-            if (category === 'all' || card.dataset.category === category) {
-              card.classList.remove('hidden');
-            } else {
-              card.classList.add('hidden');
-            }
-          });
-          
-          // После завершения фильтрации убираем класс анимации
-          setTimeout(() => {
-            projectsGrid.classList.remove('filtering');
-          }, 300);
+            projectCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Обновляем активный таб
+            document.querySelectorAll('.projects-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.category === category);
+            });
+
+            // Завершение анимации
+            setTimeout(() => {
+                projectsGrid.classList.remove('filtering');
+            }, 300);
         }, 50);
-      });
-    });
-  };
-
-  // Обработчики кликов по проектам
-  const setupProjectClickHandlers = () => {
-    document.addEventListener('click', (e) => {
-      const projectCard = e.target.closest('.project-card');
-      if (projectCard) {
-        openProjectModal(projectCard.dataset.project);
-      }
-    });
-  };
-
-  // Объект с функциями рендеринга
-  const renderers = {
-    about: Render.about,
-    stack: Render.stack,
-    experience: Render.experience,
-    projects: function(data) {
-      return `
-        <section class="projects-section">
-          <div class="projects-tabs">
-            <button class="projects-tab active" data-category="all">Все проекты</button>
-            <button class="projects-tab" data-category="personal">Индивидуальные</button>
-            <button class="projects-tab" data-category="team">Командные</button>
-          </div>
-          <div class="projects-grid">
-            ${data.projects.map(project => `
-              <div class="project-card" data-project="${project.id}" data-category="${project.category}">
-                <div class="project-image-container">
-                  <img src="${project.image}" alt="${project.title}" class="project-image"
-                       onerror="this.onerror=null;this.src='assets/images/default-project.png'">
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">${project.title}</h3>
-                  <div class="project-stack">
-                    ${project.stack.map(tech => `<span class="tech-tag" data-tech="${tech.toLowerCase()}">${tech}</span>`).join('')}
-                  </div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </section>
-      `;
-    }
-  };
-
-  // Инициализация роутера
-  const init = () => {
-    setupModalCloseHandlers();
-    setupNavbarHandlers();
-    setupProjectClickHandlers();
-    
-    window.addEventListener('hashchange', () => {
-      const page = window.location.hash.substring(1) || 'about';
-      navigate(page);
-    });
-    
-    const initialPage = window.location.hash.substring(1) || 'about';
-    navigate(initialPage);
-  };
-
-  // Навигация
-  const navigate = async (page) => {
-    if (currentPage === page) return;
-    
-    Animator.startTransition();
-    updateActiveTab(page);
-    
-    try {
-      const data = await Http.fetchPage(page);
-      renderPage(page, data);
-      currentPage = page;
-      window.location.hash = page;
-      
-      pageEvent.detail.page = page;
-      pageEvent.detail.prevPage = currentPage;
-      document.dispatchEvent(pageEvent);
-    } catch (error) {
-      console.error('Navigation error:', error);
-      showError('Ошибка загрузки страницы');
-    }
-  };
-
-  // Рендер страницы
-  const renderPage = async (page, data) => {
-    const contentContainer = document.querySelector('.content-container');
-    if (!contentContainer) return;
-    
-    contentContainer.style.opacity = '0';
-    contentContainer.style.transform = 'translateY(10px)';
-    
-    await new Promise(resolve => setTimeout(resolve, 200));
-    
-    const title = getTitle(page);
-    const content = renderers[page](data);
-    contentContainer.innerHTML = `
-      <h1 class="content-title">${title}</h1>
-      <div class="content-body">${content}</div>
-    `;
-    
-    setTimeout(() => {
-      contentContainer.style.opacity = '1';
-      contentContainer.style.transform = 'translateY(0)';
-      contentContainer.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-    }, 50);
-    
-    if (page === 'projects') {
-      setupProjectTabs();
-    }
-  };
-
-  // Вспомогательные функции
-  const getTitle = (page) => {
-    const titles = {
-      about: 'Обо мне',
-      projects: 'Мои проекты',
-      stack: 'Технологии',
-      experience: 'Опыт работы'
     };
-    return titles[page] || 'Страница';
-  };
 
-  const updateActiveTab = (page) => {
-    document.querySelectorAll('.navbar-tab').forEach(tab => {
-      tab.classList.toggle('active', tab.dataset.content === page);
-    });
-  };
+    // Обновление индикатора таба
+    const updateTabIndicator = (tab) => {
+        const indicator = document.querySelector('.tab-indicator');
+        if (!indicator || !tab) return;
 
-  const setupNavbarHandlers = () => {
-    // Обработчики для десктопных табов
-    document.querySelectorAll('.navbar-tab').forEach(tab => {
-      tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        navigate(this.dataset.content);
-      });
-    });
-    
-    // Обработчики для мобильных табов
-    document.querySelectorAll('.mobile-tab').forEach(tab => {
-      tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        navigate(this.dataset.content);
+        const tabRect = tab.getBoundingClientRect();
+        const containerRect = tab.parentNode.getBoundingClientRect();
         
-        // Обновляем активное состояние
-        document.querySelectorAll('.mobile-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        
-        document.querySelectorAll('.navbar-tab').forEach(t => {
-          t.classList.toggle('active', t.dataset.content === this.dataset.content);
+        indicator.style.width = `${tabRect.width}px`;
+        indicator.style.left = `${tabRect.left - containerRect.left}px`;
+    };
+
+    // Обработчики кликов по проектам
+    const setupProjectClickHandlers = () => {
+        document.addEventListener('click', (e) => {
+            const projectCard = e.target.closest('.project-card');
+            if (projectCard) {
+                // Анимация нажатия
+                projectCard.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    projectCard.style.transform = 'scale(1)';
+                }, 200);
+                
+                openProjectModal(projectCard.dataset.project);
+            }
         });
-      });
-    });
+    };
+
+    // Открытие модалки проекта
+    const openProjectModal = async (projectId) => {
+      try {
+          // Получаем данные проекта
+          const lang = language.getCurrentLang();
+          const data = await Http.fetchPage('projects');
+          const projectsData = data[lang] || data.ru;
+          const project = projectsData.projects.find(p => p.id === projectId);
+          
+          if (!project) throw new Error('Project not found');
+  
+          // Получаем элементы модального окна
+          const modal = document.querySelector('.modal-container');
+          const overlay = document.querySelector('.modal-overlay');
+          const imageContainer = modal.querySelector('.modal-image-container');
+          const title = modal.querySelector('.modal-title');
+          const description = modal.querySelector('.modal-description');
+          const tasksTitle = modal.querySelector('.modal-tasks-title'); // Новый класс для заголовка
+          const tasksList = modal.querySelector('.tasks-list');
+          const githubLink = modal.querySelector('.github-link');
+  
+          // 1. Загрузка изображения
+          imageContainer.innerHTML = '';
+          const img = new Image();
+          img.className = 'modal-project-image';
+          img.alt = project.title;
+          
+          // Прелоадер
+          const loader = document.createElement('div');
+          loader.className = 'image-loader';
+          imageContainer.appendChild(loader);
+          
+          img.onload = () => {
+              loader.remove();
+              imageContainer.appendChild(img);
+              img.style.opacity = '0';
+              setTimeout(() => img.style.opacity = '1', 10);
+          };
+          
+          img.onerror = () => {
+              loader.remove();
+              img.src = 'assets/images/default-project.png';
+              imageContainer.appendChild(img);
+          };
+          
+          img.src = project.image;
+  
+          // 2. Заполняем основные данные
+          title.textContent = project.title;
+          description.textContent = project.details.description;
+          
+          // 3. Устанавливаем перевод для заголовка задач
+          if (tasksTitle) {
+              tasksTitle.textContent = language.t('tasks') + ':';
+          }
+          
+          // 4. Заполняем список задач
+          tasksList.innerHTML = project.details.tasks.map(task => `<li>${task}</li>`).join('');
+          
+          // 5. Настраиваем GitHub ссылку
+          githubLink.href = project.details.github || '#';
+          githubLink.textContent = language.t('github');
+          githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
+  
+          // Показываем модальное окно
+          overlay.classList.add('active');
+          modal.classList.add('active');
+          document.body.classList.add('modal-open');
+  
+      } catch (error) {
+          console.error('Error opening modal:', error);
+          alert(language.t('load_error'));
+      }
   };
 
-  const showError = (message) => {
-    const contentContainer = document.querySelector('.content-container');
-    if (contentContainer) {
-      contentContainer.innerHTML = `
-        <div class="error-message">
-          <h1>Ошибка</h1>
-          <p>${message}</p>
-          <button class="retry-button">Попробовать снова</button>
-        </div>
-      `;
-      
-      document.querySelector('.retry-button')?.addEventListener('click', () => {
-        navigate(currentPage);
-      });
-    }
-    Animator.completeTransition();
-  };
-
-  return {
-    init,
-    navigate,
-    openProjectModal
-  };
+    // Вспомогательные функции
+    const updateActiveTab = (page) => {
+        document.querySelectorAll('.navbar-tab, .mobile-tab').forEach(tab => {
+            const shouldBeActive = tab.dataset.content === page;
+            tab.classList.toggle('active', shouldBeActive);
+        });
+    };
+    
+    const setupNavbarHandlers = () => {
+        document.querySelectorAll('.navbar-tab, .mobile-tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigate(this.dataset.content);
+            });
+        });
+    };
+    
+    const showError = (message) => {
+        const contentContainer = document.querySelector('.content-container');
+        if (contentContainer) {
+            contentContainer.innerHTML = `
+                <div class="error-message">
+                    <h1>${language.t('error')}</h1>
+                    <p>${message}</p>
+                    <button class="retry-button">${language.t('retry')}</button>
+                </div>
+            `;
+            
+            document.querySelector('.retry-button')?.addEventListener('click', () => {
+                navigate(currentPage, true);
+            });
+        }
+        Animator.completeTransition();
+    };
+    
+    // Обработчик изменения языка
+    const setupLanguageHandlers = () => {
+        document.addEventListener('languageChanged', () => {
+            // Перезагружаем текущую страницу с новым языком
+            navigate(currentPage, true);
+            
+            // Особенная обработка для страницы проектов
+            if (currentPage === 'projects') {
+                updateProjectTabs();
+            }
+        });
+    };
+    
+    // Инициализация
+    const init = () => {
+        setupModalCloseHandlers();
+        setupNavbarHandlers();
+        setupLanguageHandlers();
+        
+        window.addEventListener('hashchange', () => {
+            const page = window.location.hash.substring(1) || 'about';
+            navigate(page);
+        });
+        
+        const initialPage = window.location.hash.substring(1) || 'about';
+        navigate(initialPage);
+    };
+    
+    return {
+        init,
+        navigate,
+        openProjectModal
+    };
 })();
 
 export default Router;
