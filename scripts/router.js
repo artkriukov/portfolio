@@ -173,19 +173,44 @@ const Router = (() => {
   };
 
   // Рендер страницы
-  const renderPage = (page, data) => {
+  const renderPage = async (page, data) => {
     console.log(`[Router] Rendering page: ${page}`);
-    const contentContainer = document.querySelector('.content-container');
     
-    contentContainer.innerHTML = `
-      <h1 class="content__title">${getTitle(page)}</h1>
-      <div class="content__body">
-        ${renderers[page](data)}
-      </div>
-    `;
-    
-    // Завершение анимации перехода
-    Animator.completeTransition();
+    try {
+      const contentContainer = document.querySelector('.content-container');
+      if (!contentContainer) {
+        throw new Error('Content container not found');
+      }
+  
+      // Анимация исчезновения старого контента
+      contentContainer.style.opacity = '0';
+      contentContainer.style.transform = 'translateY(10px)';
+      
+      // Небольшая задержка для анимации
+      await new Promise(resolve => setTimeout(resolve, 200));
+      
+      // Рендер нового контента
+      const title = getTitle(page);
+      const content = renderers[page](data);
+      
+      contentContainer.innerHTML = `
+        <h1 class="content__title">${title}</h1>
+        <div class="content__body">
+          ${content}
+        </div>
+      `;
+      
+      // Анимация появления нового контента
+      setTimeout(() => {
+        contentContainer.style.opacity = '1';
+        contentContainer.style.transform = 'translateY(0)';
+        contentContainer.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      }, 50);
+      
+    } catch (error) {
+      console.error('[Router] Render error:', error);
+      showError('Ошибка отображения страницы');
+    }
   };
 
   // Получение заголовка страницы
