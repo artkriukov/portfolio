@@ -1,138 +1,118 @@
-/* Stack Section - Apple Style */
+/* stack.css */
 .stack-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    background: linear-gradient(
-      to bottom,
-      var(--bg-alt) 0%,
-      var(--bg-alt) 70%,
-      transparent 100%
-    );
-    border-radius: 24px 24px 0 0;
-    padding: 3rem 0 5rem;
-    margin-top: 3rem;
-  }
-  
-  .stack-content {
+    padding: 2rem 0;
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
   }
   
-  .stack-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+  .stack-grid {
+    background: var(--bg-alt);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: inset 0 1px 0 0 var(--border-color);
+    display: grid;
     margin-top: 2rem;
   }
   
   .stack-category {
     background: var(--card-bg);
-    border-radius: 18px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
+    border-radius: 14px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     border: 1px solid var(--border-color);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .stack-category:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
   
   .stack-category h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    color: var(--accent);
     margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 0.8rem;
   }
   
-  .stack-category h3::before {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 1.6rem;
+  .stack-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
     background: var(--accent);
-    border-radius: 3px;
+    border-radius: 2px;
   }
   
   .stack-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem;
+    border-radius: 12px;
+    transition: background 0.3s ease;
   }
   
   .stack-item {
     display: flex;
     align-items: center;
+    gap: 1rem;
     padding: 0.8rem 1.2rem;
-    background: var(--bg-alt);
+    background: var(--stack-item-bg);
     border-radius: 10px;
-    transition: all var(--transition-base);
-    gap: 0.8rem;
+    transition: all 0.3s ease;
     border: 1px solid var(--border-color);
   }
   
   .stack-item:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
+    background: rgba(var(--accent-rgb), 0.1);
+    border-color: rgba(var(--accent-rgb), 0.3);
   }
   
   .stack-icon {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
-    transition: all var(--transition-base);
-  }
-  
-  .stack-item:hover .stack-icon {
-    filter: brightness(0) invert(1);
   }
   
   .stack-item span {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-color);
-    transition: color var(--transition-base);
   }
   
-  .stack-item:hover span {
-    color: white;
+  /* Добавляем RGB переменную для акцентного цвета */
+  :root {
+    --accent-rgb: 0, 122, 255;
   }
   
-  /* Dark mode adjustments */
-  .dark-theme .stack-item {
-    background: rgba(255, 255, 255, 0.05);
+  .dark-theme {
+    --accent-rgb: 10, 132, 255;
   }
   
-  /* Responsive */
+  /* Адаптивность */
   @media (max-width: 768px) {
-    .stack-section {
-      padding: 2rem 0 4rem;
-      border-radius: 18px 18px 0 0;
+    .stack-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+      padding: 1.5rem;
     }
     
     .stack-category {
       padding: 1.5rem;
     }
-    
-    .stack-category h3 {
-      font-size: 1.4rem;
-    }
   }
   
-  @media (max-width: 480px) {
-    .stack-items {
-      gap: 0.8rem;
+  @media (max-width: 576px) {
+    .stack-section {
+      padding: 1.5rem;
     }
     
-    .stack-item {
-      padding: 0.7rem 1rem;
-      font-size: 0.9rem;
-    }
-    
-    .stack-icon {
-      width: 20px;
-      height: 20px;
+    .stack-grid {
+      grid-template-columns: 1fr;
+      border-radius: 18px;
     }
   }
