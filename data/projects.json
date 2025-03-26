@@ -26,7 +26,7 @@
         "id": "shopee",
         "title": "Shoppe",
         "category": "team",
-        "image": "assets/projects/shoppe.jpg",
+        "image": "assets/projects/Shoppe.jpg",
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
           "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее. Находите нужные товары, сохраняйте избранное, оформляйте заказы в разных валютах и получайте товары с доставкой по всему миру!",
