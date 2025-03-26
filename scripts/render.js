@@ -66,26 +66,32 @@ const Render = {
   
     experience: function(data) {
       return `
-        <div class="experience-list">
-          ${data.experiences.map(exp => `
-            <div class="experience-card card">
-              <h3>${exp.company}</h3>
-              <p class="experience-period">${exp.period}</p>
-              <p class="experience-position">${exp.position}</p>
-              <p>${exp.description}</p>
-              <div class="experience-tasks">
-                <h4>Основные задачи:</h4>
-                <ul>${exp.tasks.map(task => `<li>${task}</li>`).join('')}</ul>
-              </div>
-              ${exp.achievements && exp.achievements.length > 0 ? `
-                <div class="experience-achievements">
-                  <h4>Достижения:</h4>
-                  <ul>${exp.achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>
+        <section class="experience-section">
+          <div class="experience-list">
+            ${data.experiences.map(exp => `
+              <div class="experience-card">
+                <h3>${exp.company}</h3>
+                <p class="experience-period">${exp.period}</p>
+                <p class="experience-position">${exp.position}</p>
+                <p>${exp.description}</p>
+                <div class="experience-tasks">
+                  <h4>Основные задачи:</h4>
+                  <ul>
+                    ${exp.tasks.map(task => `<li>${task}</li>`).join('')}
+                  </ul>
                 </div>
-              ` : ''}
-            </div>
-          `).join('')}
-        </div>
+                ${exp.achievements && exp.achievements.length > 0 ? `
+                  <div class="experience-achievements">
+                    <h4>Достижения:</h4>
+                    <ul>
+                      ${exp.achievements.map(ach => `<li>${ach}</li>`).join('')}
+                    </ul>
+                  </div>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </section>
       `;
     }
   };

@@ -5,6 +5,7 @@
 @import url('./project.css');
 @import url('./navbar.css');
 @import url('./stack.css');
+@import url('./experience.css');
 
 * {
   margin: 0;

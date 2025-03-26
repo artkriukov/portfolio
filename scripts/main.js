@@ -10,20 +10,16 @@ class MainApp {
   init() {
     console.log('Initializing application...');
     
-    // Инициализация темы
+    // Инициализация основных модулей
     Theme.init();
-    
-    // Инициализация роутера
     Router.init();
     
-    // Настройка обработчиков модальных окон
+    // Настройка обработчиков
     this.setupModalClose();
-    
-    // Обработка начальной загрузки страницы
+    this.setupGlobalEventListeners();
     this.handleInitialLoad();
     
-    // Подписка на события изменения страницы
-    this.setupPageChangeListener();
+    console.log('Application initialized');
   }
 
   setupModalClose() {
@@ -31,7 +27,6 @@ class MainApp {
       const modal = document.querySelector('.modal-container');
       const overlay = document.querySelector('.modal-overlay');
       
-      // Анимация закрытия
       modal.classList.add('closing');
       overlay.classList.remove('active');
       
@@ -50,43 +45,97 @@ class MainApp {
     });
   }
 
-  handleInitialLoad() {
-    // Проверяем текущую страницу при загрузке
-    const initialPage = window.location.hash.substring(1) || 'about';
-    this.initPageSpecificModules(initialPage);
-  }
+  setupGlobalEventListeners() {
+    // Обработчик для всех внутренних ссылок
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('a[href^="#"]')) {
+        e.preventDefault();
+        const target = document.querySelector(e.target.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
 
-  setupPageChangeListener() {
+    // Подписка на изменение страниц
     document.addEventListener('pageChanged', (e) => {
-      const newPage = e.detail.page;
-      console.log(`Page changed to: ${newPage}`);
-      this.initPageSpecificModules(newPage);
+      this.initPageSpecificModules(e.detail.page);
     });
   }
 
+  handleInitialLoad() {
+    const initialPage = window.location.hash.substring(1) || 'about';
+    this.initPageSpecificModules(initialPage);
+    
+    // Инициализация анимаций для текущей страницы
+    this.initScrollAnimations();
+  }
+
   initPageSpecificModules(page) {
+    console.log(`Initializing modules for: ${page}`);
+    
     switch(page) {
       case 'projects':
-        this.initProjectsModule();
+        new Projects();
         break;
-      // Можно добавить инициализацию других модулей для других страниц
+      case 'experience':
+        this.initTimelineAnimation();
+        break;
+      case 'about':
+        // Можно добавить специфичную логику для страницы "О себе"
+        break;
       default:
-        console.log(`No specific modules for page: ${page}`);
+        console.log(`No specific modules for ${page}`);
     }
   }
 
-  initProjectsModule() {
-    console.log('Initializing Projects module...');
-    try {
-      new Projects();
-      console.log('Projects module initialized successfully');
-    } catch (error) {
-      console.error('Failed to initialize Projects module:', error);
-    }
+  initScrollAnimations() {
+    // Инициализация всех анимаций при скролле
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('[data-animate]');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight * 0.75) {
+          element.classList.add('animated');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Инициализация при загрузке
+  }
+
+  initTimelineAnimation() {
+    const timeline = document.querySelector('.experience-list');
+    if (!timeline) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          
+          // Анимация для каждого элемента временной линии
+          const items = entry.target.querySelectorAll('.experience-card');
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('animate-item');
+            }, index * 200);
+          });
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(timeline);
+    console.log('Timeline animation initialized');
   }
 }
 
-// Запуск приложения при полной загрузке DOM
+// Запуск приложения
 document.addEventListener('DOMContentLoaded', () => {
   new MainApp();
 });
