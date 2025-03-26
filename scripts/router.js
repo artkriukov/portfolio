@@ -229,10 +229,27 @@ const Router = (() => {
   };
 
   const setupNavbarHandlers = () => {
+    // Обработчики для десктопных табов
     document.querySelectorAll('.navbar-tab').forEach(tab => {
       tab.addEventListener('click', function(e) {
         e.preventDefault();
         navigate(this.dataset.content);
+      });
+    });
+    
+    // Обработчики для мобильных табов
+    document.querySelectorAll('.mobile-tab').forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigate(this.dataset.content);
+        
+        // Обновляем активное состояние
+        document.querySelectorAll('.mobile-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        
+        document.querySelectorAll('.navbar-tab').forEach(t => {
+          t.classList.toggle('active', t.dataset.content === this.dataset.content);
+        });
       });
     });
   };

@@ -131,9 +131,11 @@
   
     /* Projects */
     .projects-tabs {
-      width: 100%;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .modal-container {
       width: 100%;
@@ -170,3 +172,6 @@
       font-size: 0.9rem;
     }
   }
+
+
+  

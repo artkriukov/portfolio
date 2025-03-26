@@ -38,7 +38,7 @@ body {
 
 .main-content {
   flex: 1;
-  margin-top: 60px; /* Высота навбара */
+  margin-top: 90px; /* Высота навбара */
   padding: 40px 24px;
   width: 100%;
 }
@@ -72,4 +72,16 @@ body {
 
 .card:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+:root {
+  --navbar-height: 60px;
+  --mobile-navbar-height: 56px;
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 60px; /* Только высота navbar-top */
+  }
 }
