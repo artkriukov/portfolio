@@ -1,6 +1,9 @@
-/* Stack Section Styles */
+/* Stack Section - Apple Style */
 .stack-section {
-    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
     background: linear-gradient(
       to bottom,
       var(--bg-alt) 0%,
@@ -8,6 +11,7 @@
       transparent 100%
     );
     border-radius: 24px 24px 0 0;
+    padding: 3rem 0 5rem;
     margin-top: 3rem;
   }
   
@@ -18,110 +22,117 @@
     padding: 0 2rem;
   }
   
-  .stack-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2.5rem;
+  .stack-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
   }
   
   .stack-category {
     background: var(--card-bg);
     border-radius: 18px;
-    padding: 1.8rem;
+    padding: 2rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-    transition: all var(--transition-base);
-  }
-  
-  .stack-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   }
   
   .stack-category h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--accent);
     margin-bottom: 1.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .stack-category h3::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 1.6rem;
+    background: var(--accent);
+    border-radius: 3px;
   }
   
   .stack-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
   
   .stack-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    padding: 0.8rem 1.2rem;
     background: var(--bg-alt);
-    border-radius: 12px;
+    border-radius: 10px;
     transition: all var(--transition-base);
+    gap: 0.8rem;
+    border: 1px solid var(--border-color);
   }
   
   .stack-item:hover {
     background: var(--accent);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+  }
+  
+  .stack-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: all var(--transition-base);
+  }
+  
+  .stack-item:hover .stack-icon {
+    filter: brightness(0) invert(1);
+  }
+  
+  .stack-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color var(--transition-base);
   }
   
   .stack-item:hover span {
     color: white;
   }
   
-  .stack-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    margin-bottom: 0.8rem;
-    filter: grayscale(30%);
-    transition: all var(--transition-base);
+  /* Dark mode adjustments */
+  .dark-theme .stack-item {
+    background: rgba(255, 255, 255, 0.05);
   }
   
-  .stack-item:hover .stack-icon {
-    filter: brightness(0) invert(1);
-    transform: scale(1.1);
-  }
-  
-  .stack-item span {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-color);
-    text-align: center;
-    transition: color var(--transition-base);
-  }
-  
-  /* Responsive adjustments */
+  /* Responsive */
   @media (max-width: 768px) {
-    .stack-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .stack-items {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-    
     .stack-section {
-      padding: 3rem 0;
+      padding: 2rem 0 4rem;
+      border-radius: 18px 18px 0 0;
+    }
+    
+    .stack-category {
+      padding: 1.5rem;
+    }
+    
+    .stack-category h3 {
+      font-size: 1.4rem;
     }
   }
   
   @media (max-width: 480px) {
     .stack-items {
-      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
     }
     
     .stack-item {
-      padding: 0.8rem;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
     }
     
     .stack-icon {
-      width: 32px;
-      height: 32px;
+      width: 20px;
+      height: 20px;
     }
   }
