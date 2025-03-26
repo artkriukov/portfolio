@@ -15,7 +15,11 @@ export default class Language {
             'github': 'Посмотреть на GitHub',
             'all': 'Все проекты',
             'personal': 'Индивидуальные',
-            'team': 'Командные'
+            'team': 'Командные',
+            'navbar_about': 'Обо мне',
+            'navbar_experience': 'Опыт',
+            'navbar_projects': 'Проекты',
+            'navbar_stack': 'Технологии'
         },
         'en': {
             'about': 'About',
@@ -30,7 +34,11 @@ export default class Language {
             'github': 'View on GitHub',
             'all': 'All Projects',
             'personal': 'Personal',
-            'team': 'Team'
+            'team': 'Team',
+            'navbar_about': 'About',
+            'navbar_experience': 'Experience',
+            'navbar_projects': 'Projects',
+            'navbar_stack': 'Technologies'
         }
       };
       this.init();

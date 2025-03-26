@@ -9,7 +9,6 @@
         "stack": ["Storyboard", "MVP", "URLSession", "UserDefoults", "Unit-tests", "UI-tests"],
         "details": {
           "description": "Одностраничное приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмов IMDb.",
-          "features": ["Разработал приложение для викторин на основе фильмов с использованием архитектуры MVP."],
           "tasks": [
             "Интеграция с API: Использовал NetworkClient для загрузки данных о фильмах.",
             "Загрузка и обработка данных: Реализовал MoviesLoader для загрузки списка популярных фильмов.",
@@ -31,9 +30,6 @@
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
           "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее.",
-          "features": [
-            "Разработал экран корзины с использованием архитектуры VIPER."
-          ],
           "tasks": [
             "Реализовал взаимодействие с данными корзины, включая добавление, удаление и изменение количества товаров.",
             "Обеспечил подсчет общей суммы и количества товаров.",
@@ -51,9 +47,6 @@
         "stack": ["UIKit", "MVC", "Lottie"],
         "details": {
           "description": "Мобильное приложение для интернет-магазина",
-          "features": [
-            "Разработал игровой экран (GameView) с использованием современных технологий и подходов."
-          ],
           "tasks": [
             "Создал динамичные анимации с помощью библиотеки Lottie.",
             "Интегрировал звуковые эффекты: зацикленное тиканье бомбы и фоновую музыку.",
@@ -74,7 +67,6 @@
         "stack": ["Storyboard", "MVP", "URLSession", "UserDefoults", "Unit-tests", "UI-tests"],
         "details": {
           "description": "Single-page application with quizzes about movies from IMDb's top 250 and most popular films.",
-          "features": ["Developed a movie quiz application using MVP architecture."],
           "tasks": [
             "API Integration: Used NetworkClient to load movie data.",
             "Data loading and processing: Implemented MoviesLoader to fetch popular movies list.",
@@ -96,9 +88,6 @@
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
           "description": "Shoppe is a universal mobile shopping app that makes online shopping easier, more convenient and accessible.",
-          "features": [
-            "Developed shopping cart screen using VIPER architecture."
-          ],
           "tasks": [
             "Implemented cart data interaction including adding, removing and updating product quantities.",
             "Calculated total amount and product count.",
@@ -116,9 +105,6 @@
         "stack": ["UIKit", "MVC", "Lottie"],
         "details": {
           "description": "Mobile application for e-commerce",
-          "features": [
-            "Developed game screen (GameView) using modern technologies and approaches."
-          ],
           "tasks": [
             "Created dynamic animations using Lottie library.",
             "Integrated sound effects: looping bomb tick and background music.",

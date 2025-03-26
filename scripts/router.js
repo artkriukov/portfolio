@@ -199,92 +199,75 @@ const Router = (() => {
     // Открытие модалки проекта
     const openProjectModal = async (projectId) => {
       try {
+          // Получаем данные проекта
           const lang = language.getCurrentLang();
           const data = await Http.fetchPage('projects');
           const projectsData = data[lang] || data.ru;
           const project = projectsData.projects.find(p => p.id === projectId);
           
           if (!project) throw new Error('Project not found');
-          
+  
           // Получаем элементы модального окна
           const modal = document.querySelector('.modal-container');
           const overlay = document.querySelector('.modal-overlay');
-          const modalTitle = modal.querySelector('.modal-title');
-          const modalDescription = modal.querySelector('.modal-description');
-          const modalImageContainer = modal.querySelector('.modal-image-container');
-          const featuresTitle = modal.querySelector('.features-title');
-          const featuresList = modal.querySelector('.features-list');
-          const tasksTitle = modal.querySelector('.tasks-title');
+          const imageContainer = modal.querySelector('.modal-image-container');
+          const title = modal.querySelector('.modal-title');
+          const description = modal.querySelector('.modal-description');
+          const tasksTitle = modal.querySelector('.modal-tasks-title'); // Новый класс для заголовка
           const tasksList = modal.querySelector('.tasks-list');
           const githubLink = modal.querySelector('.github-link');
+  
+          // 1. Загрузка изображения
+          imageContainer.innerHTML = '';
+          const img = new Image();
+          img.className = 'modal-project-image';
+          img.alt = project.title;
           
-          // Заполняем данные
-          modalTitle.textContent = project.title;
-          modalDescription.textContent = project.details.description;
+          // Прелоадер
+          const loader = document.createElement('div');
+          loader.className = 'image-loader';
+          imageContainer.appendChild(loader);
           
-          // Обработка изображения - полностью переработанный блок
-          if (modalImageContainer) {
-              // Очищаем контейнер
-              modalImageContainer.innerHTML = '';
-              
-              // Создаем элемент изображения
-              const img = document.createElement('img');
-              img.className = 'modal-project-image';
-              img.alt = project.title;
-              img.src = project.image;
-              
-              // Обработчик ошибки загрузки
-              img.onerror = () => {
-                  img.src = 'assets/images/default-project.png';
-                  img.onerror = null; // Предотвращаем зацикливание
-              };
-              
-              // Добавляем прелоадер
-              const loader = document.createElement('div');
-              loader.className = 'image-loader';
-              loader.innerHTML = '<div class="spinner"></div>';
-              
-              modalImageContainer.appendChild(loader);
-              modalImageContainer.appendChild(img);
-              
-              // Убираем прелоадер после загрузки
-              img.onload = () => {
-                  loader.style.display = 'none';
-                  img.style.opacity = '0';
-                  setTimeout(() => {
-                      img.style.transition = 'opacity 0.3s ease';
-                      img.style.opacity = '1';
-                  }, 10);
-              };
-              
-              // Если изображение уже загружено (из кеша)
-              if (img.complete && img.naturalWidth !== 0) {
-                  loader.style.display = 'none';
-                  img.style.opacity = '1';
-              }
+          img.onload = () => {
+              loader.remove();
+              imageContainer.appendChild(img);
+              img.style.opacity = '0';
+              setTimeout(() => img.style.opacity = '1', 10);
+          };
+          
+          img.onerror = () => {
+              loader.remove();
+              img.src = 'assets/images/default-project.png';
+              imageContainer.appendChild(img);
+          };
+          
+          img.src = project.image;
+  
+          // 2. Заполняем основные данные
+          title.textContent = project.title;
+          description.textContent = project.details.description;
+          
+          // 3. Устанавливаем перевод для заголовка задач
+          if (tasksTitle) {
+              tasksTitle.textContent = language.t('tasks') + ':';
           }
           
-          // Устанавливаем переводы для заголовков
-          if (featuresTitle) featuresTitle.textContent = language.t('features');
-          if (tasksTitle) tasksTitle.textContent = language.t('tasks');
+          // 4. Заполняем список задач
+          tasksList.innerHTML = project.details.tasks.map(task => `<li>${task}</li>`).join('');
           
-          // Заполняем списки
-          featuresList.innerHTML = project.details.features.map(f => `<li>${f}</li>`).join('');
-          tasksList.innerHTML = project.details.tasks.map(t => `<li>${t}</li>`).join('');
-          
-          // Настройка GitHub ссылки
-          if (githubLink) {
-              githubLink.href = project.details.github || '#';
-              githubLink.textContent = language.t('github');
-              githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
-          }
-          
+          // 5. Настраиваем GitHub ссылку
+          githubLink.href = project.details.github || '#';
+          githubLink.textContent = language.t('github');
+          githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
+  
           // Показываем модальное окно
           overlay.classList.add('active');
           modal.classList.add('active');
           document.body.classList.add('modal-open');
+  
       } catch (error) {
-          console.error('Error opening project modal:', error);
+          console.error('Error opening modal:', error);
+          alert(language.t('load_error'));
       }
   };
 
