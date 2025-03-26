@@ -25,7 +25,7 @@
       width: 60%;
     }
   }
-  
+
   /* Планшеты (768px) */
   @media (max-width: 768px) {
     /* About Section */
@@ -33,6 +33,12 @@
       padding: 4rem 0;
       background-size: 100% 90%;
     }
+
+    .navbar-actions {
+      display: flex;
+      gap: 35px;
+    }
+
     .about-header {
       flex-direction: column;
       text-align: center;
