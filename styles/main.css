@@ -93,7 +93,8 @@ body {
 }
 
 .lang-toggle {
-  width: 28px;
+  width: 60px;
+  gap: 5px;
   height: 28px;
   border-radius: 50%;
   border: none;
@@ -111,6 +112,17 @@ body {
   font-size: 12px;
   font-weight: 500;
   margin-left: 4px;
+  color: var(--text-color);
+  transition: color var(--transition-base);
+}
+
+.navbar-actions button {
+  font-size: 1.5rem;
+  line-height: 1; 
+}
+
+.theme-icon, .lang-icon {
+  display: inline-block;
 }
 
 /* Для мобильной версии */
