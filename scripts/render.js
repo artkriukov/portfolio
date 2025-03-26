@@ -11,7 +11,6 @@ const Render = {
           <div class="about-header">
             ${shared.photo ? `<img src="${shared.photo}" alt="${content.name}" class="profile-image">` : ''}
             <div>
-              <h1 class="about-title">${content.name}</h1>
               <p class="about-role">${content.role}</p>
             </div>
           </div>
@@ -100,32 +99,44 @@ const Render = {
       `;
     },
   
-    experience: function(data) {
+    experience: function(data, lang = 'ru') {
+      const language = new Language();
+      const t = (key) => language.t(key);
+      
       return `
         <section class="experience-section">
           <div class="experience-list">
-            ${data.experiences.map(exp => `
-              <div class="experience-card">
-                <h3>${exp.company}</h3>
-                <p class="experience-period">${exp.period}</p>
-                <p class="experience-position">${exp.position}</p>
-                <p>${exp.description}</p>
-                <div class="experience-tasks">
-                  <h4>Основные задачи:</h4>
-                  <ul>
-                    ${exp.tasks.map(task => `<li>${task}</li>`).join('')}
-                  </ul>
-                </div>
-                ${exp.achievements && exp.achievements.length > 0 ? `
-                  <div class="experience-achievements">
-                    <h4>Достижения:</h4>
+            ${data.experiences.map(exp => {
+              // Получаем правильную версию для текущего языка
+              const currentLang = language.getCurrentLang();
+              const tasks = exp.tasks[currentLang] || exp.tasks.ru || [];
+              const achievements = exp.achievements ? 
+                (exp.achievements[currentLang] || exp.achievements.ru || []) : 
+                [];
+                
+              return `
+                <div class="experience-card">
+                  <h3>${exp.company[currentLang] || exp.company.ru || exp.company}</h3>
+                  <p class="experience-period">${exp.period}</p>
+                  <p class="experience-position">${t('position')}: ${exp.position[currentLang] || exp.position.ru || exp.position}</p>
+                  <p>${exp.description[currentLang] || exp.description.ru || exp.description}</p>
+                  <div class="experience-tasks">
+                    <h4>${t('main_tasks')}:</h4>
                     <ul>
-                      ${exp.achievements.map(ach => `<li>${ach}</li>`).join('')}
+                      ${tasks.map(task => `<li>${task}</li>`).join('')}
                     </ul>
                   </div>
-                ` : ''}
-              </div>
-            `).join('')}
+                  ${achievements.length > 0 ? `
+                    <div class="experience-achievements">
+                      <h4>${t('achievements')}:</h4>
+                      <ul>
+                        ${achievements.map(ach => `<li>${ach}</li>`).join('')}
+                      </ul>
+                    </div>
+                  ` : ''}
+                </div>
+              `;
+            }).join('')}
           </div>
         </section>
       `;

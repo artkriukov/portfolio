@@ -1,44 +1,23 @@
 {
     "experiences": [
-        {
-            "company": "Swift Marathon 14",
-            "position": "iOS Developer",
-            "period": "01-2025 - Present",
-            "description": "Описание работы, которое всегда должно быть.",
-            "tasks": [
-                "Разработка iOS-приложений на Swift",
-                "Реализовывал функциональность, основанную на лучших практиках мобильной разработки",
-                "Участвовал в командной разработке, работал с Git, код-ревью и задачами по улучшению проекта"
-            ],
-            "achievements": [
-                "-"
-            ]
+      {
+        "company": "Swift Marathon 14",
+        "position": "iOS Developer",
+        "period": "01-2025 - Present",
+        "description": {
+          "ru": "Описание работы на русском",
+          "en": "Job description in English"
         },
-        {
-            "company": "Swift Marathon 14",
-            "position": "iOS Developer",
-            "period": "01-2025 - Present",
-            "description": "Описание работы, которое всегда должно быть.",
-            "tasks": [
-                "Разработка iOS-приложений на Swift",
-                "Реализовывал функциональность, основанную на лучших практиках мобильной разработки",
-                "Участвовал в командной разработке, работал с Git, код-ревью и задачами по улучшению проекта"
-            ],
-            "achievements": [
-                "-"
-            ]
-        },
-        {
-            "company": "Swift Marathon 14",
-            "position": "iOS Developer",
-            "period": "01-2025 - Present",
-            "description": "Описание работы, которое всегда должно быть.",
-            "tasks": [
-                "Разработка iOS-приложений на Swift",
-                "Реализовывал функциональность, основанную на лучших практиках мобильной разработки",
-                "Участвовал в командной разработке, работал с Git, код-ревью и задачами по улучшению проекта"
-            ],
-            "achievements": []
+        "tasks": {
+          "ru": [
+            "Разработка iOS-приложений на Swift",
+            "Работа с Git"
+          ],
+          "en": [
+            "Developing iOS applications in Swift",
+            "Working with Git"
+          ]
         }
+      }
     ]
-}
+  }

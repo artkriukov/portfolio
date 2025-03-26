@@ -25,7 +25,11 @@ export default class Language {
             'Architectural Patterns': 'Архитектурные паттерны',
             'Databases': 'Базы данных',
             'Tools & Platforms': 'Инструменты и платформы',
-            'Other': 'Другое'
+            'Other': 'Другое',
+            'experience_title': 'Опыт работы',
+            'position': 'Должность',
+            'main_tasks': 'Основные задачи',
+            'achievements': 'Достижения'
         },
         'en': {
             'about': 'About',
@@ -50,7 +54,11 @@ export default class Language {
             'Architectural Patterns': 'Architectural Patterns',
             'Databases': 'Databases',
             'Tools & Platforms': 'Tools & Platforms',
-            'Other': 'Other'
+            'Other': 'Other',
+            'experience_title': 'Work Experience',
+            'position': 'Position',
+            'main_tasks': 'Main Responsibilities',
+            'achievements': 'Achievements'
         }
       };
       this.init();
