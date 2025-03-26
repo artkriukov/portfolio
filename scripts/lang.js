@@ -3,22 +3,34 @@ export default class Language {
       this.currentLang = this.detectLanguage();
       this.translations = {
         'ru': {
-          'about': 'Обо мне',
-          'experience': 'Опыт работы',
-          'projects': 'Проекты',
-          'stack': 'Технологии',
-          'error': 'Ошибка',
-          'load_error': 'Ошибка загрузки страницы',
-          'retry': 'Попробовать снова'
+            'about': 'Обо мне',
+            'experience': 'Опыт работы',
+            'projects': 'Проекты',
+            'stack': 'Технологии',
+            'error': 'Ошибка',
+            'load_error': 'Ошибка загрузки страницы',
+            'retry': 'Попробовать снова',
+            'features': 'Особенности',
+            'tasks': 'Реализованные задачи',
+            'github': 'Посмотреть на GitHub',
+            'all': 'Все проекты',
+            'personal': 'Индивидуальные',
+            'team': 'Командные'
         },
         'en': {
-          'about': 'About',
-          'experience': 'Experience',
-          'projects': 'Projects',
-          'stack': 'Tech Stack',
-          'error': 'Error',
-          'load_error': 'Page load error',
-          'retry': 'Try again'
+            'about': 'About',
+            'experience': 'Experience',
+            'projects': 'Projects',
+            'stack': 'Tech Stack',
+            'error': 'Error',
+            'load_error': 'Page load error',
+            'retry': 'Try again',
+            'features': 'Features',
+            'tasks': 'Implemented Tasks',
+            'github': 'View on GitHub',
+            'all': 'All Projects',
+            'personal': 'Personal',
+            'team': 'Team'
         }
       };
       this.init();

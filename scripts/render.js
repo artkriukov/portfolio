@@ -53,9 +53,14 @@ const Render = {
       const translations = {
         all: { ru: 'Все проекты', en: 'All Projects' },
         personal: { ru: 'Индивидуальные', en: 'Personal' },
-        team: { ru: 'Командные', en: 'Team' }
+        team: { ru: 'Командные', en: 'Team' },
+        features: { ru: 'Особенности', en: 'Features' },
+        tasks: { ru: 'Реализованные задачи', en: 'Implemented Tasks' },
+        github: { ru: 'Посмотреть на GitHub', en: 'View on GitHub' }
       };
-  
+    
+      const projectsData = data[lang] || data.ru;
+      
       return `
         <section class="projects-section">
           <div class="projects-tabs">
@@ -70,7 +75,7 @@ const Render = {
             </button>
           </div>
           <div class="projects-grid">
-            ${data.projects.map(project => `
+            ${projectsData.projects.map(project => `
               <div class="project-card" data-project="${project.id}" data-category="${project.category}">
                 <div class="project-image-container">
                   <img src="${project.image}" alt="${project.title}" class="project-image" 
