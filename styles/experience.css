@@ -149,42 +149,6 @@
     animation: fillTimeline 1.5s ease-out forwards;
   }
   
-  /* Адаптивность */
-  @media (max-width: 768px) {
-    .experience-list {
-      padding-left: 40px;
-    }
-    
-    .experience-card::before {
-      left: -36px;
-      width: 14px;
-      height: 14px;
-    }
-    
-    .experience-card {
-      padding: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .experience-list {
-      padding-left: 30px;
-    }
-    
-    .experience-card::before {
-      left: -28px;
-      width: 12px;
-      height: 12px;
-    }
-    
-    .experience-card h3 {
-      font-size: 1.3rem;
-    }
-    
-    .experience-position {
-      font-size: 1rem;
-    }
-  }
 
   /* Анимации */
 [data-animate] {

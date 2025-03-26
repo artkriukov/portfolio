@@ -1,0 +1,172 @@
+/* ==================== */
+/* Общие адаптивные стили */
+/* ==================== */
+
+@media (max-width: 1200px) {
+    .about-content {
+      max-width: 900px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .about-content {
+      max-width: 800px;
+    }
+    .about-title {
+      font-size: 2.5rem;
+    }
+    .about-role {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .modal-container {
+      width: 60%;
+    }
+  }
+  
+  /* Планшеты (768px) */
+  @media (max-width: 768px) {
+    /* About Section */
+    .about-section {
+      padding: 4rem 0;
+      background-size: 100% 90%;
+    }
+    .about-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .profile-image {
+      width: 140px;
+      height: 140px;
+    }
+    .about-title {
+      font-size: 2.5rem;
+    }
+    .about-role {
+      font-size: 1.4rem;
+    }
+    .about-description p {
+      font-size: 1.2rem;
+    }
+    .social-links {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    /* Experience */
+    .experience-list {
+      padding-left: 40px;
+    }
+    .experience-card::before {
+      left: -21px;
+      width: 14px;
+      height: 14px;
+    }
+    .experience-card {
+      padding: 1.5rem;
+    }
+  
+    /* Projects */
+    .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .modal-container {
+      width: 80%;
+    }
+  
+    /* Stack */
+    .stack-grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+    .stack-items {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+  
+    /* Main Content */
+    .main-content {
+      padding: 20px 16px;
+    }
+  }
+  
+  /* Мобильные устройства (576px и меньше) */
+  @media (max-width: 576px) {
+    /* About Section */
+    .about-content {
+      padding: 0 1.5rem;
+    }
+    .about-section {
+      padding: 3rem 0;
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+    .about-title {
+      font-size: 2.2rem;
+    }
+    .social-link {
+      padding: 0.8rem 1.5rem;
+    }
+  
+    /* Experience */
+    .experience-list {
+      padding-left: 30px;
+    }
+    .experience-card::before {
+      left: -28px;
+      width: 12px;
+      height: 12px;
+    }
+    .experience-card h3 {
+      font-size: 1.3rem;
+    }
+    .experience-position {
+      font-size: 1rem;
+    }
+  
+    /* Projects */
+    .projects-tabs {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    .modal-container {
+      width: 100%;
+    }
+    .modal-image-container {
+      height: 200px;
+    }
+  
+    /* Main Content */
+    .main-content {
+      padding: 20px 12px;
+    }
+  }
+  
+  /* Очень маленькие устройства (480px) */
+  @media (max-width: 480px) {
+    /* Stack */
+    .stack-section {
+      padding: 1.5rem 0.5rem;
+    }
+    .stack-items {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.6rem;
+    }
+    .stack-item {
+      padding: 0.5rem 0.6rem;
+      gap: 0.6rem;
+    }
+    .stack-icon {
+      width: 18px;
+      height: 18px;
+    }
+    .stack-item span {
+      font-size: 0.9rem;
+    }
+  }
