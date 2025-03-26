@@ -1,3 +1,5 @@
+import Language from './lang.js'; 
+
 const Render = {
   about: function(data, lang = 'ru') {
     const shared = data.shared;
@@ -29,25 +31,29 @@ const Render = {
     `;
   },
   
-    stack: function(data) {
-      return `
+  stack: function(data) {
+    const language = new Language(); // Создаем экземпляр класса
+    const lang = language.getCurrentLang(); // Получаем текущий язык
+    
+    return `
         <div class="stack-grid">
-          ${data.stack.map(category => `
-            <div class="stack-category card">
-              <h3>${category.category}</h3>
-              <div class="stack-items">
-                ${category.items.map(item => `
-                  <div class="stack-item">
-                    ${item.icon ? `<img src="${item.icon}" alt="${item.name}" class="stack-icon">` : ''}
-                    <span>${item.name}</span>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          `).join('')}
+            ${data.stack.map(category => `
+                <div class="stack-category card">
+                    <h3>${language.t(category.category)}</h3>
+                    <div class="stack-items">
+                        ${category.items.map(item => `
+                            <div class="stack-item">
+                                ${item.icon ? `<img src="${item.icon}" alt="${item.name}" class="stack-icon" 
+                                     onerror="this.onerror=null;this.src='assets/icons/default-icon.svg'">` : ''}
+                                <span>${item.name}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('')}
         </div>
-      `;
-    },
+    `;
+},
   
     projects: function(data, lang = 'ru') {
       const translations = {

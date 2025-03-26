@@ -19,7 +19,13 @@ export default class Language {
             'navbar_about': 'Обо мне',
             'navbar_experience': 'Опыт',
             'navbar_projects': 'Проекты',
-            'navbar_stack': 'Технологии'
+            'navbar_stack': 'Технологии',
+            'Languages': 'Языки',
+            'Frameworks & Libraries': 'Фреймворки и библиотеки',
+            'Architectural Patterns': 'Архитектурные паттерны',
+            'Databases': 'Базы данных',
+            'Tools & Platforms': 'Инструменты и платформы',
+            'Other': 'Другое'
         },
         'en': {
             'about': 'About',
@@ -38,7 +44,13 @@ export default class Language {
             'navbar_about': 'About',
             'navbar_experience': 'Experience',
             'navbar_projects': 'Projects',
-            'navbar_stack': 'Technologies'
+            'navbar_stack': 'Technologies',
+            'Languages': 'Languages',
+            'Frameworks & Libraries': 'Frameworks & Libraries',
+            'Architectural Patterns': 'Architectural Patterns',
+            'Databases': 'Databases',
+            'Tools & Platforms': 'Tools & Platforms',
+            'Other': 'Other'
         }
       };
       this.init();
