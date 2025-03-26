@@ -1,33 +1,59 @@
 {
-    "name": "Артем Крюков",
-    "role": "iOS Developer",
+  "shared": {
     "photo": "assets/images/me.PNG",
     "socialLinks": [
       {
-        "name": "LinkedIn",
+        "name": {
+          "ru": "LinkedIn",
+          "en": "LinkedIn"
+        },
         "url": "https://www.linkedin.com/in/artem-kriukov-348430256/",
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#0077B5'><path d='M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z'/></svg>"
+        "icon": "<svg...></svg>"
       },
       {
-        "name": "Telegram",
+        "name": {
+          "ru": "Telegram",
+          "en": "Telegram"
+        },
         "url": "https://t.me/artem_kriukov",
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#0088cc'><path d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.05 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.537-.213 1.006.128.832.94z'/></svg>"
+        "icon": "<svg...></svg>"
       },
       {
-        "name": "GitHub",
+        "name": {
+          "ru": "GitHub",
+          "en": "GitHub"
+        },
         "url": "https://github.com/artkriukov",
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#333'><path d='M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.905-.015 3.3 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z'/></svg>"
+        "icon": "<svg...></svg>"
       },
       {
-        "name": "Email",
+        "name": {
+          "ru": "Email",
+          "en": "Email"
+        },
         "url": "mailto:art.kriukov@gmail.com",
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='#EA4335'><path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>"
+        "icon": "<svg...></svg>"
       }
-    ],
+    ]
+  },
+  "ru": {
+    "name": "Артем Крюков",
+    "role": "iOS Developer",
     "description": [
       "Я Junior iOS-разработчик, который с головой ушел в Swift и UIKit.",
       "Учусь в Яндексе, участвую в Swift-марафоне.",
       "Прокачиваю скиллы, чтобы делать крутые приложения.",
-      "Иногда могу долго смотреть в код, надеясь, что баг испугается и уйдет сам, но чаще приходится идти на переговоры — уговаривать, запугивать логами или подкупать print’ами. Если и это не срабатывает, включаю режим детектива и начинаю расследование уровня «Шерлок, подвинься»."
+      "Иногда могу долго смотреть в код, надеясь, что баг испугается и уйдет сам, но чаще приходится идти на переговоры — уговаривать, запугивать логами или подкупать print'ами. Если и это не срабатывает, включаю режим детектива и начинаю расследование уровня «Шерлок, подвинься»."
+    ]
+  },
+  "en": {
+    "name": "Artem Kriukov",
+    "role": "iOS Developer",
+    "description": [
+      "I'm a Junior iOS Developer deeply immersed in Swift and UIKit.",
+      "Currently studying at Yandex, participating in Swift marathons.",
+      "Sharpening my skills to build awesome applications.",
+      "Sometimes I stare at code hoping the bug will get scared and leave on its own, but more often I have to negotiate - coaxing, intimidating with logs, or bribing with prints. If that doesn't work, I switch to detective mode and start an investigation worthy of 'Sherlock, move over'."
     ]
   }
+}

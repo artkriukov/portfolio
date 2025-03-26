@@ -85,3 +85,42 @@ body {
     margin-top: 60px; /* Только высота navbar-top */
   }
 }
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--theme-toggle-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* Для мобильной версии */
+@media (max-width: 768px) {
+  .lang-text {
+    display: none;
+  }
+  
+  .lang-toggle {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,9 +1,11 @@
 import Http from './http.js';
 import Animator from './animator.js';
 import Render from './render.js';
+import Language from './lang.js';
 
 const Router = (() => {
   let currentPage = null;
+  const language = new Language();
   const pageEvent = new CustomEvent('pageChanged', {
     detail: { page: null, prevPage: null }
   });
@@ -30,41 +32,64 @@ const Router = (() => {
     });
   };
 
-  // Открытие модалки проекта
-  const openProjectModal = async (projectId) => {
+  // Навигация
+  const navigate = async (page, forceReload = false) => {
+    if (currentPage === page && !forceReload) return;
+    
+    Animator.startTransition();
+    updateActiveTab(page);
+    
     try {
-      const data = await Http.fetchPage('projects');
-      const project = data.projects.find(p => p.id === projectId);
-      if (!project) throw new Error('Project not found');
-
-      // Заполнение модального окна
-      document.querySelector('.modal-title').textContent = project.title;
-      document.querySelector('.modal-description').textContent = project.details.description;
+      const data = await Http.fetchPage(page);
+      renderPage(page, data);
+      currentPage = page;
+      window.location.hash = page;
       
-      const imgContainer = document.querySelector('.modal-image-container');
-      imgContainer.innerHTML = project.image ? 
-        `<img src="${project.image}" alt="${project.title}" class="modal-project-image" onerror="this.onerror=null;this.src='assets/images/default-project.png'">` : '';
-      
-      document.querySelector('.features-list').innerHTML = 
-        project.details.features.map(f => `<li>${f}</li>`).join('');
-      
-      document.querySelector('.tasks-list').innerHTML = 
-        project.details.tasks.map(t => `<li>${t}</li>`).join('');
-      
-      const githubLink = document.querySelector('.github-link');
-      githubLink.href = project.details.github || '#';
-      githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
-
-      // Показ модального окна
-      document.querySelector('.modal-overlay').classList.add('active');
-      document.querySelector('.modal-container').classList.add('active');
-      document.body.classList.add('modal-open');
+      pageEvent.detail.page = page;
+      pageEvent.detail.prevPage = currentPage;
+      document.dispatchEvent(pageEvent);
     } catch (error) {
-      console.error('Error opening project modal:', error);
+      console.error('Navigation error:', error);
+      showError(language.t('load_error'));
     }
   };
 
-  // Обработчики табов проектов
+  // Рендер страницы
+  const renderPage = async (page, data) => {
+    const contentContainer = document.querySelector('.content-container');
+    if (!contentContainer) return;
+    
+    contentContainer.style.opacity = '0';
+    contentContainer.style.transform = 'translateY(10px)';
+    
+    await new Promise(resolve => setTimeout(resolve, 200));
+    
+    const title = getTitle(page, language.getCurrentLang());
+    const content = Render[page](data, language.getCurrentLang());
+    
+    contentContainer.innerHTML = `
+      <h1 class="content-title">${title}</h1>
+      <div class="content-body">${content}</div>
+    `;
+    
+    setTimeout(() => {
+      contentContainer.style.opacity = '1';
+      contentContainer.style.transform = 'translateY(0)';
+      contentContainer.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    }, 50);
+
+    if (page === 'projects') {
+      initProjectsPage();
+    }
+  };
+
+  // Инициализация страницы проектов
+  const initProjectsPage = () => {
+    setupProjectTabs();
+    setupProjectClickHandlers();
+  };
+
+  // Настройка табов проектов
   const setupProjectTabs = () => {
     const tabs = document.querySelectorAll('.projects-tab');
     const projectsGrid = document.querySelector('.projects-grid');
@@ -73,9 +98,9 @@ const Router = (() => {
       tab.addEventListener('click', function() {
         // Удаляем активный класс у всех табов
         tabs.forEach(t => t.classList.remove('active'));
+        
         // Добавляем активный класс текущему табу
         this.classList.add('active');
-        
         const category = this.dataset.category;
         
         // Добавляем класс для анимации
@@ -112,144 +137,65 @@ const Router = (() => {
     });
   };
 
-  // Объект с функциями рендеринга
-  const renderers = {
-    about: Render.about,
-    stack: Render.stack,
-    experience: Render.experience,
-    projects: function(data) {
-      return `
-        <section class="projects-section">
-          <div class="projects-tabs">
-            <button class="projects-tab active" data-category="all">Все проекты</button>
-            <button class="projects-tab" data-category="personal">Индивидуальные</button>
-            <button class="projects-tab" data-category="team">Командные</button>
-          </div>
-          <div class="projects-grid">
-            ${data.projects.map(project => `
-              <div class="project-card" data-project="${project.id}" data-category="${project.category}">
-                <div class="project-image-container">
-                  <img src="${project.image}" alt="${project.title}" class="project-image"
-                       onerror="this.onerror=null;this.src='assets/images/default-project.png'">
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">${project.title}</h3>
-                  <div class="project-stack">
-                    ${project.stack.map(tech => `<span class="tech-tag" data-tech="${tech.toLowerCase()}">${tech}</span>`).join('')}
-                  </div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </section>
-      `;
-    }
-  };
-
-  // Инициализация роутера
-  const init = () => {
-    setupModalCloseHandlers();
-    setupNavbarHandlers();
-    setupProjectClickHandlers();
-    
-    window.addEventListener('hashchange', () => {
-      const page = window.location.hash.substring(1) || 'about';
-      navigate(page);
-    });
-    
-    const initialPage = window.location.hash.substring(1) || 'about';
-    navigate(initialPage);
-  };
-
-  // Навигация
-  const navigate = async (page) => {
-    if (currentPage === page) return;
-    
-    Animator.startTransition();
-    updateActiveTab(page);
-    
+  // Открытие модалки проекта
+  const openProjectModal = async (projectId) => {
     try {
-      const data = await Http.fetchPage(page);
-      renderPage(page, data);
-      currentPage = page;
-      window.location.hash = page;
+      const data = await Http.fetchPage('projects');
+      const project = data.projects.find(p => p.id === projectId);
       
-      pageEvent.detail.page = page;
-      pageEvent.detail.prevPage = currentPage;
-      document.dispatchEvent(pageEvent);
+      if (!project) throw new Error('Project not found');
+      
+      // Заполнение модального окна
+      document.querySelector('.modal-title').textContent = project.title;
+      document.querySelector('.modal-description').textContent = project.details.description;
+      
+      const imgContainer = document.querySelector('.modal-image-container');
+      imgContainer.innerHTML = project.image ? 
+        `<img src="${project.image}" alt="${project.title}" class="modal-project-image" 
+          onerror="this.onerror=null;this.src='assets/images/default-project.png'">` : '';
+      
+      document.querySelector('.features-list').innerHTML = 
+        project.details.features.map(f => `<li>${f}</li>`).join('');
+      
+      document.querySelector('.tasks-list').innerHTML = 
+        project.details.tasks.map(t => `<li>${t}</li>`).join('');
+      
+      const githubLink = document.querySelector('.github-link');
+      githubLink.href = project.details.github || '#';
+      githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
+      
+      // Показ модального окна
+      document.querySelector('.modal-overlay').classList.add('active');
+      document.querySelector('.modal-container').classList.add('active');
+      document.body.classList.add('modal-open');
     } catch (error) {
-      console.error('Navigation error:', error);
-      showError('Ошибка загрузки страницы');
-    }
-  };
-
-  // Рендер страницы
-  const renderPage = async (page, data) => {
-    const contentContainer = document.querySelector('.content-container');
-    if (!contentContainer) return;
-    
-    contentContainer.style.opacity = '0';
-    contentContainer.style.transform = 'translateY(10px)';
-    
-    await new Promise(resolve => setTimeout(resolve, 200));
-    
-    const title = getTitle(page);
-    const content = renderers[page](data);
-    contentContainer.innerHTML = `
-      <h1 class="content-title">${title}</h1>
-      <div class="content-body">${content}</div>
-    `;
-    
-    setTimeout(() => {
-      contentContainer.style.opacity = '1';
-      contentContainer.style.transform = 'translateY(0)';
-      contentContainer.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-    }, 50);
-    
-    if (page === 'projects') {
-      setupProjectTabs();
+      console.error('Error opening project modal:', error);
     }
   };
 
   // Вспомогательные функции
-  const getTitle = (page) => {
+  const getTitle = (page, lang) => {
     const titles = {
-      about: 'Обо мне',
-      projects: 'Мои проекты',
-      stack: 'Технологии',
-      experience: 'Опыт работы'
+      about: { ru: 'Обо мне', en: 'About' },
+      projects: { ru: 'Мои проекты', en: 'Projects' },
+      stack: { ru: 'Технологии', en: 'Tech Stack' },
+      experience: { ru: 'Опыт работы', en: 'Experience' }
     };
-    return titles[page] || 'Страница';
+    return titles[page]?.[lang] || titles[page]?.ru || page;
   };
 
   const updateActiveTab = (page) => {
-    document.querySelectorAll('.navbar-tab').forEach(tab => {
-      tab.classList.toggle('active', tab.dataset.content === page);
+    document.querySelectorAll('.navbar-tab, .mobile-tab').forEach(tab => {
+      const shouldBeActive = tab.dataset.content === page;
+      tab.classList.toggle('active', shouldBeActive);
     });
   };
 
   const setupNavbarHandlers = () => {
-    // Обработчики для десктопных табов
-    document.querySelectorAll('.navbar-tab').forEach(tab => {
+    document.querySelectorAll('.navbar-tab, .mobile-tab').forEach(tab => {
       tab.addEventListener('click', function(e) {
         e.preventDefault();
         navigate(this.dataset.content);
-      });
-    });
-    
-    // Обработчики для мобильных табов
-    document.querySelectorAll('.mobile-tab').forEach(tab => {
-      tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        navigate(this.dataset.content);
-        
-        // Обновляем активное состояние
-        document.querySelectorAll('.mobile-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        
-        document.querySelectorAll('.navbar-tab').forEach(t => {
-          t.classList.toggle('active', t.dataset.content === this.dataset.content);
-        });
       });
     });
   };
@@ -259,24 +205,40 @@ const Router = (() => {
     if (contentContainer) {
       contentContainer.innerHTML = `
         <div class="error-message">
-          <h1>Ошибка</h1>
+          <h1>${language.t('error')}</h1>
           <p>${message}</p>
-          <button class="retry-button">Попробовать снова</button>
+          <button class="retry-button">${language.t('retry')}</button>
         </div>
       `;
-      
       document.querySelector('.retry-button')?.addEventListener('click', () => {
-        navigate(currentPage);
+        navigate(currentPage, true);
       });
     }
     Animator.completeTransition();
   };
 
-  return {
-    init,
-    navigate,
-    openProjectModal
+  // Инициализация
+  const init = () => {
+    setupModalCloseHandlers();
+    setupNavbarHandlers();
+    setupLanguageHandlers();
+    
+    window.addEventListener('hashchange', () => {
+      const page = window.location.hash.substring(1) || 'about';
+      navigate(page);
+    });
+
+    const initialPage = window.location.hash.substring(1) || 'about';
+    navigate(initialPage);
   };
+
+  const setupLanguageHandlers = () => {
+    document.addEventListener('languageChanged', () => {
+      navigate(currentPage, true);
+    });
+  };
+
+  return { init, navigate, openProjectModal };
 })();
 
 export default Router;

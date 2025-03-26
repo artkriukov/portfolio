@@ -1,29 +1,33 @@
 const Render = {
-    about: function(data) {
-      return `
-        <section class="about-section">
-          <div class="about-content">
-            <div class="about-header">
-              ${data.photo ? `<img src="${data.photo}" alt="${data.name}" class="profile-image">` : ''}
-              <div>
-                <h1 class="about-title">${data.name}</h1>
-                <p class="about-role">${data.role}</p>
-              </div>
-            </div>
-            <div class="about-description">
-              ${data.description.map(line => `<p>${line}</p>`).join('')}
-            </div>
-            <div class="social-links">
-              ${data.socialLinks.map(link => `
-                <a href="${link.url}" target="_blank" class="social-link">
-                  ${link.icon}<span>${link.name}</span>
-                </a>
-              `).join('')}
+  about: function(data, lang = 'ru') {
+    const shared = data.shared;
+    const content = data[lang] || data.ru;
+    
+    return `
+      <section class="about-section">
+        <div class="about-content">
+          <div class="about-header">
+            ${shared.photo ? `<img src="${shared.photo}" alt="${content.name}" class="profile-image">` : ''}
+            <div>
+              <h1 class="about-title">${content.name}</h1>
+              <p class="about-role">${content.role}</p>
             </div>
           </div>
-        </section>
-      `;
-    },
+          <div class="about-description">
+            ${content.description.map(line => `<p>${line}</p>`).join('')}
+          </div>
+          <div class="social-links">
+            ${shared.socialLinks.map(link => `
+              <a href="${link.url}" target="_blank" class="social-link">
+                ${link.icon}
+                <span>${link.name[lang] || link.name.ru}</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      </section>
+    `;
+  },
   
     stack: function(data) {
       return `
@@ -45,18 +49,39 @@ const Render = {
       `;
     },
   
-    projects: function(data) {
+    projects: function(data, lang = 'ru') {
+      const translations = {
+        all: { ru: 'Все проекты', en: 'All Projects' },
+        personal: { ru: 'Индивидуальные', en: 'Personal' },
+        team: { ru: 'Командные', en: 'Team' }
+      };
+  
       return `
         <section class="projects-section">
           <div class="projects-tabs">
-            <button class="projects-tab active" data-category="all">Все проекты</button>
-            <button class="projects-tab" data-category="personal">Индивидуальные</button>
-            <button class="projects-tab" data-category="team">Командные</button>
+            <button class="projects-tab active" data-category="all">
+              ${translations.all[lang] || translations.all.ru}
+            </button>
+            <button class="projects-tab" data-category="personal">
+              ${translations.personal[lang] || translations.personal.ru}
+            </button>
+            <button class="projects-tab" data-category="team">
+              ${translations.team[lang] || translations.team.ru}
+            </button>
           </div>
           <div class="projects-grid">
             ${data.projects.map(project => `
               <div class="project-card" data-project="${project.id}" data-category="${project.category}">
-                <!-- остальная разметка проекта -->
+                <div class="project-image-container">
+                  <img src="${project.image}" alt="${project.title}" class="project-image" 
+                    onerror="this.onerror=null;this.src='assets/images/default-project.png'">
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">${project.title}</h3>
+                  <div class="project-stack">
+                    ${project.stack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                  </div>
+                </div>
               </div>
             `).join('')}
           </div>
