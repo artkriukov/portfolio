@@ -1,38 +1,70 @@
 :root {
-    /* Light Theme */
-    --bg-color: #f8f9fa;
-    --text-color: #212529;
-    --sidebar-bg: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --accent: #4a90e2;
-    --bg-alt: rgba(0, 0, 0, 0.03);
-    --text-secondary: #86868b;
-    
-    /* Navbar Light */
-    --navbar-bg: rgba(248, 249, 250, 0.8);
-    --navbar-border: rgba(0, 0, 0, 0.1);
-    --tabs-bg: rgba(0, 0, 0, 0.05);
-    --tab-hover: rgba(0, 0, 0, 0.1);
-    --tab-active-bg: #ffffff;
-    --tab-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --theme-toggle-bg: rgba(0, 0, 0, 0.1);
-  }
+  /* Light Theme Colors */
+  --bg-color: #f5f5f7;
+  --text-color: #1d1d1f;
+  --text-secondary: #86868b;
+  --card-bg: #ffffff;
+  --bg-alt: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --badge-bg: rgba(0, 0, 0, 0.05);
+  --badge-text: #1d1d1f;
+  --accent: #007AFF;
+  --accent-hover: #0066CC;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   
-  .dark-theme {
-    /* Dark Theme */
-    --bg-color: #1a1a1a;
-    --text-color: #e9ecef;
-    --sidebar-bg: #2d2d2d;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    --bg-alt: rgba(255, 255, 255, 0.05);
-    --text-secondary: #a1a1a6;
-    
-    /* Navbar Dark */
-    --navbar-bg: rgba(26, 26, 26, 0.8);
-    --navbar-border: rgba(255, 255, 255, 0.1);
-    --tabs-bg: rgba(255, 255, 255, 0.1);
-    --tab-hover: rgba(255, 255, 255, 0.2);
-    --tab-active-bg: #3a3a3a;
-    --tab-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --theme-toggle-bg: rgba(255, 255, 255, 0.1);
-  }
+  /* Specific badge colors */
+  --badge-blue: #007AFF;
+  --badge-green: #34C759;
+  --badge-orange: #FF9500;
+  --badge-red: #FF3B30;
+  --badge-purple: #AF52DE;
+  --badge-gray: #AEAEB2;
+  
+  /* Component colors */
+  --navbar-bg: rgba(245, 245, 247, 0.8);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --tab-active-bg: #007AFF;
+  --tab-inactive-bg: rgba(0, 0, 0, 0.05);
+  
+  /* Effects */
+  --transition-base: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.dark-theme {
+  /* Dark Theme Colors */
+  --bg-color: #1d1d1f;
+  --text-color: #f5f5f7;
+  --text-secondary: #8e8e93;
+  --card-bg: #2c2c2e;
+  --bg-alt: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --badge-bg: rgba(255, 255, 255, 0.1);
+  --badge-text: #ffffff;
+  --accent: #0A84FF;
+  --accent-hover: #007AFF;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  
+  /* Specific badge colors (dark) */
+  --badge-blue: #0A84FF;
+  --badge-green: #30D158;
+  --badge-orange: #FF9F0A;
+  --badge-red: #FF453A;
+  --badge-purple: #BF5AF2;
+  --badge-gray: #636366;
+  
+  /* Component colors (dark) */
+  --navbar-bg: rgba(29, 29, 31, 0.8);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --tab-active-bg: #0A84FF;
+  --tab-inactive-bg: rgba(255, 255, 255, 0.1);
+  
+  /* Effects remain the same */
+  --transition-base: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Additional global styles for Apple aesthetic */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
