@@ -6,6 +6,7 @@
 @import url('./navbar.css');
 @import url('./stack.css');
 @import url('./experience.css');
+@import url('./theme.css');
 @import url('./media.css');
 
 * {
@@ -89,23 +90,23 @@ body {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 16px; 
+  position: relative; 
 }
 
 .lang-toggle {
-  width: 60px;
-  gap: 5px;
-  height: 28px;
-  border-radius: 50%;
-  border: none;
-  background: var(--theme-toggle-bg);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: auto;
+  padding: 0 12px;
+  height: 30px;
+  border-radius: 15px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  gap: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  transition: all var(--transition-base);
 }
 
 .lang-text {

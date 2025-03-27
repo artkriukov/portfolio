@@ -34,11 +34,6 @@
       background-size: 100% 90%;
     }
 
-    .navbar-actions {
-      display: flex;
-      gap: 35px;
-    }
-
     .about-header {
       flex-direction: column;
       text-align: center;

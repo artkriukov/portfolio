@@ -1,32 +1,71 @@
-.theme-toggle {
-    position: fixed;
+.theme-switcher {
+    position: relative; 
     top: var(--space-md);
-    right: var(--space-md);
-    width: 4.4rem;
-    height: 4.4rem;
+    right: calc(var(--space-md) + 60px); 
+    z-index: 100;
+  }
+  
+  .theme-switcher-track {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color var(--transition-base);
+  }
+  
+  .theme-switcher-handle {
+    position: absolute;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    background: var(--bg-alt);
-    border: 0.1rem solid var(--border);
+    background-color: var(--card-bg);
+    left: 2px;
+    top: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-.theme-toggle-inner {
-    position: relative;
-    width: 2em;
-    height: 2em;
-}
-
-.sun-icon, .moon-icon {
+    transition: transform var(--transition-base);
+    box-shadow: var(--tab-shadow);
+    overflow: hidden;
+  }
+  
+  /* Темная тема — показываем луну */
+  .dark-theme .theme-switcher-handle {
+    transform: translateX(30px);
+  }
+  
+  .theme-icon {
     position: absolute;
-    font-size: 1.8em;
-    transition: opacity 0.3s ease;
-}
+    font-size: 14px;
+    transition: opacity var(--transition-base), transform var(--transition-base);
+  }
+  
+  /* По умолчанию (светлая тема) — солнце видно, луна скрыта */
+  .sun-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .moon-icon {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  /* Темная тема — луна видна, солнце скрыто */
+  .dark-theme .sun-icon {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .dark-theme .moon-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Эффект при нажатии */
+  .theme-switcher-track:active .theme-switcher-handle {
+    width: 30px;
+  }
