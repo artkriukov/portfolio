@@ -26,6 +26,12 @@
     }
   }
 
+  @media (min-width: 768px) {
+    .social-links {
+      gap: 0.5rem;
+    }
+  }
+
   /* Планшеты (768px) */
   @media (max-width: 768px) {
     /* About Section */
@@ -51,11 +57,16 @@
       font-size: 1.4rem;
     }
     .about-description p {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     .social-links {
       justify-content: center;
       flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .social-link {
+      padding: 1rem 1rem;
     }
   
     /* Experience */
