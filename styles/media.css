@@ -164,6 +164,10 @@
     .main-content {
       padding: 20px 12px;
     }
+
+    .navbar-actions {
+      gap: 0;
+    }
   }
   
   /* Очень маленькие устройства (480px) */
@@ -186,6 +190,22 @@
     }
     .stack-item span {
       font-size: 0.9rem;
+    }
+
+    .lang-icon{
+      display: none;
+    }
+
+    .navbar-actions button {
+      font-size: 0.9rem;
+    }
+
+    .lang-option {
+      padding: 4px 7px;
+    }
+
+    .lang-dropdown {
+    min-width: 96px;
     }
   }
 
