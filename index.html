@@ -22,10 +22,17 @@
 
         <div class="navbar-actions">
           
-          <button class="lang-toggle" title="Switch language">
-            <span class="lang-icon">🌐</span>
-            <span class="lang-text">EN</span>
-          </button>
+          <div class="lang-selector">
+            <button class="lang-toggle" title="Switch language" aria-expanded="false">
+              <span class="lang-icon">🌐</span>
+              <span class="lang-text">EN</span>
+              <span class="lang-arrow">▼</span>
+            </button>
+            <div class="lang-dropdown" hidden>
+              <button class="lang-option" data-lang="ru">Русский</button>
+              <button class="lang-option" data-lang="en">English</button>
+            </div>
+          </div>
 
           <div class="theme-switcher">
             <div class="theme-switcher-track">

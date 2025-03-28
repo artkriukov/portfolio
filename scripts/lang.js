@@ -69,7 +69,30 @@ export default class Language {
         'tab_stack': 'Stack',
       }
     };
+
+    this.handleOptionClick = this.handleOptionClick.bind(this); 
     this.init();
+    this.setupDropdown();
+  }
+
+  handleOptionClick(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    
+    const newLang = e.target.dataset.lang;
+    if (newLang === this.currentLang) {
+      this.closeDropdown();
+      return;
+    }
+    
+    console.log(`Changing language to ${newLang}`);
+    this.currentLang = newLang;
+    this.saveLanguage();
+    this.updateToggle();
+    this.updateNavTabs();
+    this.closeDropdown();
+    this.animateLanguageChange();
+    document.dispatchEvent(new CustomEvent('languageChanged'));
   }
 
   detectLanguage() {
@@ -85,29 +108,13 @@ export default class Language {
 
   init() {
     this.saveLanguage();
-    this.setupToggle();
-    this.updateNavTabs(); // Добавляем вызов при инициализации
+    this.updateToggle();
+    this.updateNavTabs();
   }
 
   saveLanguage() {
     localStorage.setItem('lang', this.currentLang);
     document.documentElement.lang = this.currentLang;
-  }
-
-  setupToggle() {
-    const toggle = document.querySelector('.lang-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', () => this.toggleLanguage());
-      this.updateToggle();
-    }
-  }
-
-  toggleLanguage() {
-    this.currentLang = this.currentLang === 'ru' ? 'en' : 'ru';
-    this.saveLanguage();
-    this.updateToggle();
-    this.updateNavTabs(); // Добавляем вызов при переключении языка
-    document.dispatchEvent(new CustomEvent('languageChanged'));
   }
 
   updateNavTabs() {
@@ -118,7 +125,6 @@ export default class Language {
       stack: this.t('tab_stack')
     };
 
-    // Обновляем десктопные табы
     document.querySelectorAll('.navbar-tab').forEach(tab => {
       const contentKey = tab.dataset.content;
       if (tabs[contentKey]) {
@@ -126,7 +132,6 @@ export default class Language {
       }
     });
 
-    // Обновляем мобильные табы (если есть)
     document.querySelectorAll('.mobile-tab .tab-text').forEach(tab => {
       const contentKey = tab.closest('.mobile-tab').dataset.content;
       if (tabs[contentKey]) {
@@ -140,6 +145,140 @@ export default class Language {
     if (langText) {
       langText.textContent = this.currentLang.toUpperCase();
     }
+    
+    document.querySelectorAll('.lang-option').forEach(option => {
+      option.classList.toggle('active', option.dataset.lang === this.currentLang);
+    });
+  }
+
+  setupDropdown() {
+    // Удаляем старые обработчики
+    this.removeDropdownListeners();
+
+    const toggle = document.querySelector('.lang-toggle');
+    const dropdown = document.querySelector('.lang-dropdown');
+    
+    if (!toggle || !dropdown) {
+      console.error('Lang elements not found');
+      return;
+    }
+
+    // Инициализация состояния
+    this.dropdownState = {
+      isOpen: false,
+      isAnimating: false,
+      toggle: toggle,
+      dropdown: dropdown
+    };
+
+    // Назначаем обработчики
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      
+      if (this.dropdownState.isAnimating) return;
+      
+      if (this.dropdownState.isOpen) {
+        this.closeDropdown();
+      } else {
+        this.openDropdown();
+      }
+    });
+
+    // Важно: используем делегирование событий для динамических элементов
+    document.body.addEventListener('click', (e) => {
+      if (e.target.closest('.lang-option')) {
+        this.handleOptionClick(e);
+      } else if (!e.target.closest('.lang-selector') && this.dropdownState.isOpen) {
+        this.closeDropdown();
+      }
+    });
+
+    console.log('Dropdown handlers initialized');
+  }
+  
+  removeDropdownListeners() {
+    if (this.dropdownState) {
+      const { toggle } = this.dropdownState;
+      toggle.removeEventListener('click', this.handleToggleClick);
+      document.removeEventListener('click', this.handleOutsideClick);
+    }
+  }
+  
+  initDropdownHandlers() {
+    const { toggle, dropdown } = this.dropdownState;
+  
+    // Обработчик клика по переключателю (используем bind для сохранения контекста)
+    this.handleToggleClick = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      
+      if (this.dropdownState.isAnimating) return;
+      
+      if (this.dropdownState.isOpen) {
+        this.closeDropdown();
+      } else {
+        this.openDropdown();
+      }
+    };
+  
+    // Обработчик кликов вне дропдауна
+    this.handleOutsideClick = (e) => {
+      if (!e.target.closest('.lang-selector')) {
+        this.closeDropdown();
+      }
+    };
+  
+    // Назначаем обработчики
+    toggle.addEventListener('click', this.handleToggleClick);
+  }
+  
+  openDropdown() {
+    if (this.dropdownState.isOpen || this.dropdownState.isAnimating) return;
+  
+    this.dropdownState.isAnimating = true;
+    const { toggle, dropdown } = this.dropdownState;
+    
+    toggle.setAttribute('aria-expanded', 'true');
+    dropdown.classList.add('show');
+    document.addEventListener('click', this.handleOutsideClick);
+  
+    setTimeout(() => {
+      this.dropdownState.isOpen = true;
+      this.dropdownState.isAnimating = false;
+      console.log('Dropdown opened');
+    }, 300);
+  }
+
+  closeDropdown() {
+    if (!this.dropdownState.isOpen || this.dropdownState.isAnimating) return;
+  
+    this.dropdownState.isAnimating = true;
+    const { toggle, dropdown } = this.dropdownState;
+    
+    dropdown.classList.remove('show');
+    document.removeEventListener('click', this.handleOutsideClick);
+  
+    setTimeout(() => {
+      toggle.setAttribute('aria-expanded', 'false');
+      this.dropdownState.isOpen = false;
+      this.dropdownState.isAnimating = false;
+      console.log('Dropdown closed');
+    }, 300);
+  }
+
+  animateLanguageChange() {
+    const content = document.querySelector('.content-container');
+    if (!content) return;
+
+    content.style.opacity = '0';
+    content.style.transform = 'translateY(10px)';
+    content.style.transition = 'opacity 0.3s, transform 0.3s';
+
+    setTimeout(() => {
+      content.style.opacity = '1';
+      content.style.transform = 'translateY(0)';
+    }, 300);
   }
 
   t(key) {
