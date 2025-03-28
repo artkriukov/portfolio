@@ -62,7 +62,7 @@
     .social-links {
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.3rem;
     }
 
     .social-link {
@@ -125,10 +125,18 @@
     .about-title {
       font-size: 2.2rem;
     }
-    .social-link {
-      padding: 0.8rem 1.5rem;
+
+    .social-links {
+      margin-top: 2rem;
     }
-  
+
+    .social-link {
+      padding: 0.8rem 1rem;
+    }
+
+    .social-link span {
+      font-size: 0.7rem;
+    }
     /* Experience */
     .experience-list {
       padding-left: 30px;
