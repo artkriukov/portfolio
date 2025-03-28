@@ -128,3 +128,15 @@ body {
     gap: 0;
   }
 }
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+
+  .social-link span {
+    display: none;
+  }
+
+  .social-links {
+    gap: clamp(1rem, 2.4vw, 2.4rem);
+  }
+}
