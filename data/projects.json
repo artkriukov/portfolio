@@ -10,14 +10,14 @@
         "details": {
           "description": "Одностраничное приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмов IMDb.",
           "tasks": [
-            "Интеграция с API: Использовал NetworkClient для загрузки данных о фильмах.",
-            "Загрузка и обработка данных: Реализовал MoviesLoader для загрузки списка популярных фильмов.",
-            "Генерация вопросов: Создал QuestionFactory для формирования вопросов на основе рейтинга фильмов.",
-            "Пользовательский интерфейс: Разработал экран викторины с использованием Storyboard.",
-            "Логика викторины: Реализовал MovieQuizPresenter для управления логикой викторины.",
-            "Статистика и результаты: Интегрировал StatisticService для отслеживания прогресса пользователя.",
-            "Обработка ошибок: Реализовал обработку ошибок сети и отображение сообщений пользователю.",
-            "Тестирование и отладка: Написал Unit-тесты и UI-тесты."
+            "Использовал NetworkClient для загрузки данных о фильмах.",
+            "Реализовал MoviesLoader для загрузки списка популярных фильмов.",
+            "Создал QuestionFactory для формирования вопросов на основе рейтинга фильмов.",
+            "Разработал экран викторины с использованием Storyboard.",
+            "Реализовал MovieQuizPresenter для управления логикой викторины.",
+            "Интегрировал StatisticService для отслеживания прогресса пользователя.",
+            "Реализовал обработку ошибок сети и отображение сообщений пользователю.",
+            "Написал Unit-тесты и UI-тесты."
           ],
           "github": "https://github.com/artkriukov/MovieQuiz"
         }
@@ -29,12 +29,13 @@
         "image": "assets/projects/Shoppe.jpg",
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
-          "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее.",
+          "description": "Shoppe – это универсальное мобильное приложение для онлайн-шопинга, которое делает покупки проще, удобнее и доступнее. Находите нужные товары, сохраняйте избранное, оформляйте заказы в разных валютах и получайте товары с доставкой по всему миру!",
           "tasks": [
+            "Разработал экран корзины с использованием архитектуры VIPER.",
             "Реализовал взаимодействие с данными корзины, включая добавление, удаление и изменение количества товаров.",
             "Обеспечил подсчет общей суммы и количества товаров.",
             "Работал со StorageManager для загрузки и обновления данных.",
-            "Обеспечил связь между слоями Interactor, Presenter и View для корректного отображения данных и обработки пользовательских действий."
+            "Участвовал в оптимизации и рефакторинге кода для улучшения производительности и читаемости."
           ],
           "github": "https://github.com/artkriukov/Shoppe"
         }
@@ -46,11 +47,12 @@
         "image": "assets/projects/GameBomb.gif",
         "stack": ["UIKit", "MVC", "Lottie"],
         "details": {
-          "description": "Мобильное приложение для интернет-магазина",
+          "description": "Бомба — это iOS-приложение, которое идеально подойдет для веселых вечеринок! Игроки по очереди отвечают на вопросы, а если не успели — бомба взрывается.",
           "tasks": [
-            "Создал динамичные анимации с помощью библиотеки Lottie.",
+            "Создал динамичные анимации с помощью библиотеки Lottie, включая анимацию тиканья бомбы и взрыва.",
             "Интегрировал звуковые эффекты: зацикленное тиканье бомбы и фоновую музыку.",
-            "Реализовал интерактивный таймер с функциями паузы и возобновления."
+            "Реализовал интерактивный таймер с функциями паузы и возобновления.",
+            "Реализовал переход на следующий экран по завершении таймера."
           ],
           "github": "https://github.com/artkriukov/Boom"
         }
@@ -66,16 +68,16 @@
         "image": "assets/projects/MovieQuiz.png",
         "stack": ["Storyboard", "MVP", "URLSession", "UserDefoults", "Unit-tests", "UI-tests"],
         "details": {
-          "description": "Single-page application with quizzes about movies from IMDb's top 250 and most popular films.",
+          "description": "A single-page application with quizzes about movies from the IMDb Top 250 and Most Popular Movies ratings.",
           "tasks": [
-            "API Integration: Used NetworkClient to load movie data.",
-            "Data loading and processing: Implemented MoviesLoader to fetch popular movies list.",
-            "Question generation: Created QuestionFactory to generate questions based on movie ratings.",
-            "User interface: Developed quiz screen using Storyboard.",
-            "Quiz logic: Implemented MovieQuizPresenter to manage quiz logic.",
-            "Statistics and results: Integrated StatisticService to track user progress.",
-            "Error handling: Implemented network error handling and user notifications.",
-            "Testing and debugging: Wrote Unit tests and UI tests."
+            "Used NetworkClient to load movie data.",
+            "Implemented MoviesLoader to load the list of popular movies.",
+            "Created QuestionFactory to generate questions based on movie ratings.",
+            "Developed a quiz screen using Storyboard.",
+            "Implemented MovieQuizPresenter to manage quiz logic.",
+            "Integrated StatisticService to track user progress.",
+            "Implemented network error handling and user message display.",
+            "Wrote Unit tests and UI tests."
           ],
           "github": "https://github.com/artkriukov/MovieQuiz"
         }
@@ -87,12 +89,13 @@
         "image": "assets/projects/Shoppe.jpg",
         "stack": ["UIKit", "VIPER", "StorageManager"],
         "details": {
-          "description": "Shoppe is a universal mobile shopping app that makes online shopping easier, more convenient and accessible.",
+          "description": "Shoppe is a universal mobile app for online shopping that makes purchasing easier, more convenient, and more accessible. Find the products you need, save favorites, place orders in different currencies, and get worldwide delivery!",
           "tasks": [
-            "Implemented cart data interaction including adding, removing and updating product quantities.",
-            "Calculated total amount and product count.",
+            "Developed the shopping cart screen using VIPER architecture.",
+            "Implemented cart data interaction, including adding, removing, and updating product quantities.",
+            "Ensured calculation of the total price and item count.",
             "Worked with StorageManager to load and update data.",
-            "Established connection between Interactor, Presenter and View layers for proper data display and user action handling."
+            "Participated in code optimization and refactoring to improve performance and readability."
           ],
           "github": "https://github.com/artkriukov/Shoppe"
         }
@@ -104,11 +107,12 @@
         "image": "assets/projects/GameBomb.gif",
         "stack": ["UIKit", "MVC", "Lottie"],
         "details": {
-          "description": "Mobile application for e-commerce",
+         "description": "Bomba is an iOS app perfect for fun parties! Players take turns answering questions—if they don’t answer in time, the bomb explodes.",
           "tasks": [
-            "Created dynamic animations using Lottie library.",
-            "Integrated sound effects: looping bomb tick and background music.",
-            "Implemented interactive timer with pause and resume functions."
+            "Created dynamic animations using the Lottie library, including bomb ticking and explosion effects.",
+            "Integrated sound effects: looping bomb ticking and background music.",
+            "Implemented an interactive timer with pause and resume functionality.",
+            "Added a screen transition when the timer runs out."
           ],
           "github": "https://github.com/artkriukov/Boom"
         }
