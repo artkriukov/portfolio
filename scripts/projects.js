@@ -15,54 +15,111 @@ export default class Projects {
   async loadProjects() {
     try {
       const response = await fetch('data/projects.json');
-      if (!response.ok) throw new Error('Network response was not ok');
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      
       const data = await response.json();
-      this.projectsData = data.projects;
+      
+      // Добавляем проверку структуры данных
+      if (!data?.ru?.projects || !data?.en?.projects) {
+        throw new Error('Invalid data format');
+      }
+      
+      this.projectsData = data[new Language().getCurrentLang()]?.projects || [];
+      
+      if (this.projectsData.length === 0) {
+        throw new Error('No projects available');
+      }
+      
       this.renderProjects();
     } catch (error) {
       console.error("Failed to load projects:", error);
-      this.showError();
+      this.showError(error.message); // Передаем сообщение об ошибке
     }
   }
 
   renderProjects() {
     const container = document.querySelector('.projects-grid');
-    if (!container) return;
+  if (!container) return;
+
+  const filtered = this.activeCategory === 'all' 
+    ? (this.projectsData || []) 
+    : (this.projectsData || []).filter(p => p.category === this.activeCategory);
+
+  // Добавляем проверку на наличие данных
+  if (!filtered || filtered.length === 0) {
+    container.innerHTML = '<div class="no-projects">No projects found</div>';
+    return;
+  }
 
     // Анимация исчезновения перед обновлением
     container.style.opacity = '0';
     container.style.transform = 'translateY(10px)';
     container.style.transition = 'opacity 0.3s, transform 0.3s';
 
-    const filtered = this.activeCategory === 'all' 
-      ? this.projectsData 
-      : this.projectsData.filter(p => p.category === this.activeCategory);
-
     setTimeout(() => {
+      // 1. Сначала рендерим только скелетоны
       container.innerHTML = filtered.map((project, index) => `
-        <div class="project-card" 
-             data-project="${project.id}"
-             style="animation-delay: ${index * 50}ms">
+        <div class="project-card" data-project="${project.id}" style="animation-delay:${index * 50}ms">
           <div class="project-image-container">
-            <img src="${project.image}" 
-                 alt="${project.title}" 
-                 class="project-image"
-                 onerror="this.onerror=null; this.src='assets/images/default-project.png'">
+            <div class="skeleton" style="width:100%; height:100%;"></div>
+            <!-- Пустой img с data-src -->
+            <img 
+              data-src="${project.image}" 
+              alt="${project.title}" 
+              class="project-image"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='assets/images/default-project.png'"
+            >
           </div>
           <div class="project-info">
-            <h3 class="project-title">${project.title}</h3>
+            <div class="skeleton skeleton-text" style="width:80%; height:20px;"></div>
             <div class="project-stack">
-              ${project.stack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+              ${Array(3).fill().map(() => 
+                `<span class="skeleton skeleton-text" style="width:60px; height:15px; display:inline-block; margin-right:5px;"></span>`
+              ).join('')}
             </div>
           </div>
         </div>
       `).join('');
 
-      // Анимация появления
+      // Анимация появления скелетонов
       container.style.opacity = '1';
       container.style.transform = 'translateY(0)';
-    }, 300);
-  }
+
+      // 2. Искусственная задержка (3 секунды) перед загрузкой реальных изображений
+      setTimeout(() => {
+        // Загружаем изображения
+        document.querySelectorAll('.project-image').forEach(img => {
+          const src = img.dataset.src;
+          if (src) {
+            img.src = src;
+            img.onload = function() {
+              // Показываем изображение и скрываем скелетон
+              this.classList.add('loaded');
+              const skeleton = this.previousElementSibling;
+              if (skeleton) {
+                skeleton.style.opacity = '0';
+                setTimeout(() => skeleton.remove(), 300);
+              }
+              
+              // Показываем реальный контент
+              const card = this.closest('.project-card');
+              if (card) {
+                card.querySelector('.project-info').innerHTML = `
+                  <h3 class="project-title">${project.title}</h3>
+                  <div class="project-stack">
+                    ${project.stack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                  </div>
+                `;
+              }
+            };
+          }
+        });
+      }, 3000); // 3 секунды задержка
+
+    }, 10);
+}
+
 
   setupTabs() {
     const tabsContainer = document.querySelector('.projects-tabs');
@@ -133,70 +190,101 @@ export default class Projects {
   }
 
   setupModalClose() {
-    const closeModal = () => {
-      const modal = document.querySelector('.modal-container');
-      const overlay = document.querySelector('.modal-overlay');
-      
-      // Анимация закрытия
-      modal.classList.add('closing');
-      overlay.classList.remove('active');
-      
-      setTimeout(() => {
-        modal.classList.remove('active', 'closing');
-        document.body.style.overflow = '';
-      }, 400);
+    // Закрытие основной модалки
+    const closeProjectModal = () => {
+        document.querySelector('.project-modal').classList.remove('active');
+        document.querySelector('.project-modal-overlay').classList.remove('active');
     };
 
-    document.querySelector('.modal-close').addEventListener('click', closeModal);
-    document.querySelector('.modal-overlay').addEventListener('click', closeModal);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && document.querySelector('.modal-container.active')) {
-        closeModal();
-      }
+    // Закрытие видео модалки
+    const closeVideoModal = () => {
+        document.querySelector('.video-modal').classList.remove('active');
+        document.querySelector('.video-modal-overlay').classList.remove('active');
+        const video = document.querySelector('.video-player');
+        if(video) {
+            video.pause();
+            video.remove();
+        }
+    };
+
+    // Обработчики для основной модалки
+    document.querySelector('.project-modal .modal-close').addEventListener('click', closeProjectModal);
+    document.querySelector('.project-modal-overlay').addEventListener('click', (e) => {
+        if(e.target === document.querySelector('.project-modal-overlay')) {
+            closeProjectModal();
+        }
     });
+
+    // Обработчики для видео модалки
+    document.querySelector('.video-close').addEventListener('click', closeVideoModal);
+    document.querySelector('.video-modal-overlay').addEventListener('click', (e) => {
+        if(e.target === document.querySelector('.video-modal-overlay')) {
+            closeVideoModal();
+        }
+    });
+
+    // Обработчики клавиши Esc
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') {
+            if(document.querySelector('.video-modal.active')) {
+                closeVideoModal();
+            } else if(document.querySelector('.project-modal.active')) {
+                closeProjectModal();
+            }
+        }
+    });
+}
+
+async openModal(projectId) {
+  const project = this.projectsData.find(p => p.id === projectId);
+  if (!project) return;
+
+  const projectModal = document.querySelector('.project-modal');
+  const projectOverlay = document.querySelector('.project-modal-overlay');
+  const headerActions = projectModal.querySelector('.modal-header-actions');
+  
+  // Очищаем предыдущие элементы
+  headerActions.innerHTML = '';
+
+  // Добавляем кнопку видео
+  if (project.details.videoUrl) {
+      const videoButton = document.createElement('button');
+      videoButton.className = 'video-button';
+      videoButton.innerHTML = `
+          <span class="play-icon">▶</span>
+          ${new Language().t('watch_video')}
+      `;
+
+      videoButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const videoWrapper = document.querySelector('.video-wrapper');
+          
+          videoWrapper.innerHTML = `
+              <video controls class="video-player">
+                  <source src="${project.details.videoUrl}" type="video/mp4">
+                  ${new Language().t('video_not_supported')}
+              </video>
+          `;
+
+          document.querySelector('.video-modal').classList.add('active');
+          document.querySelector('.video-modal-overlay').classList.add('active');
+      });
+
+      headerActions.appendChild(videoButton);
   }
 
-  async openModal(projectId) {
-    const project = this.projectsData.find(p => p.id === projectId);
-    if (!project) return;
+  // Показываем основную модалку
+  projectModal.classList.add('active');
+  projectOverlay.classList.add('active');
+}
 
-    // Показываем overlay
-    document.querySelector('.modal-overlay').classList.add('active');
-    
-    // Показываем модалку
-    const modal = document.querySelector('.modal-container');
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
 
-    // Заполняем данные
-    document.querySelector('.modal-title').textContent = project.title;
-    document.querySelector('.modal-description').textContent = project.details.description;
-    
-    const imgContainer = document.querySelector('.modal-image-container');
-    imgContainer.innerHTML = `
-      <img src="${project.image}" 
-           alt="${project.title}" 
-           class="modal-project-image"
-           onerror="this.onerror=null; this.src='assets/images/default-project.png'">
-    `;
-
-    document.querySelector('.features-list').innerHTML = 
-      project.details.features.map(f => `<li>${f}</li>`).join('');
-
-    document.querySelector('.tasks-list').innerHTML = 
-      project.details.tasks.map(t => `<li>${t}</li>`).join('');
-
-    const githubLink = document.querySelector('.github-link');
-    githubLink.href = project.details.github || '#';
-    githubLink.style.display = project.details.github ? 'block' : 'none';
-  }
-
-  showError() {
+  showError(message = 'Не удалось загрузить проекты') {
     const container = document.querySelector('.projects-grid');
     if (container) {
       container.innerHTML = `
         <div class="error-message">
-          <p>Не удалось загрузить проекты.</p>
+          <p>${message}</p>
           <p>Попробуйте обновить страницу.</p>
         </div>
       `;

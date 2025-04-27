@@ -198,78 +198,122 @@ const Router = (() => {
 
     // Открытие модалки проекта
     const openProjectModal = async (projectId) => {
-      try {
-          // Получаем данные проекта
-          const lang = language.getCurrentLang();
-          const data = await Http.fetchPage('projects');
-          const projectsData = data[lang] || data.ru;
-          const project = projectsData.projects.find(p => p.id === projectId);
-          
-          if (!project) throw new Error('Project not found');
-  
-          // Получаем элементы модального окна
-          const modal = document.querySelector('.modal-container');
-          const overlay = document.querySelector('.modal-overlay');
-          const imageContainer = modal.querySelector('.modal-image-container');
-          const title = modal.querySelector('.modal-title');
-          const description = modal.querySelector('.modal-description');
-          const tasksTitle = modal.querySelector('.modal-tasks-title'); // Новый класс для заголовка
-          const tasksList = modal.querySelector('.tasks-list');
-          const githubLink = modal.querySelector('.github-link');
-  
-          // 1. Загрузка изображения
-          imageContainer.innerHTML = '';
-          const img = new Image();
-          img.className = 'modal-project-image';
-          img.alt = project.title;
-          
-          // Прелоадер
-          const loader = document.createElement('div');
-          loader.className = 'image-loader';
-          imageContainer.appendChild(loader);
-          
-          img.onload = () => {
-              loader.remove();
-              imageContainer.appendChild(img);
-              img.style.opacity = '0';
-              setTimeout(() => img.style.opacity = '1', 10);
-          };
-          
-          img.onerror = () => {
-              loader.remove();
-              img.src = 'assets/images/default-project.png';
-              imageContainer.appendChild(img);
-          };
-          
-          img.src = project.image;
-  
-          // 2. Заполняем основные данные
-          title.textContent = project.title;
-          description.textContent = project.details.description;
-          
-          // 3. Устанавливаем перевод для заголовка задач
-          if (tasksTitle) {
-              tasksTitle.textContent = language.t('tasks') + ':';
-          }
-          
-          // 4. Заполняем список задач
-          tasksList.innerHTML = project.details.tasks.map(task => `<li>${task}</li>`).join('');
-          
-          // 5. Настраиваем GitHub ссылку
-          githubLink.href = project.details.github || '#';
-          githubLink.textContent = language.t('github');
-          githubLink.style.display = project.details.github ? 'inline-flex' : 'none';
-  
-          // Показываем модальное окно
-          overlay.classList.add('active');
-          modal.classList.add('active');
-          document.body.classList.add('modal-open');
-  
-      } catch (error) {
-          console.error('Error opening modal:', error);
-          alert(language.t('load_error'));
-      }
-  };
+        try {
+            const lang = language.getCurrentLang();
+            const data = await Http.fetchPage('projects');
+            const projectsData = data[lang] || data.ru;
+            const project = projectsData.projects.find(p => p.id === projectId);
+            
+            if (!project) throw new Error('Project not found');
+    
+            // Элементы основной модалки
+            const projectModal = document.querySelector('.project-modal');
+            const projectOverlay = document.querySelector('.project-modal-overlay');
+            const title = projectModal.querySelector('.modal-title');
+            const description = projectModal.querySelector('.modal-description');
+            const tasksList = projectModal.querySelector('.tasks-list');
+            const githubLink = projectModal.querySelector('.github-link');
+            const headerActions = projectModal.querySelector('.modal-header-actions');
+            const imageContainer = projectModal.querySelector('.modal-image-container');
+    
+            // Очистка содержимого
+            title.textContent = '';
+            description.textContent = '';
+            tasksList.innerHTML = '';
+            imageContainer.innerHTML = '';
+            headerActions.innerHTML = '';
+    
+            // Заполнение данных
+            title.textContent = project.title;
+            description.textContent = project.details.description;
+            tasksList.innerHTML = project.details.tasks.map(t => `<li>${t}</li>`).join('');
+            githubLink.href = project.details.github || '#';
+            githubLink.style.display = project.details.github ? 'inline' : 'none';
+    
+            // Добавление изображения
+            const img = document.createElement('img');
+            img.src = project.image;
+            img.alt = project.title;
+            img.className = 'modal-project-image';
+            img.onerror = () => img.src = 'assets/images/default-project.png';
+            imageContainer.appendChild(img);
+    
+            // Добавление кнопки видео
+            if (project.details.videoUrl) {
+                const videoButton = document.createElement('button');
+                videoButton.className = 'video-button';
+                videoButton.innerHTML = `
+                    <span class="play-icon">▶</span>
+                    ${language.t('watch_video')}
+                `;
+    
+                videoButton.addEventListener('click', () => {
+                    const videoModal = document.querySelector('.video-modal');
+                    const videoOverlay = document.querySelector('.video-modal-overlay');
+                    const videoWrapper = videoModal.querySelector('.video-wrapper');
+                    
+                    // Очистка предыдущего видео
+                    videoWrapper.innerHTML = '';
+                    
+                    // Создание видео элемента
+                    const video = document.createElement('video');
+                    video.controls = true;
+                    video.autoplay = true;
+                    video.className = 'video-player';
+                    video.innerHTML = `
+                        <source src="${project.details.videoUrl}" type="video/mp4">
+                        ${language.t('video_not_supported')}
+                    `;
+                    
+                    videoWrapper.appendChild(video);
+                    videoModal.classList.add('active');
+                    videoOverlay.classList.add('active');
+                });
+    
+                headerActions.appendChild(videoButton);
+            }
+    
+            // Показ основной модалки
+            projectModal.classList.add('active');
+            projectOverlay.classList.add('active');
+            document.body.classList.add('modal-open');
+    
+        } catch (error) {
+            console.error('Error opening modal:', error);
+            alert(language.t('load_error'));
+        }
+    };
+    
+    // Обработчики закрытия
+    document.querySelectorAll('.modal-close').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.modal-container, .modal-overlay').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.body.classList.remove('modal-open');
+            
+            // Остановка видео
+            const video = document.querySelector('.video-player');
+            if (video) video.pause();
+        });
+    });
+    
+    // Закрытие по клику на оверлей
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                document.querySelectorAll('.modal-container, .modal-overlay').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.body.classList.remove('modal-open');
+                
+                // Остановка видео
+                const video = document.querySelector('.video-player');
+                if (video) video.pause();
+            }
+        });
+    });
+    
 
     // Вспомогательные функции
     const updateActiveTab = (page) => {

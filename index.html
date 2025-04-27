@@ -78,21 +78,32 @@
   </div>
 
   <!-- Модальное окно -->
-  <div class="modal-overlay"></div>
-  <div class="modal-container">
+  <div class="modal-overlay project-modal-overlay"></div>
+    <div class="modal-container project-modal">
       <button class="modal-close">✕</button>
       <div class="modal-content">
-          <div class="modal-image-container"></div>
-          <div class="modal-content-body">
-              <h2 class="modal-title"></h2>
-              <p class="modal-description"></p>
-              <div class="modal-tasks">
-                  <h4 class="modal-tasks-title">Реализованные задачи:</h4> <!-- Добавлен класс -->
-                  <ul class="tasks-list"></ul>
-              </div>
-              <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
+        <div class="modal-image-container"></div>
+        <div class="modal-content-body">
+          <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <div class="modal-header-actions"></div>
           </div>
+          <p class="modal-description"></p>
+          <div class="modal-tasks">
+            <h4 class="modal-tasks-title">Реализованные задачи:</h4>
+            <ul class="tasks-list"></ul>
+          </div>
+          <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
+        </div>
       </div>
+    </div>
+
+    <!-- Модалка видео (центр) -->
+    <div class="video-modal-overlay"></div>
+    <div class="video-modal">
+      <button class="video-close">✕</button>
+      <div class="video-wrapper"></div>
+    </div>
   </div>
 
   <script src="scripts/animator.js" type="module"></script>

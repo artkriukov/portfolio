@@ -19,7 +19,8 @@
             "Реализовал обработку ошибок сети и отображение сообщений пользователю.",
             "Написал Unit-тесты и UI-тесты."
           ],
-          "github": "https://github.com/artkriukov/MovieQuiz"
+          "github": "https://github.com/artkriukov/MovieQuiz",
+          "videoUrl": "assets/video/quiz.mp4"
         }
       },
       {
@@ -54,7 +55,8 @@
             "Реализовал интерактивный таймер с функциями паузы и возобновления.",
             "Реализовал переход на следующий экран по завершении таймера."
           ],
-          "github": "https://github.com/artkriukov/Boom"
+          "github": "https://github.com/artkriukov/Boom",
+          "videoUrl": "assets/video/quiz.mp4"
         }
       }
     ]
@@ -79,7 +81,8 @@
             "Implemented network error handling and user message display.",
             "Wrote Unit tests and UI tests."
           ],
-          "github": "https://github.com/artkriukov/MovieQuiz"
+          "github": "https://github.com/artkriukov/MovieQuiz",
+          "videoUrl": "assets/video/quiz.mp4"
         }
       },
       {
@@ -114,7 +117,8 @@
             "Implemented an interactive timer with pause and resume functionality.",
             "Added a screen transition when the timer runs out."
           ],
-          "github": "https://github.com/artkriukov/Boom"
+          "github": "https://github.com/artkriukov/Boom",
+          "videoUrl": "assets/video/quiz.mp4"
         }
       }
     ]

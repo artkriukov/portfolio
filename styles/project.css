@@ -190,6 +190,13 @@
   transform: translateX(0);
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .modal-container.closing {
   transform: translateX(100%);
 }
@@ -239,7 +246,6 @@
 .modal-title {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
   color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -272,7 +278,7 @@
 }
 
 .github-link {
-  display: inline-flex;
+  display: inline;
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.5rem;
@@ -287,4 +293,12 @@
 .github-link:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
+}
+
+.project-modal {
+  z-index: 1001;
+}
+
+.project-modal-overlay {
+  z-index: 1000;
 }
