@@ -217,5 +217,11 @@
     }
   }
 
+  @media (max-width: 400px) {
+    .modal-header {    
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 
   

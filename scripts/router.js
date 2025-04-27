@@ -215,6 +215,7 @@ const Router = (() => {
             const githubLink = projectModal.querySelector('.github-link');
             const headerActions = projectModal.querySelector('.modal-header-actions');
             const imageContainer = projectModal.querySelector('.modal-image-container');
+            const tasksTitle = projectModal.querySelector('.modal-tasks-title');
     
             // Очистка содержимого
             title.textContent = '';
@@ -223,11 +224,23 @@ const Router = (() => {
             imageContainer.innerHTML = '';
             headerActions.innerHTML = '';
     
-            // Заполнение данных
+            // Заполнение данных с переводами
             title.textContent = project.title;
             description.textContent = project.details.description;
-            tasksList.innerHTML = project.details.tasks.map(t => `<li>${t}</li>`).join('');
+            
+            // Заголовок задач
+            if (tasksTitle) {
+                tasksTitle.textContent = language.t('tasks');
+            }
+            
+            // Список задач
+            tasksList.innerHTML = project.details.tasks
+                .map(t => `<li>${language.t(t)}</li>`) // Перевод каждой задачи
+                .join('');
+    
+            // Ссылка на GitHub
             githubLink.href = project.details.github || '#';
+            githubLink.textContent = language.t('github');
             githubLink.style.display = project.details.github ? 'inline' : 'none';
     
             // Добавление изображения

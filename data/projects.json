@@ -56,7 +56,7 @@
             "Реализовал переход на следующий экран по завершении таймера."
           ],
           "github": "https://github.com/artkriukov/Boom",
-          "videoUrl": "assets/video/quiz.mp4"
+          "videoUrl": "assets/video/bombGame.mp4"
         }
       }
     ]
@@ -118,7 +118,7 @@
             "Added a screen transition when the timer runs out."
           ],
           "github": "https://github.com/artkriukov/Boom",
-          "videoUrl": "assets/video/quiz.mp4"
+          "videoUrl": "assets/video/bombGame.mp4"
         }
       }
     ]

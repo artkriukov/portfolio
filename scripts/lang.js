@@ -34,6 +34,8 @@ export default class Language {
         'tab_experience': 'Опыт',
         'tab_projects': 'Проекты',
         'tab_stack': 'Технологии',
+        'watch_video': 'Смотреть видео',
+        'video_not_supported': 'Ваш браузер не поддерживает видео'
       },
       'en': {
         'about': 'About',
@@ -67,6 +69,8 @@ export default class Language {
         'tab_experience': 'Experience',
         'tab_projects': 'Projects',
         'tab_stack': 'Stack',
+        'watch_video': 'Watch Video',
+        'video_not_supported': 'Your browser does not support the video tag'
       }
     };
 
