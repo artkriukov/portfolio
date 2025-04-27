@@ -201,7 +201,7 @@ body {
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 75vh; /* Ограничение по высоте с учетом модалки */
+  max-height: 90vh; /* Ограничение по высоте с учетом модалки */
   object-fit: contain;
 }
 
@@ -264,10 +264,7 @@ body {
     min-height: 300px;
     border-radius: 6px;
   }
-  
-  .video-wrapper video {
-    max-height: 80vh;
-  }
+
 }
 
 @media (max-width: 480px) {
@@ -286,7 +283,6 @@ body {
   }
   
   .video-wrapper video {
-    max-height: 85vh;
     max-width: 100%;
   }
   
@@ -303,18 +299,10 @@ body {
   .video-wrapper {
     min-height: 45vh;
   }
-  
-  .video-wrapper video {
-    max-height: 90vh;
-  }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .video-modal {
     max-width: 85%;
-  }
-  
-  .video-wrapper video {
-    max-height: 75vh;
   }
 }
