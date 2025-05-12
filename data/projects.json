@@ -58,6 +58,29 @@
           "github": "https://github.com/artkriukov/Boom",
           "videoUrl": "assets/video/bombGame.mp4"
         }
+      },
+      {
+        "id": "unsplash-app",
+        "title": "ImageFeed",
+        "category": "personal",
+        "image": "assets/projects/unsplash-app.png",
+        "stack": ["UIKit", "OAuth 2.0", "REST API", "UITableView", "UICollectionView", "URLSession", "UserDefaults", "Unit-tests"],
+        "details": {
+          "description": "Многостраничное приложение для просмотра и взаимодействия с изображениями из Unsplash API с поддержкой авторизации, избранного и возможностью делиться контентом.",
+          "tasks": [
+            "Реализовал OAuth 2.0 авторизацию через Unsplash API с обработкой токенов и сохранением сессии.",
+            "Разработал бесконечную ленту изображений с использованием UITableView и кастомных ячеек.",
+            "Интегрировал REST API Unsplash для загрузки изображений с пагинацией и кэшированием.",
+            "Создал систему добавления/удаления изображений в избранное с синхронизацией между экранами.",
+            "Реализовал экран полноэкранного просмотра с поддержкой жестов (зум, поворот) и возможностью поделиться.",
+            "Разработал профиль пользователя с отображением данных из Unsplash и списком избранных изображений.",
+            "Настроил обработку ошибок сети с показом системных алертов и состояний placeholder.",
+            "Оптимизировал загрузку изображений с прогрессивным отображением и системным индикатором загрузки.",
+            "Реализовал Unit-тесты для критических модулей приложения."
+          ],
+          "github": "https://github.com/yourusername/unsplash-app",
+          "videoUrl": "assets/video/unsplash-demo.mp4"
+        }
       }
     ]
   },
@@ -119,6 +142,29 @@
           ],
           "github": "https://github.com/artkriukov/Boom",
           "videoUrl": "assets/video/bombGame.mp4"
+        }
+      },
+      {
+        "id": "unsplash-app",
+        "title": "ImageFeed",
+        "category": "personal",
+        "image": "assets/projects/unsplash-app.png",
+        "stack": ["UIKit", "OAuth 2.0", "REST API", "UITableView", "UICollectionView", "URLSession", "UserDefaults", "Unit-tests"],
+        "details": {
+          "description": "Multi-screen application for viewing and interacting with images from Unsplash API, featuring authorization, favorites, and content sharing capabilities.",
+          "tasks": [
+            "Implemented OAuth 2.0 authorization via Unsplash API with token handling and session persistence.",
+            "Developed an infinite image feed using UITableView with custom cells.",
+            "Integrated Unsplash REST API for image loading with pagination and caching.",
+            "Created a favorites system with synchronization across different screens.",
+            "Built a full-screen image viewer with gesture support (zoom, rotate) and sharing functionality.",
+            "Designed user profile screen displaying data from Unsplash and favorite images list.",
+            "Configured network error handling with system alerts and placeholder states.",
+            "Optimized image loading with progressive display and system loading indicators.",
+            "Implemented Unit tests for critical application modules."
+          ],
+          "github": "https://github.com/yourusername/unsplash-app",
+          "videoUrl": "assets/video/unsplash-demo.mp4"
         }
       }
     ]
