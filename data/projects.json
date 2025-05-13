@@ -64,7 +64,7 @@
         "title": "ImageFeed",
         "category": "personal",
         "image": "assets/projects/unsplash-app.png",
-        "stack": ["UIKit", "OAuth 2.0", "REST API", "UITableView", "UICollectionView", "URLSession", "UserDefaults", "Unit-tests"],
+        "stack": ["UIKit", "OAuth 2.0", "REST API", "UserDefaults", "Unit-tests"],
         "details": {
           "description": "Многостраничное приложение для просмотра и взаимодействия с изображениями из Unsplash API с поддержкой авторизации, избранного и возможностью делиться контентом.",
           "tasks": [
@@ -78,8 +78,8 @@
             "Оптимизировал загрузку изображений с прогрессивным отображением и системным индикатором загрузки.",
             "Реализовал Unit-тесты для критических модулей приложения."
           ],
-          "github": "https://github.com/yourusername/unsplash-app",
-          "videoUrl": "assets/video/unsplash-demo.mp4"
+          "github": "https://github.com/artkriukov/ImageFeed",
+          "videoUrl": "assets/video/imagefeed.mp4"
         }
       }
     ]
@@ -149,7 +149,7 @@
         "title": "ImageFeed",
         "category": "personal",
         "image": "assets/projects/unsplash-app.png",
-        "stack": ["UIKit", "OAuth 2.0", "REST API", "UITableView", "UICollectionView", "URLSession", "UserDefaults", "Unit-tests"],
+        "stack": ["UIKit", "OAuth 2.0", "REST API", "UserDefaults", "Unit-tests"],
         "details": {
           "description": "Multi-screen application for viewing and interacting with images from Unsplash API, featuring authorization, favorites, and content sharing capabilities.",
           "tasks": [
@@ -163,8 +163,8 @@
             "Optimized image loading with progressive display and system loading indicators.",
             "Implemented Unit tests for critical application modules."
           ],
-          "github": "https://github.com/yourusername/unsplash-app",
-          "videoUrl": "assets/video/unsplash-demo.mp4"
+          "github": "https://github.com/artkriukov/ImageFeed",
+          "videoUrl": "assets/video/imagefeed.mp4"
         }
       }
     ]
