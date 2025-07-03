@@ -11,16 +11,10 @@
     },
     "description": {
       "ru": [
-        "Я Junior iOS-разработчик, который с головой ушел в Swift и UIKit.",
-        "Учусь в Яндексе, участвую в Swift-марафоне.",
-        "Прокачиваю скиллы, чтобы делать крутые приложения.",
-        "Иногда могу долго смотреть в код, надеясь, что баг испугается и уйдет сам, но чаще приходится идти на переговоры — уговаривать, запугивать логами или подкупать print'ами. Если и это не срабатывает, включаю режим детектива и начинаю расследование уровня «Шерлок, подвинься»."
+        "Я Junior iOS-разработчик, который всерьёз увлёкся Swift и созданием удобных приложений на UIKit. Люблю разбираться в сложных задачах и не боюсь багов: если они не уходят по-хорошему, подключаю логику, принты и немного детективного чутья. Учусь, чтобы делать приложения, которыми хочется гордиться. Открыт к новым знаниям и командам, ценю честную обратную связь и всегда готов брать на себя ответственность за результат."
       ],
       "en": [
-        "I'm a Junior iOS developer deeply immersed in Swift and UIKit.",
-        "Studying at Yandex, participating in Swift Marathon.",
-        "Improving my skills to build awesome applications.",
-        "Sometimes I can stare at the code hoping the bug will get scared and leave on its own, but more often I have to negotiate - persuade, intimidate with logs or bribe with prints. If that doesn't work, I turn on detective mode and start an investigation of 'Sherlock, move over' level."
+        "I'm a Junior iOS developer passionate about Swift and creating user-friendly apps with UIKit. I enjoy tackling complex challenges and never shy away from bugs: if they don't leave peacefully, I bring in logic, prints, and a bit of detective flair. I'm learning to build apps I can be proud of. Open to new knowledge and teams, I value honest feedback and am always ready to take responsibility for results."
       ]
     },
     "socialLinks": [
@@ -47,26 +41,34 @@
     ]
   },
   "experiences": [
-    {
-      "company": "Swift Marathon 14",
-      "position": { "ru": "iOS Developer", "en": "iOS Developer" },
-      "period": "01-2025 - Present",
-      "description": {
-        "ru": "Описание работы на русском",
-        "en": "Job description in English"
-      },
-      "tasks": {
-        "ru": [
-          "Разработка iOS-приложений на Swift",
-          "Работа с Git"
-        ],
-        "en": [
-          "Developing iOS applications in Swift",
-          "Working with Git"
-        ]
-      }
+  {
+    "company": "Swift Marathon 14",
+    "position": { "ru": "iOS Developer", "en": "iOS Developer" },
+    "period": "01-2025 - Present",
+    "description": {
+      "ru": "Получил ценный опыт в командной разработке iOS-приложений в условиях, максимально приближённых к реальной работе в IT-компании. В каждом проекте отвечал за полный цикл создания отдельного экрана: от проектирования интерфейса и выбора архитектуры до реализации бизнес-логики и оптимизации кода. Активно участвовал в коллективном обсуждении технических решений, обмене опытом и совместном поиске оптимальных подходов. Развил навыки эффективного взаимодействия в команде и решения сложных задач в сжатые сроки.",
+      "en": "Gained valuable experience in collaborative iOS app development, closely mirroring real-world IT company workflows. In each project, was responsible for the full development cycle of a specific screen—from UI and architecture design to implementing business logic and code optimization. Actively contributed to technical discussions, shared expertise, and participated in finding optimal solutions as a team. Enhanced skills in effective team collaboration and solving complex tasks under tight deadlines."
+    },
+    "tasks": {
+      "ru": [
+        "Разработка и внедрение пользовательских интерфейсов и бизнес-логики с использованием современных архитектур (VIPER, MVC).",
+        "Полная ответственность за реализацию отдельных экранов в командных проектах.",
+        "Внедрение анимаций и звуковых эффектов для повышения вовлечённости пользователей.",
+        "Участие в технических обсуждениях и совместной выработке архитектурных решений.",
+        "Проведение код-ревью и поддержка высокого качества кода в команде.",
+        "Оптимизация производительности и обеспечение стабильной работы приложений."
+      ],
+      "en": [
+        "Developed and implemented user interfaces and business logic using modern architectures (VIPER, MVC).",
+        "Took full responsibility for developing specific screens in team projects.",
+        "Integrated animations and sound effects to enhance user engagement.",
+        "Participated in technical discussions and collaborative architectural decision-making.",
+        "Conducted code reviews and maintained high code quality within the team.",
+        "Optimized performance and ensured application stability."
+      ]
     }
-  ],
+  }
+],
   "projects": [
     {
       "id": "moviequiz",
