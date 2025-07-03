@@ -1,3 +1,7 @@
+/* ==================== */
+/* Секция проектов */
+/* ==================== */
+
 .projects-section {
   padding: 2rem 0;
   max-width: 1200px;
@@ -190,12 +194,15 @@
   top: 0;
   right: 0;
   width: 40%;
+  min-width: 320px;
+  max-width: 100vw;
   height: 100vh;
   background: var(--bg-color);
   z-index: 1001;
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow-y: auto;
+  /* overflow-y: auto;  убрано, чтобы не было двойного скролла */
+  box-shadow: 0 0 32px rgba(0,0,0,0.15);
 }
 
 .modal-container.active {
@@ -214,9 +221,9 @@
 }
 
 .modal-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .modal-close {
@@ -235,14 +242,14 @@
   justify-content: center;
   background: var(--close-btn-bg);
   color: var(--close-btn-color);
-  box-shadow: var(--close-btn-shadow); /* Добавляем тень */
-  border: 1px solid var(--border-color); /* Добавляем границу */
+  box-shadow: var(--close-btn-shadow);
+  border: 1px solid var(--border-color);
   transition: all var(--transition-base);
 }
 
 .modal-close:hover {
   background: var(--close-btn-hover);
-  transform: scale(1.08); /* Добавляем масштабирование при ховере */
+  transform: scale(1.08);
 }
 
 .modal-image-container {
@@ -250,18 +257,29 @@
   height: 300px;
   overflow: hidden;
   flex-shrink: 0;
+  margin-bottom: 0; /* убираем лишний отступ, если не нужен */
 }
 
 .modal-project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .modal-content-body {
+  flex: 1 1 auto;
   padding: 2rem;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-scroll-area {
+  flex: 1 1 auto;
+  height: 100%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-title {
@@ -289,7 +307,7 @@
 .features-list,
 .tasks-list {
   padding-left: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0; /* убираем лишний отступ снизу */
 }
 
 .features-list li,
@@ -299,7 +317,7 @@
 }
 
 .github-link {
-  display: inline;
+  display: inline-block;
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.5rem;
@@ -309,6 +327,12 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-self: flex-start; /* не растягивать на всю ширину */
 }
 
 .github-link:hover {
@@ -322,4 +346,22 @@
 
 .project-modal-overlay {
   z-index: 1000;
+}
+
+/* Для мобильных: модалка на всю ширину */
+@media (max-width: 700px) {
+  .modal-container {
+    width: 100vw;
+    min-width: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+  .modal-content-body {
+    padding: 1rem;
+  }
+  .modal-image-container {
+    height: 180px;
+    margin-bottom: 1rem;
+  }
 }

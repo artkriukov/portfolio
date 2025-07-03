@@ -8,20 +8,17 @@
 </head>
 <body>
   <div class="app-container">
-    <!-- Объединенный навбар для десктопа -->
+    <!-- Десктопный навбар -->
     <div class="navbar-desktop">
       <div class="navbar-top">
         <div class="navbar-name">Artem Kriukov</div>
-
         <div class="navbar-tabs">
           <button class="navbar-tab active" data-content="about">About</button>
           <button class="navbar-tab" data-content="experience">Experience</button>
           <button class="navbar-tab" data-content="projects">Projects</button>
           <button class="navbar-tab" data-content="stack">Stack</button>
         </div>
-
         <div class="navbar-actions">
-          
           <div class="lang-selector">
             <button class="lang-toggle" title="Switch language" aria-expanded="false">
               <span class="lang-icon">🌐</span>
@@ -33,7 +30,6 @@
               <button class="lang-option" data-lang="en">🇺🇸 English</button>
             </div>
           </div>
-
           <div class="theme-switcher">
             <div class="theme-switcher-track">
               <div class="theme-switcher-handle">
@@ -42,13 +38,11 @@
               </div>
             </div>
           </div>
-          
         </div>
-
       </div>
     </div>
 
-    <!-- Мобильные табы (отдельно внизу) -->
+    <!-- Мобильные табы -->
     <div class="navbar-mobile">
       <div class="mobile-tabs">
         <button class="mobile-tab active" data-content="about">
@@ -77,35 +71,40 @@
     </main>
   </div>
 
-  <!-- Модальное окно -->
+  <!-- Модальное окно проектов -->
   <div class="modal-overlay project-modal-overlay"></div>
     <div class="modal-container project-modal">
       <button class="modal-close">✕</button>
       <div class="modal-content">
-        <div class="modal-image-container"></div>
-        <div class="modal-content-body">
-          <div class="modal-header">
-            <h2 class="modal-title"></h2>
-            <div class="modal-header-actions"></div>
+        <div class="modal-scroll-area">
+          <div class="modal-image-container"></div>
+          <div class="modal-content-body">
+            <div class="modal-header">
+              <h2 class="modal-title"></h2>
+              <div class="modal-header-actions"></div>
+            </div>
+            <p class="modal-description"></p>
+            <div class="modal-tasks">
+              <h4 class="modal-tasks-title"></h4>
+              <ul class="tasks-list"></ul>
+            </div>
+            <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
           </div>
-          <p class="modal-description"></p>
-          <div class="modal-tasks">
-            <h4 class="modal-tasks-title"></h4>
-            <ul class="tasks-list"></ul>
-          </div>
-          <a href="#" class="github-link" target="_blank">Посмотреть на GitHub</a>
         </div>
       </div>
     </div>
 
-    <!-- Модалка видео (центр) -->
-    <div class="video-modal-overlay"></div>
-    <div class="video-modal">
-      <button class="video-close">✕</button>
-      <div class="video-wrapper"></div>
-    </div>
+
+
+
+  <!-- Модалка видео (центр) -->
+  <div class="video-modal-overlay"></div>
+  <div class="video-modal">
+    <button class="video-close">✕</button>
+    <div class="video-wrapper"></div>
   </div>
 
+  <!-- Скрипты -->
   <script src="scripts/animator.js" type="module"></script>
   <script src="scripts/http.js" type="module"></script>
   <script src="scripts/render.js" type="module"></script>
@@ -114,4 +113,5 @@
   <script src="scripts/projects.js" type="module"></script>
   <script src="scripts/main.js" type="module"></script>
 </body>
+
 </html>
