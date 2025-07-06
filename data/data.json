@@ -204,6 +204,51 @@
         "github": "https://github.com/artkriukov/ImageFeed",
         "videoUrl": "assets/video/imagefeed.mp4"
       }
+    },
+    {
+      "id": "trackerapp",
+      "title": {
+        "ru": "Habit Tracker",
+        "en": "Habit Tracker"
+      },
+      "category": "personal",
+      "image": "assets/projects/trackers.png",
+      "stack": [
+        "UIKit (Code-Only)",
+        "Core Data",
+        "SPM",
+        "Localization",
+        "AppMetrica",
+        "Snapshot-tests"
+      ],
+      "details": {
+        "description": {
+          "ru": "Приложение для iOS, помогающее пользователям формировать и отслеживать полезные привычки. Позволяет создавать настраиваемые трекеры, просматривать прогресс и анализировать статистику.",
+          "en": "An iOS application that helps users build and track useful habits. It allows creating customizable trackers, viewing progress, and analyzing statistics."
+        },
+        "tasks": {
+          "ru": [
+            "Реализовал полный CRUD-функционал для трекеров и категорий с использованием Core Data.",
+            "Создал кастомный UI для карточек трекеров, календаря и экрана статистики с градиентной рамкой.",
+            "Реализовал онбординг для новых пользователей.",
+            "Добавил фильтрацию трекеров (по дате, завершенности, поиску) и возможность закрепления важных привычек.",
+            "Внедрил поддержку тёмной темы и локализацию (русский/английский).",
+            "Настроил сбор и отправку аналитических событий с помощью AppMetrica.",
+            "Написал UI-тесты с использованием Snapshot-тестирования для обеспечения консистентности интерфейса."
+          ],
+          "en": [
+            "Implemented full CRUD functionality for trackers and categories using Core Data.",
+            "Created custom UI for tracker cards, a calendar, and a statistics screen with a gradient border.",
+            "Implemented an onboarding flow for new users.",
+            "Added tracker filtering (by date, completion status, search) and the ability to pin important habits.",
+            "Integrated support for Dark Mode and localization (Russian/English).",
+            "Configured the collection and sending of analytics events using AppMetrica.",
+            "Wrote UI tests using Snapshot Testing to ensure interface consistency."
+          ]
+        },
+        "github": "https://github.com/artkriukov/TrackerApp",
+        "videoUrl": "assets/video/tracker.mp4"
+      }
     }
   ],
   "stack": [
