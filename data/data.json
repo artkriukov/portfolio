@@ -182,6 +182,57 @@
       }
     },
     {
+    "id": "todoist",
+    "title": { "ru": "Todoist", "en": "Todoist" },
+    "category": "personal",
+    "image": "assets/projects/Todoist.png",
+    "stack": [
+      "Swift",
+      "XcodeGen",
+      "SwiftLint",
+      "Custom UI",
+      "URLSession",
+      "Debouncer",
+      "PhotoPicker",
+      "UIDatePicker"
+    ],
+    "details": {
+      "description": {
+        "ru": "Приложение для создания заметок и напоминаний с нативным интерфейсом, кастомными UI-компонентами, поддержкой загрузки изображений из сети и с устройства, а также гибким управлением задачами.",
+        "en": "An app for creating notes and reminders with a modern native, custom UI components, support for loading images from the network and device, and flexible task management."
+      },
+      "tasks": {
+        "ru": [
+          "Сформировал архитектуру с использованием XcodeGen для четкой структуры проекта.",
+          "Реализовал кастомные элементы интерфейса для задач и напоминаний.",
+          "Настроил загрузку и пагинацию изображений из сети.",
+          "Добавил возможность загружать фотографии с устройства пользователя.",
+          "Внедрил выбор даты и времени через UIDatePicker при создании напоминаний.",
+          "Использовал debouncer для обработки частых пользовательских событий (например, поиска).",
+          "Встроил логгер для сохранения и отслеживания событий.",
+          "Добавил SwiftLint для единого стиля кода и автоматической проверки.",
+          "Обеспечил сохранение данных через UserDefaults и FileManager.",
+          "Обработал возможные ошибки сетевых запросов."
+        ],
+        "en": [
+          "Structured the app using XcodeGen for a clean project setup.",
+          "Implemented custom UI components for notes and reminders.",
+          "Set up image loading and pagination from the network.",
+          "Added ability to upload photos from the user's device.",
+          "Integrated UIDatePicker for reminder creation and scheduling.",
+          "Used a debouncer to handle frequent user actions (e.g., searching).",
+          "Integrated a logger for event and error tracking.",
+          "Added SwiftLint for code style consistency and automated checks.",
+          "Implemented data storage via UserDefaults and FileManager.",
+          "Handled potential network errors and user notifications."
+        ]
+      },
+      "github": "https://github.com/artkriukov/Todoist",
+      "videoUrl": ""
+    }
+  },
+
+    {
       "id": "trackerapp",
       "title": {
         "ru": "Habit Tracker",
