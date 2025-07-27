@@ -80,38 +80,51 @@ const Render = {
   },
 
   experience(data, lang = 'ru') {
-    const language = new Language();
-    const t = (key) => language.t(key);
+  const language = new Language();
+  const t = (key) => language.t(key);
+  const isEmpty = !data.experiences || data.experiences.length === 0 || (data.experiences.length === 1 && data.experiences[0].stub);
+
+  if (isEmpty) {
+    const notReadyText = lang === 'en' ? "This page is not ready yet." : "Страница ещё не готова.";
     return `
       <section class="experience-section">
-        <div class="experience-list">
-          ${data.experiences.map(exp => {
-            const currentLang = language.getCurrentLang();
-            const tasks = exp.tasks[currentLang] || exp.tasks.ru || [];
-            const achievements = exp.achievements ? (exp.achievements[currentLang] || exp.achievements.ru || []) : [];
-            return `
-              <div class="experience-card">
-                <h3>${exp.company}</h3>
-                <p class="experience-period">${exp.period}</p>
-                <p class="experience-position">${t('position')}: ${exp.position[currentLang] || exp.position.ru || exp.position}</p>
-                <p>${exp.description[currentLang] || exp.description.ru || exp.description}</p>
-                <div class="experience-tasks">
-                  <h4>${t('main_tasks')}:</h4>
-                  <ul>${tasks.map(task => `<li>${task}</li>`).join('')}</ul>
-                </div>
-                ${achievements.length > 0 ? `
-                  <div class="experience-achievements">
-                    <h4>${t('achievements')}:</h4>
-                    <ul>${achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>
-                  </div>
-                ` : ''}
-              </div>
-            `;
-          }).join('')}
+        <div class="experience-empty">
+          <p>${notReadyText}</p>
         </div>
       </section>
     `;
   }
+
+  return `
+    <section class="experience-section">
+      <div class="experience-list">
+        ${data.experiences.map(exp => {
+          const currentLang = language.getCurrentLang();
+          const tasks = exp.tasks[currentLang] || exp.tasks.ru || [];
+          const achievements = exp.achievements ? (exp.achievements[currentLang] || exp.achievements.ru || []) : [];
+          return `
+            <div class="experience-card">
+              <h3>${exp.company}</h3>
+              <p class="experience-period">${exp.period}</p>
+              <p class="experience-position">${t('position')}: ${exp.position[currentLang] || exp.position.ru || exp.position}</p>
+              <p>${exp.description[currentLang] || exp.description.ru || exp.description}</p>
+              <div class="experience-tasks">
+                <h4>${t('main_tasks')}:</h4>
+                <ul>${tasks.map(task => `<li>${task}</li>`).join('')}</ul>
+              </div>
+              ${achievements.length > 0 ? `
+                <div class="experience-achievements">
+                  <h4>${t('achievements')}:</h4>
+                  <ul>${achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `;
+}
 };
 
 export default Render;

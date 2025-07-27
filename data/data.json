@@ -42,31 +42,7 @@
   },
   "experiences": [
   {
-    "company": "Swift Marathon 14",
-    "position": { "ru": "iOS Developer", "en": "iOS Developer" },
-    "period": "01-2025 - Present",
-    "description": {
-      "ru": "Получил ценный опыт в командной разработке iOS-приложений в условиях, максимально приближённых к реальной работе в IT-компании. В каждом проекте отвечал за полный цикл создания отдельного экрана: от проектирования интерфейса и выбора архитектуры до реализации бизнес-логики и оптимизации кода. Активно участвовал в коллективном обсуждении технических решений, обмене опытом и совместном поиске оптимальных подходов. Развил навыки эффективного взаимодействия в команде и решения сложных задач в сжатые сроки.",
-      "en": "Gained valuable experience in collaborative iOS app development, closely mirroring real-world IT company workflows. In each project, was responsible for the full development cycle of a specific screen—from UI and architecture design to implementing business logic and code optimization. Actively contributed to technical discussions, shared expertise, and participated in finding optimal solutions as a team. Enhanced skills in effective team collaboration and solving complex tasks under tight deadlines."
-    },
-    "tasks": {
-      "ru": [
-        "Разработка и внедрение пользовательских интерфейсов и бизнес-логики с использованием современных архитектур (VIPER, MVC).",
-        "Полная ответственность за реализацию отдельных экранов в командных проектах.",
-        "Внедрение анимаций и звуковых эффектов для повышения вовлечённости пользователей.",
-        "Участие в технических обсуждениях и совместной выработке архитектурных решений.",
-        "Проведение код-ревью и поддержка высокого качества кода в команде.",
-        "Оптимизация производительности и обеспечение стабильной работы приложений."
-      ],
-      "en": [
-        "Developed and implemented user interfaces and business logic using modern architectures (VIPER, MVC).",
-        "Took full responsibility for developing specific screens in team projects.",
-        "Integrated animations and sound effects to enhance user engagement.",
-        "Participated in technical discussions and collaborative architectural decision-making.",
-        "Conducted code reviews and maintained high code quality within the team.",
-        "Optimized performance and ensured application stability."
-      ]
-    }
+    "stub": true
   }
 ],
   "projects": [
