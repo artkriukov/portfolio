@@ -70,27 +70,16 @@ rfm_final AS (
         ,m_score
         ,CONCAT(r_score, f_score, m_score) AS rfm_code
         ,CASE
-            WHEN r_score = 4 AND f_score = 4 AND m_score >=3
+            WHEN (r_score + f_score + m_score) >= 11
                 THEN 'Чемпионы'
-            
-            WHEN r_score >=3  AND f_score >=3
+            WHEN (r_score + f_score + m_score) BETWEEN 7 AND 10
                 THEN 'Лояльные'
-            
-            WHEN r_score =4  AND f_score <=2
-                THEN 'Перспективные'
-            
-            WHEN r_score <=2  AND (f_score >=3 OR m_score >=3)
+            WHEN (r_score + f_score + m_score) = 6
                 THEN 'Под угрозой'
-
-            WHEN r_score <=2 AND f_score =2
-                THEN 'Спящие'
-            
-            WHEN r_score <=2  AND f_score <=1
-                THEN 'Потерянные'
-            
-            ELSE 'Другие'
-            
-        END segment
+            WHEN (r_score + f_score + m_score) = 5
+                THEN 'Нельзя терять'
+            ELSE 'Потерянные'
+        END AS segment
     FROM rfm_scores
 )
 
