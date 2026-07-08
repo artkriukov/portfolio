@@ -87,9 +87,7 @@ SELECT
     segment
     ,COUNT(*) AS customers
     ,SUM(COUNT(*)) OVER () AS total_customers
-    ,ROUND(AVG(purchase_cnt), 2) AS avg_purchases
-    ,ROUND(AVG(total_revenue), 2) AS avg_revenue_per_customer
-    ,ROUND(AVG(recency_days)::numeric, 1) AS avg_days_since_purchase
+    ,SUM(total_revenue) AS total_revenue_per_segment
     ,ROUND((COUNT(*) * 100.0 / SUM(COUNT(*)) OVER ())::numeric, 2) AS customer_share_pct
 FROM rfm_final
 GROUP BY segment
