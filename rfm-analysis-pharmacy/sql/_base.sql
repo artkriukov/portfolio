@@ -1,18 +1,34 @@
-WITH user_agg AS (
+-- Базовый пайплайн RFM + ABC для клиентов аптечной сети.
+-- Период: последние 12 месяцев от даты последней транзакции в данных.
+-- Единица анализа: бонусная карта (card LIKE '2000%').
+WITH params AS (
     SELECT
-        card,
-        EXTRACT(
-            DAY FROM (SELECT MAX(datetime) FROM Bonuscheques) - MAX(datetime)
-        ) AS recency_days,
-        COUNT(*) AS purchase_cnt,
-        SUM(summ) AS total_revenue
+        MAX(datetime) AS analysis_date,
+        MAX(datetime) - INTERVAL '1 year' AS period_start
     FROM Bonuscheques
     WHERE card LIKE '2000%'
-      AND datetime >= (
-            SELECT MAX(datetime) - INTERVAL '1 year'
-            FROM Bonuscheques
-        )
-    GROUP BY card
+),
+filtered_tx AS (
+    SELECT
+        b.card,
+        b.datetime,
+        b.summ,
+        b.doc_id
+    FROM Bonuscheques b
+    CROSS JOIN params p
+    WHERE b.card LIKE '2000%'
+      AND b.datetime >= p.period_start
+      AND b.datetime <= p.analysis_date
+),
+user_agg AS (
+    SELECT
+        f.card,
+        (p.analysis_date::date - MAX(f.datetime)::date) AS recency_days,
+        COUNT(*) AS purchase_cnt,
+        SUM(f.summ) AS total_revenue
+    FROM filtered_tx f
+    CROSS JOIN params p
+    GROUP BY f.card, p.analysis_date
 ),
 percentiles AS (
     SELECT
@@ -33,18 +49,21 @@ rfm_scores AS (
         u.recency_days,
         u.purchase_cnt,
         u.total_revenue,
+        -- Recency: чем меньше дней с последней покупки, тем выше балл.
         CASE
             WHEN u.recency_days <= p.r_p25 THEN 4
             WHEN u.recency_days <= p.r_p50 THEN 3
             WHEN u.recency_days <= p.r_p75 THEN 2
             ELSE 1
         END AS r_score,
+        -- Frequency: чем больше покупок, тем выше балл.
         CASE
             WHEN u.purchase_cnt <= p.f_p25 THEN 1
             WHEN u.purchase_cnt <= p.f_p50 THEN 2
             WHEN u.purchase_cnt <= p.f_p75 THEN 3
             ELSE 4
         END AS f_score,
+        -- Monetary: чем выше выручка, тем выше балл.
         CASE
             WHEN u.total_revenue <= p.m_p25 THEN 1
             WHEN u.total_revenue <= p.m_p50 THEN 2
@@ -64,6 +83,7 @@ rfm_final AS (
         f_score,
         m_score,
         CONCAT(r_score, f_score, m_score) AS rfm_code,
+        -- Пороги по сумме R+F+M подобраны под распределение базы (квартили + бизнес-лейблы).
         CASE
             WHEN (r_score + f_score + m_score) >= 11 THEN 'Чемпионы'
             WHEN (r_score + f_score + m_score) BETWEEN 7 AND 10 THEN 'Лояльные'
