@@ -3,7 +3,7 @@ env/
 ENV/
 .env/
 .venv/
-
+*.xlsx
 __pycache__/
 
 .ipynb_checkpoints/
