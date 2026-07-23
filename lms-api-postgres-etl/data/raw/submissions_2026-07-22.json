@@ -1,0 +1,1717 @@
+[
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:06:03.547742"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:06:40.324396"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:07:36.283511"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:07:43.282439"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-71ced6597c8a4a4a8d8c153a24c27557:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@71ced6597c8a4a4a8d8c153a24c27557/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:11:06.141700"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-7785f98555484930a089af839295c2a1:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@7785f98555484930a089af839295c2a1/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:40:03.188778"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-47e024798444451aa9bb279de3b2668c:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@47e024798444451aa9bb279de3b2668c/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:46:46.913417"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-832f891de6bc49feb46d915cecd9985e:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@832f891de6bc49feb46d915cecd9985e/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 14:48:55.046651"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:11:29.711875"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:13:40.719320"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:16:03.961640"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:22:13.209610"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:22:24.988820"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:23:21.463221"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:24:10.882919"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-61a4b6a28fbd4b9c99ac92096b520f00:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@61a4b6a28fbd4b9c99ac92096b520f00/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 15:38:36.326786"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e82917f10e0643b3888c10844737c1ed:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e82917f10e0643b3888c10844737c1ed/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:01:45.157901"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-99739f4554484d4e8a5917a838a78bfc:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@99739f4554484d4e8a5917a838a78bfc/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:08:45.280930"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:13:07.178559"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:16:32.023237"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:18:59.000835"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:19:52.863422"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:20:32.870316"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:20:42.601835"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:21:43.484541"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:22:17.017754"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 16:22:45.895558"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 17:13:30.991677"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 17:13:47.356701"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 17:14:22.556071"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:03:14.592761"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:06:08.170493"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:09:27.412022"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:09:49.924409"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-a75a8d3755d14033927304a00716fd77:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@a75a8d3755d14033927304a00716fd77/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:14:08.833042"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-0ad769d44f934b6299db50e208fac686:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@0ad769d44f934b6299db50e208fac686/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:17:38.979087"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-e11e6630fd964bec887830f277acad49:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@e11e6630fd964bec887830f277acad49/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:22:18.407823"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-e11e6630fd964bec887830f277acad49:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@e11e6630fd964bec887830f277acad49/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 18:22:34.202676"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-f65772cc79ba488b92c434222fd42862:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@f65772cc79ba488b92c434222fd42862/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-22 20:15:31.239231"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-9f0efe5bfe664089b0693cc9c53c0909:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@9f0efe5bfe664089b0693cc9c53c0909/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:06:00.872662"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-5bc2a7ab5f6348c1bb6e73245253d96c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@5bc2a7ab5f6348c1bb6e73245253d96c/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:42:18.512334"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-2a9b146f3874421a834c2dd03dbf03a5:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@2a9b146f3874421a834c2dd03dbf03a5/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:51:24.676855"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:53:49.583870"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-2a9b146f3874421a834c2dd03dbf03a5:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@2a9b146f3874421a834c2dd03dbf03a5/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:54:21.750091"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:54:46.539727"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:55:06.197373"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:55:29.775189"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-2a9b146f3874421a834c2dd03dbf03a5:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@2a9b146f3874421a834c2dd03dbf03a5/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:56:20.910541"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:57:56.577331"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 09:58:07.595078"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-bb61079e4faf431189f3c6673ce6afab:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@bb61079e4faf431189f3c6673ce6afab/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:17:23.785093"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-1a9c8f341f134a3984f17ecae7903bfc:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@1a9c8f341f134a3984f17ecae7903bfc/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:35:08.110477"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-944795ec32ae4ddeb90e79ecf59556a0:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@944795ec32ae4ddeb90e79ecf59556a0/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:48:58.231605"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-900037dab4854238bcccc1480bd29b3c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@900037dab4854238bcccc1480bd29b3c/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:52:24.197475"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-900037dab4854238bcccc1480bd29b3c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@900037dab4854238bcccc1480bd29b3c/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:57:15.554362"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-900037dab4854238bcccc1480bd29b3c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@900037dab4854238bcccc1480bd29b3c/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 10:58:57.876821"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:03:48.567284"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:05:51.297486"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:09:53.595879"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:13:23.606589"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-77e8b3002bc14bb98c5a2077b4c58a45:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@77e8b3002bc14bb98c5a2077b4c58a45/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:18:25.396155"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-77e8b3002bc14bb98c5a2077b4c58a45:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@77e8b3002bc14bb98c5a2077b4c58a45/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:19:17.009084"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-77e8b3002bc14bb98c5a2077b4c58a45:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@77e8b3002bc14bb98c5a2077b4c58a45/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:19:27.236042"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-77e8b3002bc14bb98c5a2077b4c58a45:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@77e8b3002bc14bb98c5a2077b4c58a45/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:19:50.684817"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-6c2f1e6c88504d72a16603a133f38d76:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@6c2f1e6c88504d72a16603a133f38d76/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:28:17.646975"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-95c76958dfb14f7a9ea8afd861182835:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@95c76958dfb14f7a9ea8afd861182835/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:39:22.582461"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-e3942c4e971546068c9a48c5793d4df6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@e3942c4e971546068c9a48c5793d4df6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:41:05.620387"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-e3942c4e971546068c9a48c5793d4df6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@e3942c4e971546068c9a48c5793d4df6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:42:58.448845"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-e3942c4e971546068c9a48c5793d4df6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@e3942c4e971546068c9a48c5793d4df6/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 11:44:00.716104"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-023d697551cc41d39109682a54311817:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@023d697551cc41d39109682a54311817/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:08:22.898873"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-76a45fbc61654670b987de031bad7651:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@76a45fbc61654670b987de031bad7651/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:11:17.803276"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-76a45fbc61654670b987de031bad7651:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@76a45fbc61654670b987de031bad7651/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:12:11.099364"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-76a45fbc61654670b987de031bad7651:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@76a45fbc61654670b987de031bad7651/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:12:53.382052"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b9e9ad9cac5d4648a4708db23e444616:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b9e9ad9cac5d4648a4708db23e444616/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:14:20.829834"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b9e9ad9cac5d4648a4708db23e444616:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b9e9ad9cac5d4648a4708db23e444616/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:14:38.612779"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-0b3f21bf14e74f2283a74c2c355a9441:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@0b3f21bf14e74f2283a74c2c355a9441/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:16:56.623271"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-0b3f21bf14e74f2283a74c2c355a9441:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@0b3f21bf14e74f2283a74c2c355a9441/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:18:39.990818"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:33:49.342873"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:34:42.165469"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:35:16.303997"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:35:40.076940"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:36:18.024863"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:37:32.351128"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": null,
+        "attempt_type": "run",
+        "created_at": "2026-07-23 13:38:01.276697"
+    },
+    {
+        "lti_user_id": "aaf16c0ea249e6b2ed0b476178258e2b",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:skillfactory+MIFIML-DS+2025:lms.skillfactory.ru-287fa0315f0344f19af6f54cb47f3eb7:aaf16c0ea249e6b2ed0b476178258e2b', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:skillfactory+MIFIML-DS+2025/xblock/block-v1:skillfactory+MIFIML-DS+2025+type@lti+block@287fa0315f0344f19af6f54cb47f3eb7/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:05:45.837133"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:06:16.725963"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:06:51.897557"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-8443c13e136046f3b74292ca873c7579:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@8443c13e136046f3b74292ca873c7579/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:07:55.779174"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-71ced6597c8a4a4a8d8c153a24c27557:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@71ced6597c8a4a4a8d8c153a24c27557/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:11:20.990386"
+    },
+    {
+        "lti_user_id": "034f93de63590d7b1d7f6016a135d978",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PDEV+2021:lms.skillfactory.ru-2f5d2f6d497642a9abc66fe30e671790:034f93de63590d7b1d7f6016a135d978', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PDEV+2021/xblock/block-v1:SkillFactory+PDEV+2021+type@lti+block@2f5d2f6d497642a9abc66fe30e671790/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:19:41.325922"
+    },
+    {
+        "lti_user_id": "034f93de63590d7b1d7f6016a135d978",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PDEV+2021:lms.skillfactory.ru-092aea967a344a7c84a3655198e7dd1e:034f93de63590d7b1d7f6016a135d978', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PDEV+2021/xblock/block-v1:SkillFactory+PDEV+2021+type@lti+block@092aea967a344a7c84a3655198e7dd1e/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:23:15.967633"
+    },
+    {
+        "lti_user_id": "034f93de63590d7b1d7f6016a135d978",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PDEV+2021:lms.skillfactory.ru-092aea967a344a7c84a3655198e7dd1e:034f93de63590d7b1d7f6016a135d978', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PDEV+2021/xblock/block-v1:SkillFactory+PDEV+2021+type@lti+block@092aea967a344a7c84a3655198e7dd1e/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:24:05.111724"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-7785f98555484930a089af839295c2a1:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@7785f98555484930a089af839295c2a1/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:40:18.342420"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-47e024798444451aa9bb279de3b2668c:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@47e024798444451aa9bb279de3b2668c/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:47:02.580687"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-832f891de6bc49feb46d915cecd9985e:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@832f891de6bc49feb46d915cecd9985e/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:49:12.344329"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-58ca29d0a68144ff9fe72b60b16eee23:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@58ca29d0a68144ff9fe72b60b16eee23/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 14:55:55.607424"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e7b5e1b2908e4940b6e1bc6a05b63982:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e7b5e1b2908e4940b6e1bc6a05b63982/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:24:51.771051"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-61a4b6a28fbd4b9c99ac92096b520f00:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@61a4b6a28fbd4b9c99ac92096b520f00/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:39:07.995747"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-61a4b6a28fbd4b9c99ac92096b520f00:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@61a4b6a28fbd4b9c99ac92096b520f00/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:39:40.934522"
+    },
+    {
+        "lti_user_id": "b903728f1badaa76dd11464b054a0c3b",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+SQL2.0+31AUG2020:lms.skillfactory.ru-df97b0d979e9418198b060b73c51272c:b903728f1badaa76dd11464b054a0c3b', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+SQL2.0+31AUG2020/xblock/block-v1:SkillFactory+SQL2.0+31AUG2020+type@lti+block@df97b0d979e9418198b060b73c51272c/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:41:07.790920"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-61a4b6a28fbd4b9c99ac92096b520f00:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@61a4b6a28fbd4b9c99ac92096b520f00/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:41:18.265334"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-16ce5dbf2f164a9e8b7bbf442938aabb:dd6ac3db440e761acd73d4195a86a0cc'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:42:29.311183"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-16ce5dbf2f164a9e8b7bbf442938aabb:dd6ac3db440e761acd73d4195a86a0cc'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 15:44:11.892551"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e82917f10e0643b3888c10844737c1ed:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e82917f10e0643b3888c10844737c1ed/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:01:55.523116"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-e82917f10e0643b3888c10844737c1ed:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@e82917f10e0643b3888c10844737c1ed/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:02:13.819847"
+    },
+    {
+        "lti_user_id": "b903728f1badaa76dd11464b054a0c3b",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+SQL2.0+31AUG2020:lms.skillfactory.ru-b6697f6af9ec43929106d64ad4ccef9a:b903728f1badaa76dd11464b054a0c3b', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+SQL2.0+31AUG2020/xblock/block-v1:SkillFactory+SQL2.0+31AUG2020+type@lti+block@b6697f6af9ec43929106d64ad4ccef9a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:05:00.473836"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-99739f4554484d4e8a5917a838a78bfc:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@99739f4554484d4e8a5917a838a78bfc/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:09:05.276811"
+    },
+    {
+        "lti_user_id": "b903728f1badaa76dd11464b054a0c3b",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+SQL2.0+31AUG2020:lms.skillfactory.ru-b6697f6af9ec43929106d64ad4ccef9a:b903728f1badaa76dd11464b054a0c3b', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+SQL2.0+31AUG2020/xblock/block-v1:SkillFactory+SQL2.0+31AUG2020+type@lti+block@b6697f6af9ec43929106d64ad4ccef9a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:09:47.930612"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-99739f4554484d4e8a5917a838a78bfc:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@99739f4554484d4e8a5917a838a78bfc/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:11:38.844348"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:13:29.077146"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:14:36.028622"
+    },
+    {
+        "lti_user_id": "ba6d1a93f80371b95237c0fddc9f2a41",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-a427a07340f04254ba88058fd7886c5a:ba6d1a93f80371b95237c0fddc9f2a41', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@a427a07340f04254ba88058fd7886c5a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:15:29.785837"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:16:44.303525"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:17:35.730840"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-81a71d8845f74cdaba34e3022d4d333a:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@81a71d8845f74cdaba34e3022d4d333a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:17:52.715695"
+    },
+    {
+        "lti_user_id": "ba6d1a93f80371b95237c0fddc9f2a41",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-a427a07340f04254ba88058fd7886c5a:ba6d1a93f80371b95237c0fddc9f2a41', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@a427a07340f04254ba88058fd7886c5a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:17:55.315422"
+    },
+    {
+        "lti_user_id": "ba6d1a93f80371b95237c0fddc9f2a41",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-a427a07340f04254ba88058fd7886c5a:ba6d1a93f80371b95237c0fddc9f2a41', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@a427a07340f04254ba88058fd7886c5a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:21:02.402638"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:22:35.299300"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:23:00.117805"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7e1b1c0bf7c64225906074d55f3c2ccb:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7e1b1c0bf7c64225906074d55f3c2ccb/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 16:24:07.279521"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-842f2f3098844e94a740f43634c797f1:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@842f2f3098844e94a740f43634c797f1/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:02:08.887527"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:06:06.966675"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:06:54.984268"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:07:47.704735"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:08:49.061910"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:09:22.156557"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:09:36.975842"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:09:50.087005"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:09:55.024056"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:09:59.685065"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:10:05.201930"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-5d0e4b66dbb342f5bdbc4645c8cfe61a:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@5d0e4b66dbb342f5bdbc4645c8cfe61a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:10:28.899369"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:12:27.157363"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:13:25.625339"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:14:12.066796"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:14:19.041811"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:14:53.258227"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:15:50.954630"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:15:55.960512"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:16:01.272876"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:16:06.188032"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:16:11.618159"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-cf6f050e78c74ab29b73f88d93251ed3:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@cf6f050e78c74ab29b73f88d93251ed3/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:16:36.442740"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-842f2f3098844e94a740f43634c797f1:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@842f2f3098844e94a740f43634c797f1/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:17:14.156333"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-842f2f3098844e94a740f43634c797f1:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@842f2f3098844e94a740f43634c797f1/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:18:22.036827"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-842f2f3098844e94a740f43634c797f1:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@842f2f3098844e94a740f43634c797f1/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:19:06.544936"
+    },
+    {
+        "lti_user_id": "d29a75ead356d010b507637311836095",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-842f2f3098844e94a740f43634c797f1:d29a75ead356d010b507637311836095', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@842f2f3098844e94a740f43634c797f1/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:19:25.699330"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ee7898a937b84e29998be1de3b3dd6d8:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ee7898a937b84e29998be1de3b3dd6d8/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:20:36.436246"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-e71ebc66da36439bb5cf65513acc8ebb:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@e71ebc66da36439bb5cf65513acc8ebb/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:22:14.905631"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:24:30.893100"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:24:43.928527"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:25:04.453839"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:25:41.926394"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:26:01.928126"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:26:07.282274"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:26:11.689689"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-fed27c09ed1b4a53a5fc2ed0754955c4:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@fed27c09ed1b4a53a5fc2ed0754955c4/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 17:26:19.293909"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:05:17.159028"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:05:34.452977"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:05:51.800744"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:06:20.101500"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:06:26.211093"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:06:31.285443"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:06:54.641186"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:06:59.307208"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:07:04.485484"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:07:09.725112"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-ec1d5eafc29e47f488b89932162d45fe:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@ec1d5eafc29e47f488b89932162d45fe/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:07:31.115557"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:10:24.259687"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:10:58.491431"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:11:29.413464"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:12:04.266106"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-917d7b2b292a43a080c0055eeb3434dd:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@917d7b2b292a43a080c0055eeb3434dd/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:12:56.315746"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-a75a8d3755d14033927304a00716fd77:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@a75a8d3755d14033927304a00716fd77/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:14:20.037417"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-0ad769d44f934b6299db50e208fac686:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@0ad769d44f934b6299db50e208fac686/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:17:49.954717"
+    },
+    {
+        "lti_user_id": "3941a631bd501168b030f84a4f889da7",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:Skillfactory+PDEVPRO+2023:lms.skillfactory.ru-e11e6630fd964bec887830f277acad49:3941a631bd501168b030f84a4f889da7', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:Skillfactory+PDEVPRO+2023/xblock/block-v1:Skillfactory+PDEVPRO+2023+type@lti+block@e11e6630fd964bec887830f277acad49/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 18:22:44.652747"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-f65772cc79ba488b92c434222fd42862:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@f65772cc79ba488b92c434222fd42862/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 20:15:48.023567"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-f65772cc79ba488b92c434222fd42862:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@f65772cc79ba488b92c434222fd42862/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 20:16:15.315931"
+    },
+    {
+        "lti_user_id": "3e2ad549b15d324e273b81aef2baabe9",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-f65772cc79ba488b92c434222fd42862:3e2ad549b15d324e273b81aef2baabe9', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@f65772cc79ba488b92c434222fd42862/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-22 20:16:38.049318"
+    },
+    {
+        "lti_user_id": "0132c74a30b8b30891549b1f07fbac5e",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+MA2.0+2022_FEB:lms.skillfactory.ru-e1b9331ed94142dfb1296f58f3607408:0132c74a30b8b30891549b1f07fbac5e', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+MA2.0+2022_FEB/xblock/block-v1:SkillFactory+MA2.0+2022_FEB+type@lti+block@e1b9331ed94142dfb1296f58f3607408/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 04:17:42.592124"
+    },
+    {
+        "lti_user_id": "1a905cd87547fa010839752934d82fef",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-de39de6dc04d453baa3d490a80dbe73b:1a905cd87547fa010839752934d82fef', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@de39de6dc04d453baa3d490a80dbe73b/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 06:00:22.864305"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-d1959a8d1e33420fb5cda96b94bd569d:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@d1959a8d1e33420fb5cda96b94bd569d/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 06:30:35.321756"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-fe257dab44e843e6aeefcfcfdcc45419:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@fe257dab44e843e6aeefcfcfdcc45419/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 06:47:48.341947"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-16296330324d4a0198499ca73bacc1e4:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@16296330324d4a0198499ca73bacc1e4/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 06:49:22.660205"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-7f899d1144de4657998916059cc03823:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@7f899d1144de4657998916059cc03823/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 07:10:16.113551"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-3f4fb41f8236443cbd37ec96f9b8f83b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@3f4fb41f8236443cbd37ec96f9b8f83b/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 07:47:45.231400"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-d05ad0f1c5924cedaaaa0de5140328c7:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@d05ad0f1c5924cedaaaa0de5140328c7/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 07:49:50.201973"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-06f3ae0e6f66488ea48abc7a97aa1038:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@06f3ae0e6f66488ea48abc7a97aa1038/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 07:53:40.405354"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:05:13.974800"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:05:40.635683"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:06:10.915761"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:13:19.837072"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:16:37.223422"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:17:12.581203"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:17:43.463595"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:18:39.676535"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:29:32.674095"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-8932c3cf4ec745e9abd712e2bf5b9289:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@8932c3cf4ec745e9abd712e2bf5b9289/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:29:49.261843"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-f6d38389ae774e5690c064a91bb5bb54:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@f6d38389ae774e5690c064a91bb5bb54/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:57:12.379888"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-f6d38389ae774e5690c064a91bb5bb54:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@f6d38389ae774e5690c064a91bb5bb54/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 08:59:07.370738"
+    },
+    {
+        "lti_user_id": "ac77a81548ac57d675c2569d72bc9593",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPRMGU+2023_FEB:lms.skillfactory.ru-f6d38389ae774e5690c064a91bb5bb54:ac77a81548ac57d675c2569d72bc9593', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPRMGU+2023_FEB/xblock/block-v1:SkillFactory+DSPRMGU+2023_FEB+type@lti+block@f6d38389ae774e5690c064a91bb5bb54/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:00:07.877693"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-9f0efe5bfe664089b0693cc9c53c0909:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@9f0efe5bfe664089b0693cc9c53c0909/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:06:33.135078"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-ef58c425ff384cf0be714a75a044d96f:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@ef58c425ff384cf0be714a75a044d96f/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:09:45.783282"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-5d0188e0a6c04d8daa60d21b2378f57c:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@5d0188e0a6c04d8daa60d21b2378f57c/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:11:25.681547"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:13:01.201497"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:14:37.766203"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:15:56.232291"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:18:11.071506"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:19:21.883045"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-c2a1096e64354cd4820f23f21fc641d9:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@c2a1096e64354cd4820f23f21fc641d9/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:21:38.064659"
+    },
+    {
+        "lti_user_id": "86438625037ce76d1ad3958131f4d170",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DAPR-2.0+MAR2021:lms.skillfactory.ru-09d37c67e907490f83ed78c089ce692d:86438625037ce76d1ad3958131f4d170', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DAPR-2.0+MAR2021/xblock/block-v1:SkillFactory+DAPR-2.0+MAR2021+type@lti+block@09d37c67e907490f83ed78c089ce692d/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:26:50.611890"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-95eddd25e28f43929e06876faba88e1a:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@95eddd25e28f43929e06876faba88e1a/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:40:19.063040"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-5bc2a7ab5f6348c1bb6e73245253d96c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@5bc2a7ab5f6348c1bb6e73245253d96c/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:43:03.631384"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:55:53.875348"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-2a9b146f3874421a834c2dd03dbf03a5:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@2a9b146f3874421a834c2dd03dbf03a5/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:56:55.117356"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-8b4ca3ea70f84b51b9f6d570d4120ca6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@8b4ca3ea70f84b51b9f6d570d4120ca6/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 09:58:23.981452"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-bb61079e4faf431189f3c6673ce6afab:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@bb61079e4faf431189f3c6673ce6afab/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:18:50.782118"
+    },
+    {
+        "lti_user_id": "093fababbaa1823f3fcf712af30b0183",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-1a9c8f341f134a3984f17ecae7903bfc:093fababbaa1823f3fcf712af30b0183', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@1a9c8f341f134a3984f17ecae7903bfc/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:35:28.754477"
+    },
+    {
+        "lti_user_id": "a5e15f0bcf78de5d3f6d849bd97bdbe8",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+PY-ANALYSIS+26OCT2020:lms.skillfactory.ru-222165326ecc480d8ac8e18985b687a7:a5e15f0bcf78de5d3f6d849bd97bdbe8', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+PY-ANALYSIS+26OCT2020/xblock/block-v1:SkillFactory+PY-ANALYSIS+26OCT2020+type@lti+block@222165326ecc480d8ac8e18985b687a7/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:45:06.786558"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-944795ec32ae4ddeb90e79ecf59556a0:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@944795ec32ae4ddeb90e79ecf59556a0/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:49:17.602983"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-900037dab4854238bcccc1480bd29b3c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@900037dab4854238bcccc1480bd29b3c/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:59:10.412548"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-900037dab4854238bcccc1480bd29b3c:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@900037dab4854238bcccc1480bd29b3c/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 10:59:19.990850"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:06:15.318228"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:06:41.578637"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:07:15.850355"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:08:32.874587"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:09:09.820600"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:13:34.822900"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-4e046fe7cd6a42c5999f0a079aa87a7b:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@4e046fe7cd6a42c5999f0a079aa87a7b/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:13:44.994036"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-77e8b3002bc14bb98c5a2077b4c58a45:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@77e8b3002bc14bb98c5a2077b4c58a45/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:20:04.758436"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-95c76958dfb14f7a9ea8afd861182835:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@95c76958dfb14f7a9ea8afd861182835/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:39:38.106825"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-e3942c4e971546068c9a48c5793d4df6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@e3942c4e971546068c9a48c5793d4df6/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:44:17.357395"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-e3942c4e971546068c9a48c5793d4df6:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@e3942c4e971546068c9a48c5793d4df6/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 11:45:11.341031"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-023d697551cc41d39109682a54311817:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@023d697551cc41d39109682a54311817/handler_noauth/grade_handler'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:08:45.963950"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-e36933c38d3e4876a8983f2f8c614a21:4290fa4965624e0ce5a1ef8b160f7566', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@e36933c38d3e4876a8983f2f8c614a21/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:09:28.034261"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-023d697551cc41d39109682a54311817:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@023d697551cc41d39109682a54311817/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:10:17.793567"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-76a45fbc61654670b987de031bad7651:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@76a45fbc61654670b987de031bad7651/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:13:29.081168"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-6672b2ed28c14807acb97d3ed0bf00ec:4290fa4965624e0ce5a1ef8b160f7566', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@6672b2ed28c14807acb97d3ed0bf00ec/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:13:42.272306"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b9e9ad9cac5d4648a4708db23e444616:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b9e9ad9cac5d4648a4708db23e444616/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:14:51.256205"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-0b3f21bf14e74f2283a74c2c355a9441:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@0b3f21bf14e74f2283a74c2c355a9441/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:20:04.835921"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-c083646bc1b54de8986f56e571de1144:4290fa4965624e0ce5a1ef8b160f7566', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@c083646bc1b54de8986f56e571de1144/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:21:10.251661"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-3fabca9ad6be401a9af681d4338e2e65:4290fa4965624e0ce5a1ef8b160f7566'}",
+        "is_correct": 0,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:34:38.838475"
+    },
+    {
+        "lti_user_id": "dd6ac3db440e761acd73d4195a86a0cc",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DST-3.0+28FEB2021:lms.skillfactory.ru-b6c6bab7c00f42ee876c7a408c2ca191:dd6ac3db440e761acd73d4195a86a0cc', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DST-3.0+28FEB2021/xblock/block-v1:SkillFactory+DST-3.0+28FEB2021+type@lti+block@b6c6bab7c00f42ee876c7a408c2ca191/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:39:29.645513"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-3fabca9ad6be401a9af681d4338e2e65:4290fa4965624e0ce5a1ef8b160f7566'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:44:39.562740"
+    },
+    {
+        "lti_user_id": "4290fa4965624e0ce5a1ef8b160f7566",
+        "passback_params": "{'oauth_consumer_key': '', 'lis_result_sourcedid': 'course-v1:SkillFactory+DSPR-2.0+14JULY2021:lms.skillfactory.ru-cffa56e3f4ef40538cbee8b3e2206ce1:4290fa4965624e0ce5a1ef8b160f7566', 'lis_outcome_service_url': 'https://lms.skillfactory.ru/courses/course-v1:SkillFactory+DSPR-2.0+14JULY2021/xblock/block-v1:SkillFactory+DSPR-2.0+14JULY2021+type@lti+block@cffa56e3f4ef40538cbee8b3e2206ce1/handler_noauth/grade_handler'}",
+        "is_correct": 1,
+        "attempt_type": "submit",
+        "created_at": "2026-07-23 13:48:04.376613"
+    }
+]

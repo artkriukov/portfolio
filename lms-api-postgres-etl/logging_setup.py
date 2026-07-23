@@ -12,8 +12,12 @@ def setup_logging():
 
   logging.basicConfig(
     level=logging.INFO, 
-    filename=log_path,
-    format="%(asctime)s %(module)s %(levelname)s %(funcName)s %(message)s"
+    # filename=log_path,
+    format="%(asctime)s %(module)s %(levelname)s %(funcName)s %(message)s",
+       handlers=[
+        logging.FileHandler(log_path, encoding="utf-8"),
+        logging.StreamHandler() 
+    ],
   )
 
 def remove_old_logs(days=3):
