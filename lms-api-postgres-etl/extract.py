@@ -1,11 +1,12 @@
 import logging
 import os
-from datetime import datetime, timedelta, timezone
+import json
 
+from datetime import datetime, timedelta, timezone
 from requests import get
 from requests.exceptions import ConnectionError, HTTPError, Timeout
 from dotenv import load_dotenv
-import json
+
 
 load_dotenv()
 logger = logging.getLogger(__name__)

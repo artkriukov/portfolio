@@ -27,7 +27,7 @@ def transform_record(row: dict) -> dict:
 
   return {
     'lti_user_id': row.get("lti_user_id"),
-    'oauth_consumer_key': parsed.get("oauth_consumer_key"),
+    'oauth_consumer_key': parsed.get("oauth_consumer_key") or None,
     'lis_result_sourcedid': parsed.get("lis_result_sourcedid"),
     'lis_outcome_service_url': parsed.get("lis_outcome_service_url"),
     'is_correct': row.get("is_correct"),
