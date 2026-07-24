@@ -1,13 +1,7 @@
-import logging
-from extract import fetch_submissions
 import ast
-
-import json
+import logging
 
 logger = logging.getLogger(__name__)
-
-with open('data/raw/submissions_2026-07-22.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
 
 def parse_passback_params(raw: str | None) -> dict:
   if not raw:
