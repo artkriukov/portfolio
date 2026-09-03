@@ -1,0 +1,12 @@
+from datetime import datetime
+from pydantic import BaseModel
+
+class Submission(BaseModel):
+  user_id: str
+  oauth_consumer_key: str | None 
+  lis_result_sourcedid: str | None
+  lis_outcome_service_url: str | None
+  is_correct: bool | None
+  attempt_type: str
+  created_at: datetime
+
